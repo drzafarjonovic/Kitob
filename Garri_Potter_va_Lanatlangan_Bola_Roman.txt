@@ -624,13 +624,35 @@ Germiona unga uzoq qaradi.
 
 — Yo'q, bu qadа ishingni hech qachon tugata olmaysan. Qanday qilib bunday betartib xonada ishlash mumkin? — Germiona bosh chayqadi.
 
-Garri sehrli tayoqchasini silkitdi — shu zahoti qog'ozlar papkaga joylanibbir tekisda joyi-joyiga taxlandi. Xona bir lahzada tartibli ko'rinish oldi.
+Garri sehrli tayoqchasini silkitdi — shu zahoti qog'ozlar papkaga joylanib, bir tekisda joyi-joyiga taxlandi. Xona bir lahzada tartibli ko'rinish oldi.
 
-— Bo'ldi, xuddi avval betartib bo'lmagandek, — kuliб qo'ydi Garri.
+— Bo'ldi, xuddi avval betartib bo'lmagandek, — kulib qo'ydi Garri.
 
-Oralarg'a bir oz jim turdilar. Germiona irisqand paketini ochib og'ziga soldi.
+Germiona unga ma'noli qaradi. U qog'oz uyumidan bir nechtasini qo'liga oldi.
 
-— Xotin va bolalaring qalay, yaxshi yurishibdimi? — so'radi u.
+— Bu qog'ozlarda nima yozilganiga qiziqib ham ko'rmaysan, — dedi u. — Qara — mana, tog' trollarining Vengriyaga ketishayotganida topilgan jasadlari. Mana — belida qanotga o'xshash tatuirovkasi bor devlarning Gretsiya dengizida aylanib, ortga qaytishayotganda sohil bo'yida g'oyib bo'lganligi haqida ma'lumotlar. Bularning hammasi bir narsani anglatishi mumkin.
+
+— Yaxshi, uyga borib ozgina dam olay, keyin bu ishlar bilan shug'ullanaman, — dedi Garri yelka qisib.
+
+— Garri, seni yaxshi tushunaman, — dedi Germiona. — Qog'ozbozlik ishlari juda zerikarli. Lekin Buyuk afsungarlar urushida ko'pchilik odamlar Voldemort tomonda bo'lib, o'lim yeguvchilar qatoriga qo'shilgan edi. Agar biz Teodor Nottdan olgan ma'lumotlarni shu ishlar bilan taqqoslab tekshirsak, nima bo'layotganini tushunishimiz mumkin. Agar Sehrgarlik Tartibotini Ta'minlash bo'limining boshlig'i hujjatlarga bee'tibor bo'laversa...
+
+— Men senga o'xshab qog'ozlarga ko'milib o'tirmayman, — dedi Garri biroz qattiqroq ohangda. — Teodor Nottni ham, Vaqt aylanasini ham men shu hujjatlarsiz, tergov va surishtiruv ishlari orqali topdim. Sen menga aql o'rgataverma.
+
+Germiona bir lahza unga tikilib qoldi, so'ng yumshab, cho'ntagidan iris qand paketini oldi.
+
+— Iris qand xohlaysanmi? Faqat Ronga aytma.
+
+— O'zing bu mavzuni ochib, endi o'zgartirmoqchimisan? — kuldi Garri.
+
+— Ha, albatta. Iris qand yeysanmi?
+
+— Yo'q, hozir shirinlikxo'rlik qiladigan payt emas, — dedi Garri. Bir lahza jimlik cho'kdi. — O'zing bilasan-ku, shirinlik yesang, o'zingni tutolmay yana yeging kelaveradi.
+
+— O'zing bilasan, ota-onam stomatolog bo'lishgan, — dedi Germiona qandni og'ziga solib. — Yoshligimda shirinlikka to'ymaganman. Mana, qirq yoshga ham yetdik... hay, mayli. — U jiddiylashdi. — Sen ajoyib ish qilding, Garri. Men senga aql o'rgatmoqchi emasman. Shunchaki bo'sh vaqtlaringda bu hujjatlarga ham ko'z yugurtirib qo'y, demoqchiman, xolos.
+
+Garri kulib qo'ydi. Oraga bir oz jimlik cho'kdi. Keyin Germiona ovozini yumshatib so'radi:
+
+— Xotining va bolalaring qalay, yaxshi yurishibdimi?
 
 Garri o'tirdi, chuqur nafas oldi.
 
@@ -2410,15 +2432,19 @@ Albus to'xtab, Skorpiusga o'girildi.
 
 — Men senga nima dedim? Hoziroq bunga chek qo'y. So'ngi bor ogohlantirshim, — dedi Garri qat'iy.
 
-Albus bir do'stiga, bir otasiga qaradi. Ikki tomon — ikki dunyo.
+Albus bir do'stiga, bir otasiga qaradi. Ikki tomon — ikki dunyo. Bir tomonda — Skorpius, uning yagona haqiqiy do'sti, uni hech qachon tark etmagan, hatto eng og'ir damlarda ham yonida bo'lgan yagona inson. Ikkinchi tomonda — otasi, butun dunyo sajda qiladigan, lekin uni hech qachon tushunmagan odam.
 
-— Bunday qila olmayman, — dedi u nihoyat.
+— Bunday qila olmayman, — dedi u nihoyat. Ovozi titrardi.
 
-— Nima qila olmaysan? — so'radi Skorpius.
+— Nima qila olmaysan? — so'radi Skorpius, hech narsani tushunmay.
+
+Albus ko'zlarini do'stidan uzdi. U bu so'zlarni aytishni xohlamasdi — har bir harfi tomog'ini o'rtardi — lekin u otasini boshqa yo'qotishni ham xohlamasdi. U tanlov qilishga majbur edi. Va u — yana bir bor — xato tanlov qildi.
 
 — Biz boshqa gaplashmasligimiz kerak.
 
-Skorpius uning ortidan yuragi ezilib qarab qoldi.
+So'zlar havoda muallaq qoldi. Skorpiusning yuzidagi tabassum so'ndi. Uning ko'zlarida — ishonchsizlik, keyin og'riq, keyin tushunish paydo bo'ldi. Albus o'girilib, otasining ortidan ketdi.
+
+Skorpius uning ortidan yuragi ezilib qarab qoldi. U yolg'iz edi — yana yolg'iz. Va bu safar uni yolg'iz qoldirgan — uning yagona do'sti edi.
 
 * * *
 
@@ -2892,7 +2918,11 @@ Ular yerda yotgan ridoni topishdi — bo'sh, ho'l.
 
 — Bir yoqimtoy yigitni qutqarishmoqchi. Sedrik Diggorini.
 
-Garri shu zahoti nima bo'layotganligini tushunib, dahshatga tushdi. Uning yuzi oqardi. Vaqt Chig'irig'i. O'tmish. Sedrik. Va — yana bir bor — oqibatlarni hech kim bilmaydi.
+Garri shu zahoti nima bo'layotganligini tushunib, dahshatga tushdi. Uning yuzi oqarib ketdi, qoni muzladi. Vaqt Chig'irig'i. O'tmish. Sedrik. Ikkinchi musobaqa. Va — yana bir bor — oqibatlarni hech kim bilmaydi.
+
+U devorga suyandi. Albus o'sha xatoni — o'sha dahshatli, tuzatib bo'lmas xatoni — yana takrorlamoqda edi. Va bu safar... bu safar nima o'zgarishini hech kim ayta olmasdi. Garrining peshonasidagi chandig'i sanchidi — go'yo o'zi ham yaqinlashayotgan zulmatni sezgandek.
+
+— Yo'q, — pichirladi u. — Albus, nima qilyapsan...
 
 
 
@@ -3818,9 +3848,13 @@ Jinni tribunaga bordi va Garrining yoniga turdi:
 
 — Balkim u bizning o'g'limiz tomonidan berilgandir. Yoki undan o'g'irlangandir.
 
-Drako ham tribunaga ko'tarildi — va Jinnining yoniga borib turdi. Bu Spartakcha palla edi. Tanberganlarning oh-voxi eshitildi.
+Professor Makgonagal ularga uzoq qaradi. Uning yuzida g'azab yumshab, o'rnini boshqa bir narsa — hurmat aralash tashvish egalladi.
 
-— Unda bu ehtiyotsizlikka men ham javob berishim kerak. Germiona va Garri hech qanday yomon ish qilishmadi, ular hammamizni qutqarishga harakat qilishdi. Agar u aybdor bo'lsa, unda men ham aybdorman.
+— Sizning jipsligingiz tahsinga loyiq, — dedi u sovuq ohangda. — Lekin bu sizning ehtiyotsizligingizni oqlamaydi.
+
+Drako ham tribunaga ko'tarildi — va Jinnining yoniga borib turdi. Bu Spartakcha palla edi. Tan berganlarning oh-vohi eshitildi.
+
+— Unda bu ehtiyotsizlikka men ham javob berishim kerak, — dedi Drako mag'rur ovozda. — Germiona va Garri hech qanday yomon ish qilishmadi, ular hammamizni qutqarishga harakat qilishdi. Agar ular aybdor bo'lsa, unda men ham aybdorman.
 
 Germiona o'z jamoasiga mamnun qaradi. Ron tribunaga turganlarga borib qo'shildi:
 
@@ -3858,33 +3892,57 @@ Albus va Skorpius sovuq havoda Vokzal Nazoratchisiga xavfsirab qarab turar edi. 
 
 — O'zingchi? — Skorpius ovozini pasaytirdi. — Qizlar bobida sen tomon emasman, lekin u senga yoqar edi... endi...
 
-Ularning ikkisi ham gapni kim haqida ketayotganini tushundi — Delfi haqida.
+Ularning ikkisi ham gap kim haqida ketayotganini tushundi — Delfi haqida. Albusning yuziga soya tushdi.
 
-— U shunchaki bizdan foydalangan, — dedi Albus, ovozida og'riq. — Boshidan oxirigacha. Hamma mehribonligi, hamma do'stligi — yolg'on.
+— Bunga men sabab bo'ldim, shunday emasmi? — dedi u past ovozda. — Men Kreyg bilan nima qilganini nazarda tutayapman. U... u o'ldi. Delfi uni o'ldirdi. Va men buni to'xtata olmadim.
 
-— Ha, — dedi Skorpius. — Lekin hozir biz boshqa narsani o'ylashimiz kerak. Agar u Volan-de-Mortga xabar bersa, agar u Potterlar uyiga borishini to'xtatsa — hamma narsa o'zgaradi.
+Skorpius bir lahza do'stiga qaradi. U bu og'riqni — bu aybdorlik yukini — qanday yengillashtirishni bilmasdi.
 
-— Unda — otam o'lmaydi. Lekin... dunyo qorong'u bo'ladi. Volan-de-Mort g'olib bo'ladi.
+— Kel, bu haqida o'ylamaymiz, — dedi u nihoyat, ovozini yumshatib. — Hozir bunga vaqt yo'q. Kel, bizda bor dalillarni bir joyga to'playmiz. Bizni ortga qaytishimizda yordam beradigan hech qanday sehrli tayoqcha yo'q, supurgi yo'q. Bizning bor narsamiz — bu bizning ongimiz. Va biz Delfini to'xtatishimiz kerak.
 
-— Biz Delfini to'xtatishimiz kerak. Lekin... Vaqt Chig'irig'i yo'q. Bizda hech narsa yo'q.
+Albus bosh irg'adi. Ular hali ham nima qilishni rejalashtirayotgan edilar — qaysi tomonga borishni, qayerdan boshlashni bilmay — shu payt orqalaridan bir tovush eshitildi. Vokzal Nazoratchisi — egnida eski temir yo'lchi formasi bo'lgan, yuzi ajin bosgan keksa bir odam — ularga ohista yaqinlashdi.
 
-Albus o'ylandi. Shamol uning sochlari bilan o'ynardi. 1981-yilning kuz havosi — sovuq, toza, dahshatli kelajakdan bexabar.
+— Siz bilmoq, — dedi u shu qadar quyuq shotland shevasida gapirdiki, bolalar uning so'zlarini zo'rg'a ilg'ashdi, — ye ken th' auld poyezd kechikadi, bolalar?
 
-— Bitta narsa bor, — dedi u nihoyat. — Otamga xabar yuborishimiz kerak. Va buning uchun... Garri Potterning ko'rpasi.
+— Kechirasiz? — dedi Skorpius, hech narsa tushunmay.
 
-— Qanday?
+— Agar siz oan th' auld — Edinburg — poyezdini kutgan bo'lsangiz, — davom etdi nazoratchi sabr bilan, — uning kechikishini bilishingiz kerak edi. Liniyada temir yo'l ishlari olib borilyapti. Poyezd jadvaliga o'zgartirish kiritilgan.
 
-— Onamning ko'rpasi. Otam uning orqali his qila oladi — bu sehrli bog'lanish. Agar biz xabar yubora olsak — u bu yerga kelish yo'lini topadi.
+U qovog'ini osiltirib, devordagi o'zgartirilgan jadvalga ishora qildi, so'ng o'ng tomonini ko'rsatdi.
 
-— Lekin qanday xabar yuboramiz? Biz 1981-yildamiz.
+— Kechikkan, — qo'shimcha qildi u norozi ohangda va yo'liga ketdi.
 
-— Xotiralar Girdobiga xabar jo'natgandek, — dedi Albus. — Go'dak Garrining qarshisida turamiz va kerakli vaqtda eslay olishiga umid bog'lab xabar jo'natamiz.
+Bolalar bir lahza hovliqib turishdi. Keyin Albus to'satdan oldinga intildi va jadvalni qo'liga oldi. Uning ko'zlari raqamlar va sanalar bo'ylab yugurar, yuz ifodasi olayotgan ma'lumotlar ostida o'zgarib borardi. Skorpius esa hali ham nazoratchining ketidan termulib turardi.
 
-— Bola shikast olishi mumkin...
+— Men uning qayerda ekanligini bilaman, — dedi Albus to'satdan.
 
-— Faqat yengilgina. Hech qanday shikast hozir sodir bo'layotganlar bilan taqqoslab bo'lmaydi.
+— Sen nimani bilib olding? — so'radi Skorpius.
 
-Ular Godrik Jarligi tomon yo'l olishdi — bu kichik qishloqda, bu sovuq kuz kechasida, ular bilishardi — vaqt tugayotgan edi.
+— Sanaga qara. Jadvalda.
+
+Skorpius egilib, jadvaldagi raqamlarni o'qidi.
+
+— O'ttizinchi oktabr, 1981-yil. Barcha Avliyolar Kuni Arafasidan bir kun oldin. Lekin... u nega...? — Skorpiusning ovozi to'satdan uzilib qoldi, rangi oqarib ketdi. — Ohh.
+
+— Mening ajdodlarimning o'limi, — dedi Albus sokin, dahshatli ovozda. — Otam go'dakligida unga hujum qilingan kun. Aynan Volan-de-Mort qo'llagan afsun o'ziga qaytgan kun. Delfi o'zining bashoratini amalga oshirmoqchi emas. U asosiy bashoratni yo'q qilmoqchi.
+
+— Eng birinchisini? — pichirladi Skorpius.
+
+Albus sekin, har bir so'zni avaylab boshladi:
+
+— "Yovuz Lordni yenga oladigan shaxsning tug'ilishiga oz qoldi..."
+
+Skorpius davom ettirdi va ikkovi birga, ovozlari titrab, qadimiy bashoratni so'zlab ketishdi:
+
+— "...u yettinchi oy xotimasida, Yovuz Lordga uch marta qarshi chiqqan kishilardan dunyoga keltiriladi, yettinchi oyning oxirida..."
+
+Har bir so'z aytilgan sayin Skorpiusning yuzi battar oqarardi.
+
+— Bu mening aybim, — dedi u zo'rg'a eshitiladigan ovozda. — Men unga bashoratni o'zgartirish mumkin deb aytdim. Men unga mantiqan bashorat hali shubhali, to'liq o'rganilmagan deb aytdim. Men unga g'oya berdim.
+
+— Yigirma to'rt soat ichida, — dedi Albus, — Volan-de-Mort go'dak Garri Potterni o'ldirishga urinib, o'zini la'natga duchor qiladi. Delfi esa o'sha la'natni bartaraf qilmoqchi. U Garrini o'z qo'li bilan o'ldirmoqchi. — U Skorpiusga o'girildi, ko'zlarida qat'iyat porladi. — Biz Godrik Jarligiga borishimiz kerak. Hoziroq.
+
+Ular yo'lga tushishdi — bu sovuq kuz kechasida, bu kichik shotland vokzalidan Godrik Jarligi tomon. Va ikkalasi ham bilardi: vaqt tugayotgan edi. Yer yuzining taqdiri — va Garri Potterning hayoti — endi ikki o'smirning qo'lida edi.
 
 
 
@@ -4249,339 +4307,515 @@ Drako yaqinlashdi va yopinchiqqa qaradi.
 Ikki ota — bir vaqtlar dushman, endi sherik — bir-biriga qarashdi. Va ikkalasining ham ko'zlarida bir xil narsa bor edi: umid.
 
 
-
 XXV BOB. AVLIYO JEREMI CHERKOVI
 
-Godrik Jarligi. Avliyo Jeremi cherkovi. 1981-yil.
+Godrik Jarligi 2020 yilda butunlay boshqacha edi. Bir vaqtlar jodugarlar va sehrgarlar bilan to'lib-toshgan bu kichkina qishloq endi turistlar va kunduzgi sayohatchilar bilan gavjum bo'lib qolgan edi. Tosh yo'lkalarda muzqaymoq yalab yurgan bolalar, fotoapparat ko'tarib olgan sayyohlar, ko'cha kafelarida o'tirib qahva ichayotgan odamlar — hammasi shu qadar oddiy, shu qadar maglcha ediki, sehrgarlar guruhi bu yerda o'zlarini begona his qilishardi.
 
-Garri, Jinni, Ron, Germiona va Drako — beshala — o'tmishga qaytishdi. Drakoning maxfiy Vaqt Chig'irig'i ularni 1981-yil 31-Oktabr kechasiga olib keldi. Godrik Jarligi — kuz kechasi, barglar to'kilgan, osmon bulutli. Shamol sovuq esardi — go'yo yaqinlashayotgan falokatni sezgandek.
+Germiona, Ron, Drako, Jinni va Garri — beshovi olomon orasidan o'tib borishar, atrofga ehtiyotkorona razm solishardi. Vaqtni orqaga qaytaruvchi chig'iriq Germionaning qo'lida yana bir bor ish bergan, ularni o'tmishning ostonasiga olib kelgan edi. Ammo hozircha ular hali ham hozirgi zamonda turishardi.
 
-Cherkov — kichkina, qadimiy, tosh devorli — qishloqning chetida turardi. Ular ichkariga kirishdi. Albus va Skorpius allaqachon u yerda edi — kutib turishardi. Ularning yuzlarida — charchoq va umid aralash.
+— Godrik Jarligi, — dedi Germiona atrofga qarab. — Yigirma yildan keyin bu yer shunaqa bo'lib qoldi, deysizmi?
 
-— Dada! — Albus otasini ko'rib, ko'zlari yondi. U yugurdi — va Garri o'g'lini quchoqladi. Mahkam, uzoq — go'yo hech qo'yib yubormaydigan dek.
+— Magllar... — Ron burnini jiyirib, muzqaymoq do'koniga ishora qildi. — Hamma yoqni egallab olishibdi-ku.
 
-— O'g'lim, — pichirladi Garri. — Sog'misan?
+— Bu ularning ham qishlog'i, Ron, — dedi Germiona.
 
-— Sog'man. Biz sog'miz.
+— Bilaman, bilaman. Faqat... — Ron yelka qisdi. — Qarshi emasman. Shunchaki kuzatyapman.
 
-Skorpius ham otasiga yaqinlashdi. Drako — odatda hissiyotlarini yashiradigan odam — o'g'lini ko'rib, ko'zlari namlandi.
+Drako pinjak yoqasini ko'tarib, yuzini yashirishga urindi. U bu maglcha olomon orasida o'zini suvdan chiqqan baliqday his qilardi.
 
-— Delfi bu yerda, — dedi Skorpius tezda. — U Volan-de-Mortga xabar bermoqchi. Potterlar o'ldirilishini to'xtatmoqchi. Agar u muvaffaq bo'lsa — Volan-de-Mort hech qachon yiqilmaydi.
+— Bu yer juda... ochiq, — dedi u sovuq ohangda. — Bunchalik odamning orasida turish menga yoqmaydi.
 
-— Biz uni to'xtatamiz, — dedi Garri qat'iy.
+— Hech kim seni tanimaydi, Malfoy, — dedi Ron tirjayib. — Bu yerda sen shunchaki yana bir sariq sochli odam, xolos.
 
-Ron gapirdi:
+— Sochlarim haqida gapirmasang ham bo'ladi.
 
-— Oydinlashtiribolay likchi — biz Volan-de-Mortni himoya qilamiz, shundaymi?
+— Nima? Men hech narsa demadim. Faqat... soching juda yaxshi tarangan, dedim, xolos.
 
-— Mening bobom va buvimni o'ldirgan Volan-de-Mortni? Mening otamni o'ldirishga harakat qilgan Volan-de-Mortnimi? — dedi Albus.
+Germiona Ronning biqiniga turtdi.
 
-— Sen haqsan, Jinni, — dedi Germiona. — Delfi Garrini o'ldirishga harakat qilmaydi. U Garrini o'ldirishga harakat qiladigan Volan-de-Mortni to'xtatmoqchi. Ajoyib.
+— Ron.
 
-— Shunday qilib... — dedi Drako. — Biz faqat Volan-de-Mortni kelishini kutishimiz kerakmi?
+— Nima?
 
-— Delfi uni qachon kelishini bilar mikan? — Albus o'ylandi. — Tarix kitoblarida uning Godrik Jarligining qayerida va qachon paydo bo'lishi haqida ma'lumot yo'q edimi?
+— Drakoga yoqimli biror narsa de. Biz hozir bir jamoamiz.
 
-— Sen adashmayabsan, — dedi Skorpius va Germiona bir vaqtda.
+Ron Germionaga ishonqiramay qaradi, so'ng Drakoga o'girilib, og'ir bir xo'rsindi.
 
-— Jinur sin! Endi ular ikkita! — dedi Ron.
+— Malfoy... sochlaring chindan ham... yaxshi ko'rinadi. Juda silliq. Hasad qilsa arziydigan darajada.
 
-— Men chindan ham nimada yaxshiman bilasizmi? — dedi Albus.
+Drako bir lahza unga tikilib qoldi.
 
-— Sen ko'p narsada yaxshisan, Albus, — dedi Garri.
+— Bu... g'alati edi, Uizli. Lekin... rahmat, deb o'ylayman.
 
-— Sehrli Damlamalar qaynatishda. O'ylashimcha Batilda Begshotning omborxonasida Qiyofaga kirish damlamasi uchun hamma masalliqlar topiladi. Biz Volan-de-Mort qiyofasiga kiramiz va u bilan uchrashuvga chiqamiz.
+Jinni jilmaydi. Bu odamlar — bir vaqtlar bir-birini yomon ko'rgan, bir-biriga qarshi turgan odamlar — endi o'g'illari uchun qo'l-qo'lga berib turishardi. Vaqt hammani o'zgartirar ekan.
 
-— Qiyofaga kirish damlamasi uchun senga yana nimadir kerak, — dedi Ron. — Bizda esa Volan-de-Mortning biron bo'lagi yo'q.
+— Tayyormisizlar? — dedi Germiona, chig'iriqni qo'liga olib. — Biz 1981 yilga qaytamiz. O'sha Xellouin kechasiga. Voldemort Potterlarni o'ldirgan kechaga.
 
-— Lekin menga bu fikr yoqdi, — dedi Germiona. — U bilan "mushuk-sichqon" o'ynamiz.
+Garrining yuragi siqildi. Bu — uning ota-onasi o'lgan kecha edi. U o'sha tunni eslamasdi — go'dak edi-ku — ammo butun umri davomida o'sha tunning soyasida yashagan edi.
 
-— Qiyofaga kirish afsunidan foydalansak qanchalik o'xshash mumkin? — so'radi Garri.
+— Tayyorman, — dedi u sokin ovozda.
 
-— Biz uni qanday ko'rinishini bilamiz. Va ichimizda zo'r afsungarlar va sehrgarlar mavjud.
+Germiona chig'iriqni aylantirdi. Dunyo gir aylanib, vaqt ipi tortildi va ularning atrofidagi yorug' kunduz qorong'u, sovuq Xellouin tuniga aylandi.
 
-— Sizlar Volan-de-Mort qiyofasiga kirmoqchimisizlar? — dedi Jinni hayrat bilan.
 
-— Bu yagona chora, — dedi Albus.
+Ular o'zlarini bir omborxonada — chang bosgan, qorong'u, eski bir xonada topishdi. Va o'sha yerda — devorga suyanib, hayajondan qaltirab — Albus va Skorpius turishardi.
 
-Ron qo'rqmasdan oldinga chiqdi:
+— Dada! — Albus otasini ko'rishi bilanoq unga otildi.
 
-— Unda men xohlardim-ki... o'ylayman ki men uni qiyofasiga kirishim kerak. Men Volan-de-Mort bo'lish yaxshi demoqchi emasman, lekin men o'zimni topshirsam... hammalaringizni ichingizda men eng vazminiman.
+Garri o'g'lini bag'riga bosdi. U bolasini shunchalik mahkam quchoqladiki, go'yo uni hech qachon qo'yib yubormaslikka qaror qilgandek edi.
 
-— Sen kimni hovliqma deyapsan? — dedi Germiona.
+— Albus. Albus, sen tirikmisan. Sen butunmisan.
 
-— Men ham ta'labgor bo'lishni xohlardim, — dedi Drako. — O'ylayman-ki Volan-de-Mort bo'lish aniqlikni talab qiladi. Xafa bo'lma-kuya Ron, bundan tashqari qora jodudagi bilimlarni ham...
+— Kechir, dada. Men... biz hamma narsani buzib yubordik. Men juda ahmoqlik qildim.
 
-— Men ham ko'ngilli bo'lishni xohlardim, — dedi Germiona. — O'ylashimcha bu meni Sehrgarlik Vaziri sifatidagi burchim va vazifam.
+— Hozir bu muhim emas, — dedi Garri uning yuzini ushlab. — Sen tiriksan. Boshqa hech narsa muhim emas.
 
-— Balkim biz qur'a tashlashimiz kerakdir... — dedi Skorpius.
+Jinni ham yugurib kelib o'g'lini quchoqladi. Albus onasining bag'rida bir lahza ko'zlarini yumdi.
 
-— Sen bunda ishtirok etmaysan, Skorpius, — dedi Drako qat'iy.
+Drako esa Skorpiusga yaqinlashdi. Ular bir-biriga qarab turishdi — ota va o'g'il, ikkalasi ham qanday harakat qilishni bilmay.
 
-— Umuman olganda... — boshladi Albus.
+— Biz... — boshladi Drako noqulay ohangda. — Biz quchoqlashsak bo'ladimi? Yoki...
 
-— Yo'q. Hech qachon, — dedi Jinni. — Men hammangiz aqlingizni yeb qo'ygansiz deb o'ylayapman. Men buni — miyamda uni ovozini eshitish qanday ekanligini bilaman — men uni yana paydo bo'lishini istamayman...
+Skorpius javob o'rniga otasini quchoqlab oldi. Drako bir lahza qotib qoldi, so'ng o'g'lini mahkam bag'riga bosdi.
 
-— Xohlaysizmi yoki yo'q — bu men bo'lishim kerak, — dedi Garri.
+— Yaxshimisan? — pichirladi u.
 
-Hamma Garriga qaradi.
+— Endi yaxshiman, — dedi Skorpius.
 
-— Nima? — dedi Drako.
+— Delfi, — dedi Albus, otasidan ajralib. — U shu yerda. U Voldemortni kutyapti. U Voldemortga o'zining bashoratini aytmoqchi — Voldemort meni yengadi, lekin keyin... U dunyoni o'zgartirmoqchi, dada. U bugun, shu kecha, Voldemort sizning ota-onangizni o'ldirgan kechada Voldemortni xabardor qilmoqchi.
 
-— Reja ish berishi uchun u meni u ekanligimga so'zsiz ishonishi kerak. U Esperanto tilidan foydalanadi va men uni tushuna olishim mumkinligi yana bir sabab bo'ladi. Bundan tashqari, men bu qanday bo'lishini bilaman — o'zimni unga o'xshab qanday tutishni. Men u bo'lish qanday bo'lishini bilaman. Bu men bo'lishim kerak.
+Germiona qoshlarini chimirdi.
 
-— Bo'lmagan gap! — dedi Ron. — Chiroyli qilib aytganda bu butunlay bo'lmagan gap. Sen har qanday vaziyatda ham bo'lmaysan...
+— Agar Voldemort kelajak haqida bilib qolsa... agar u o'zining mag'lubiyatini oldindan ko'rsa...
 
-— Sen haqsan deb qo'rqaman, mening qadirli do'stim, — dedi Germiona.
+— U hech qachon Garrining oldiga bormaydi, — dedi Drako. — U yashiringan holicha qoladi. Tarix butunlay o'zgaradi.
 
-— Agar sen bunga qarshi bo'lsang, men buni qilmayman, — dedi Garri Jinniga qarab. — Lekin yagona yo'lga o'xshab ko'rinayapti. Haqmanmi?
+— Demak biz uni to'xtatishimiz kerak, — dedi Ron. — Bu yerda. Bugun.
 
-Bir soniyaga Jinni o'ylanib qoldi. Keyin sekin bosh irg'itdi.
+— U qayerda Voldemortni kutadi? — so'radi Garri.
 
-— Sen haqsan.
+Albus va Skorpius bir-biriga qarashdi.
 
-— Kelinglar buni qilaylik, unda.
+— Bilmaymiz, — tan oldi Skorpius. — U buni aytmadi.
 
-Hamma o'z tayoqchalarini ko'tardi. Garri o'zinikini yashirdi. Yorug'lik paydo bo'ldi — u vujudga kela boshladi, u aylanayapti...
+Germiona o'ylanib qoldi.
 
-Aylanish juda ham sekin va dahshatli bo'layotgan edi. Garrining o'rnida Volan-de-Mortning sharpasi paydo bo'la boshladi. U dahshat uyg'otardi. U o'girildi. U o'zining do'stlariga va oilasiga qaradi. Ular unga hayratlanib qarab turishdi.
+— O'ylab ko'raylik. Voldemort bugun kechqurun bu yerga keladi. U Potterlarning uyiga boradi. Delfi uni kutib olmoqchi bo'lsa, u Voldemort o'tadigan yo'l yaqinida turishi kerak. Biror baland joy — uni hamma narsani ko'ra oladigan joy.
 
-— La'nati do'zax iti! — dedi Ron.
+— Avliyo Jeremi cherkovi, — dedi Jinni to'satdan. — Qishloqning eng baland nuqtasi. Cherkov minorasidan butun Godrik Jarligi ko'rinadi. Agar men Voldemortni kutsam, o'sha yerda kutardim.
 
-— Ish berdimi? — so'radi Garri/Volan-de-Mort.
+Germiona bosh irg'adi.
 
-— Ha, ish berdi, — dedi Jinni vazminalik bilan.
+— Mantiqan to'g'ri. Boramiz. Lekin ehtiyot bo'lishimiz kerak — biz o'tmishni yana o'zgartirib qo'ymasligimiz lozim. Hech kim bizni ko'rmasligi kerak.
+
+
+Avliyo Jeremi cherkovi qorong'u tunda bir qora soya bo'lib turardi. Uning yonidagi kichik boshpanada — eski tosh devorlar ostida — guruh to'planib, keyingi harakatni rejalashtirdi. Boshqalar tashqarini kuzatishga chiqqan, Garri va Jinni esa bir lahzaga yolg'iz qolishdi.
+
+Garri devorga suyanib, qo'llarini ko'ksiga chalishtirdi. Uning yuzida tashvish, charchoq va boshqa bir narsa — qo'rquv bor edi.
+
+— Sen jimsan, — dedi Jinni unga yaqinlashib.
+
+— O'ylayapman, — dedi Garri. — Albus haqida. U meni... u mendan qo'rqadi, Jinni. O'z otasidan. Men qayerda xato qildim?
+
+Jinni uning yoniga o'tirdi.
+
+— Sen xato qilmading. Sen shunchaki... boshqa hayotni bilmaysan. Sen otasiz o'sgansan. Sen kimga o'xshashni bilmaysan, chunki senda hech qachon namuna bo'lmagan.
+
+— Men unga juda qattiq talab qo'ydim. Men undan men o'zim hech qachon bo'lmagan narsani bo'lishini kutdim.
+
+— U seni sevadi, Garri. Hatto qo'rqsa ham. Hatto seni tushunmasa ham. Bolalar shunaqa bo'ladi.
+
+Garri jim qoldi. Keyin sekin gapirdi:
+
+— Bilasanmi, men hech qachon ota-onamni eslay olmayman. Men ularni faqat fotosuratlarda, faqat boshqalarning xotiralarida ko'rganman. Va bugun... bugun men o'zim ular o'lgan tunda turibman. Men ularni qutqara olmayman. Bu shunchalik... shunchalik adolatsiz.
+
+— Sevgi har doim ham qutqara olmaydi, — dedi Jinni asta. — Lekin u har doim biror narsani qoldiradi. Sening onang seni sevgani uchun o'lgan. Va o'sha sevgi seni butun umr himoya qilgan. O'sha sevgi seni Voldemortdan ham kuchli qilgan.
+
+Garrining ko'zlari namlandi. U boshini Jinning yelkasiga qo'ydi.
+
+— Men Albusni yo'qotishdan qo'rqaman.
+
+— Sen uni yo'qotmaysan. Chunki sen kurashishni to'xtatmaysan. Mana shu — sen ham, men ham bilamiz — eng muhimi.
+
+Bir lahza ikkovi jim turishdi. Keyin Jinni to'satdan qaddini rostladi, ko'zlarida yangi bir tushuncha porladi.
+
+— Garri... Delfi bu kunni nega tanlaganini o'ylab ko'rdingmi? Nega aynan bugun?
+
+— Chunki bugun Voldemort men tomonga keladi.
+
+— Yo'q. Yana ko'proq narsa bor, — dedi Jinni. — U otasini — Voldemortni — uchratmoqchi. U butun umri davomida yetim bo'lib o'sgan. Uning otasi yo'q edi. Va u o'zining otasini — eng dahshatli, eng qudratli sehrgarni — uchratish, unga o'zini ko'rsatish, undan tan olinishni xohlaydi. Bu — bizning Albusdan farqi yo'q, Garri. U ham otasini izlayotgan bola, xolos. Faqat uning otasi — Voldemort.
+
+Garri unga tikilib qoldi. Bu so'zlar uning vujudini junjiktirdi.
+
+— Demak biz nafaqat dunyoni qutqarishimiz, balki o'sha uchrashuvni ham to'xtatishimiz kerak.
+
+— Ha, — dedi Jinni. — Va men bir reja o'ylab topdim. Lekin bu senga yoqmaydi.
+
+
+Boshqalar qaytib kirishganda, Jinni rejani aytib berdi va Garri uni yakunladi.
+
+— Men Voldemort bo'laman, — dedi Garri.
+
+Xonada sukunat cho'kdi.
+
+— Nima? — dedi Ron. — Yo'q. Yo'q, yo'q, yo'q.
+
+— Bu yagona yo'l, — dedi Garri. — Delfi otasini kutyapti. Agar men Voldemort qiyofasiga kirib, uning oldiga chiqsam, u meni tinglaydi. U menga ergashadi. Va shunda biz uni tuzoqqa tushiramiz.
+
+— Sen Voldemort bo'la olmaysan, — dedi Drako. — Bu... bu shunchaki aqldan ozish.
+
+— Men buni qila olaman, — dedi Garri qat'iy. — Men uning ovozini eshitganman. Men uning ongiga kirganman. Men bilaman u qanday gapiradi, qanday harakat qiladi. Men buni qila olaman.
+
+— Agarlar juda ko'p, Garri, — dedi Germiona. — Agar transformatsiya to'liq bo'lmasa? Agar Delfi seni taniб qolsa? Agar...
+
+— Unda men o'laman, — dedi Garri sodda qilib. — Lekin men allaqachon bir marta Voldemort uchun o'lganman. Va men yana qilishga tayyorman — agar bu Albusni qutqarsa.
+
+Albus otasiga qaradi.
+
+— Dada...
+
+— Skorpius transfiguratsiya formulasini biladi, — dedi Garri. — U menga yordam beradi. Va sizlar — hammangiz — yashirinib turasizlar. Eshiklar yopiq bo'ladi. Men Delfini ichkariga kiritaman, u o'zini fosh qiladi, va shunda sizlar chiqasizlar. Birgalikda biz uni yengamiz.
+
+Drako bir muddat jim turdi, keyin og'ir bir qaror bilan bosh irg'adi.
+
+— Bu jinnilik. Lekin... bu ishlashi mumkin. — U Albusga qaradi. — Otangga ishon, bolam. U... u bilganidan ko'ra kuchliroq.
+
+Skorpius cho'ntagidan kichik bir shisha chiqardi va titroq qo'llari bilan formulani tayyorlay boshladi.
+
+— Bu og'riqli bo'ladi, janob Potter, — dedi u. — Voldemortga aylanish... bu yengil bo'lmaydi.
+
+Garri ko'zlarini yumdi. U o'zining eng dahshatli dushmaniga aylanishga tayyorlandi.
+
+— Men tayyorman, — dedi u. — Boshlaylik.
+
 
 
 XXVI BOB. YAKUNIY JANG
 
-Godrik Jarligi. Avliyo Jeremi cherkovi. 1981-yil kechasi.
+Transformatsiya dahshatli edi.
 
-Ron, Germiona, Drako, Skorpius va Albus deraza yonida turib sodir bo'lishi kerak bo'lgan voqealarni kuzatib turishardi. Jinni qaramasdi. Chekkada o'tirardi. Albus onasini alohida o'tirganini sezib qoldi. U uni yoniga bordi.
+Garrining tanasi burishdi, suyaklari qayta shakllandi, terisi oqarib, oqarib — go'yo umuman qonsiz bo'lib qoldi. Burni yo'qolib, ilonnikiga o'xshash ikki tirqishga aylandi. Ko'zlari qizg'ish tusга kirdi. U endi Garri Potter emas edi — u Voldemort, Qora Lord, asrlar davomida sehrgarlar dunyosini larzaga solgan eng dahshatli mavjudot edi.
 
-— Hammasi yaxshi bo'ladi, buni tushunasiz-ku-a, oyi?
+— Bu... — Skorpiusning ovozi titradi. — Bu aniq u. Aniq o'sha.
 
-— Tushunaman. Umid qilaman-ki tushunaman. Men shunchaki... uni bunday ko'rinishda ko'rishni xohlamayman. Men sevgan inson men yomon ko'rgan inson qiyofasida.
+Garri-Voldemort qaddini rostladi. Hatto uning turishi ham o'zgargan edi — sovuq, mag'rur, shafqatsiz.
 
-Albus onasini yoniga o'tirdi.
+— Yashiringlar, — dedi u. Va hatto uning ovozi ham boshqacha — sovuq, sirpanchiq, ilon shivirlashiga o'xshash chiqdi. — Hammangiz. Hozir.
 
-— U menga yoqqan edi, oyi. Tasavvur qilayapsizmi? U menga chindan ham yoqqan edi. Delfi. Va u shu vaqtgacha Volan-de-Mortning qizi bo'lganmi?
+Albus bir lahza otasiga — endi otasiga o'xshamaydigan bu mavjudotga — qarab qoldi. Keyin Skorpius uni yengidan tortdi va ikkalasi soyaga yashirinishdi. Ron, Germiona, Drako va Jinni ham o'z joylarini egallashdi — devorlar ortida, ustunlar soyasida, eshik yonida.
 
-— Gap ularda bunday — juda ham yaxshiligida, Albus. Ular aybsiz qurbonlarni o'z to'rlariga tushura oladilar.
+Cherkov ichi sokin va sovuq edi. Faqat shamlarning xira yorug'i tosh devorlarda raqsga tushardi.
 
-— Bularning hammasi mening aybim.
+Va shunda eshik ochildi.
 
-Jinni Albusning qo'lidan tutdi.
 
-— Qiziq. Otang esa bularning bariga aynan o'zini aybdor deb hisoblayapti. Siz ikkinginiz haqiqatan ham g'alati juftliksizlar.
+Delfi kirdi.
 
-— Anau! U o'sha yerda. U uni payqadi, — dedi Skorpius derazaga ishora qilib.
+U cherkov ichiga shoshilmay qadam tashladi, ko'zlari atrofni kuzatardi. Uning yuzida intizorlik — uzoq kutilgan uchrashuv arafasidagi hayajon bor edi. Va keyin u soyada turgan qomatni — uzun, oppoq, dahshatli qomatni — ko'rdi.
 
-— Joylarga. Hamma joylariga, — dedi Germiona. — Va esingizda bo'lsin — u uni yorug'likka olib chiqmaguncha ko'rinish bermang. Bizda bor yo'g'i bitta imkon bo'ladi va biz uni qo'ldan chiqara olmaymiz.
+U taqqa to'xtadi. Nafasi bo'g'zida tiqildi.
 
-Ularning hammasi tezlashdi.
+— Otam? — pichirladi u. Ovozi qaltirardi. — Bu... bu sizmisiz?
 
-— Germiona Grenjir, menga Germiona Grenjir buyruq berayapti, — dedi Drako. Germiona o'girilb qaradi — u kuldi. — Bu menga deyarli yoqayapti.
+Garri-Voldemort soyadan chiqdi. U Delfiga sovuq, beparvo nigoh bilan qaradi.
 
-— Dada... — dedi Skorpius.
+— Sen kimsan? — so'radi u. So'zlar zaharli edi.
 
-Ular u yerdan bu yerga yurishdi va asosiy ikki eshikning ortigа yashirinishdi.
+— Men... men sizning qizingizman, — dedi Delfi. Uning ovozida butun umrlik intiqlik jamlangan edi. — Men Delfini. Bellatrisa Lestreyn va sizning qizingiz. Men o'tmishdan keldim — kelajakdan. Men sizga ogohlantirish olib keldim. Garri Potter — bir go'dak — sizni yengadi. Lekin men buni o'zgartira olaman. Biz birgalikda dunyoni o'zgartira olamiz. Faqat... faqat menga qarang. Men sizni topish uchun butun umrimni sarfladim.
 
-Garri/Volan-de-Mort cherkovga qaytdi. U bir necha qadam qo'ydi va ortiga o'girildi.
+Garri-Voldemort jim turardi. Va Delfi davom etdi, ovozida endi yosh bolaning iltijosi sezilardi:
 
-— Jodugarmisan, afsungarmisan, lekin sen meni ortimdan kuzatayapsan, va seni ishontirib aytishim mumkin-ki sen bundan afsuslanasan.
+— Men sizning farzandingizman. Men sizga sodiqman. Men hech kimga kerak bo'lmaganman — meni hech kim sevmagan. Faqat siz... faqat siz meni tushuna olasiz. Iltimos. Menga qarang. Aytingiz — siz mendan faxrlanasizmi?
 
-Delfi uning oldiga kirdi. U butunlay qat'iy edi. Bu uning otasi — va bu daqiqani u yaralganidan beri kutar edi.
+Bu so'zlar cherkov ichida muallaq qoldi. Va Garrining — Voldemort qiyofasidagi Garrining — yuragi bir lahzaga sanchildi. Chunki bu — yana bir bolaning faryodi edi. Otasidan tan olinishni xohlagan bolaning faryodi.
 
-— Lord Volan-de-Mort! Bu menman. Men sizni kuzatayapman.
+Lekin u o'zini bosdi. U vazifasini bilardi.
 
-— Men seni tanimayman. Meni tinch qo'y.
+— Sen... — boshladi u sovuq ohangda.
 
-— Men sizning qizingizman.
+Ammo ayni o'sha lahzada nimadir buzildi.
 
-— Agar sen mening qizim bo'lganingda, men sen haqingda bilgan bo'lar edim.
 
-Delfi unga yolvorib qaradi:
+Transformatsiya susaya boshladi. Skorpiusning formulasi vaqtinchalik edi — va vaqt tugayotgan edi. Garrining terisida uning o'z rangi qaytib kela boshladi, ko'zlari yana yashil tusга kirardi.
 
-— Men kelajakdanman. Sizni va Bellatriks Lestrenjning farzandingizman. Men Xogvarts uchun jangdan oldin Malfoylar Boshpanasida tug'ulganman. Siz mag'lubiyatga yuz tutadigan jangdan oldin. Men sizni qutqargani keldim.
+Delfi buni payqadi. Uning yuzidagi intiqlik bir lahzada vahshatga, keyin g'azabga aylandi.
 
-Garri/Volan-de-Mort o'girildi. U uni ko'zqarashi bilan to'qnashdi.
+— Yo'q, — pichirladi u. — Yo'q. Sen u emassan. Sen... — Uning ovozi qichqiriqqa aylandi. — SEN GARRI POTTERSAN!
 
-— Bu haqida menga Rudolfus Lestrenj, Bellatriksning qonuniy eri, Azkabandan qaytganida aytib bergan edi. U menga o'zi aytganiday amalga oshishi allaqachon xalqilingan bashoratni ham aytib bergan. Men sizning qizingizman, Janob.
+U hassasini ko'tardi.
 
-Garri/Volan-de-Mort unga yaqinlashdi:
+— Hammangiz chiqinglar! — qichqirdi Garri o'z ovozi bilan. — Hozir!
 
-— Men Bellatriks bilan tanishman va men siz ikkinggizning yuzingizda qandaydir o'xshashlikni ko'rayapman, sen undan ko'rinishini meros qilib olmagan san ham. Lekin isbotsiz...
+Soyalardan figuralar otilib chiqdi. Ron, Germiona, Drako, Jinni — hassalarini ko'tarib, Delfini o'rab olishdi.
 
-Delfi ilon tilida gapirishni boshladi — Parseltong. Garri/Volan-de-Mort qattiq kulib yubordi.
+— Kollesho! — qichqirdi Delfi va eshiklar gumburlab yopildi, qulflar o'z-o'zidan tushdi. Endi hech kim chiqa olmasdi.
 
-— Va bu seni isbotingmi?
+Jang boshlandi.
 
-Delfi hech bir qiyinchiliksiz havoga ko'tarildi. Garri/Volan-de-Mort hayratlanib ortga tisarildi.
+Delfi vahshiy edi. U cherkov o'rindiqlarini havoga ko'tarib, ularni odamlar ustiga otdi. Tosh ustunlardan parchalar uchdi. Germiona qalqon afsunini ko'tardi, Ron bir o'rindiqdan o'zini chetga otdi. Drako Skorpiusni himoya qilib, oldiga o'tdi.
 
-— Men sizning Avgurey angizman, Yovuz Lord. Va men sizga xizmat qilish uchun borimni berishga tayyorman.
+— Avada Kedavra! — qichqirdi Delfi.
 
-— Avval men bilan tenglashmoqchi bo'lgan hech bir jodugar, hech bir afsungarni uchratmagan dim.
+Yashil nur cherkov ichini yoritdi. Garri o'zini yerga otdi va nur uning tepasidan o'tib, tosh devorga urildi.
 
-— Meni noto'g'ri tushunmang, men siz bilan tenglashmoqchi emasman, Milord. Men bolaligimdan mendan faxrlanib yurishingizni orzu qilardim.
+Delfi qudratli edi — Voldemortning qoni unda jo'sh urardi. U bir o'zi to'rt katta sehrgarga qarshi turardi va g'olib chiqayotganday tuyulardi.
 
-— Men seni kimligingni ko'rayapman. Va kim bo'lishingni ham, qizim.
 
-Delfi juda ta'sirlanib unga diqqat bilan qaradi:
+Ammo u bir narsani unutgan edi — Albusni.
 
-— Ota?
+Cherkov polida, qadimiy bir tabaqa — yerto'laga olib boruvchi luk — bor edi. Albus o'sha tabaqani sekin ko'tarib, jang shovqini ostida sezdirmay sirg'alib chiqdi. U hech kimning e'tiborini tortmagan edi. Delfi uni hisobga olmagan edi.
 
-— Biz ikkimiz birgalikda favqulotda katta kuch-qudratga ega bo'lamiz.
+— Aloxomora! — qichqirdi Albus bor ovozi bilan, hassasini eshiklarga qaratib.
 
-— Ota...
+Eshiklar gumburlab ochildi.
 
-— Yorug'likka yaqinroq kel, mening qonimdan nima yaralganini yaxshilab ko'ray.
+Delfi o'girilib qaradi — bir lahza chalg'idi. Va o'sha bir lahza yetarli edi.
 
-Lekin shu payt — Garri/Volan-de-Mortning qo'li Garrining qo'liga aylandi. Garri qo'liga hayrat va vahima bilan qaradi, keyin u tezda uni yengi ichiga yashirib oldi. Afsun buzila boshladi.
+— Expelliarmus! — qichqirdi Garri.
 
-— Sizning vazifangiz xato, — dedi Delfi, hali sezmay. — Garri Potterga hujum qilish ham. U sizni yo'q qiladi.
+— Petrificus Totalus! — dedi Germiona.
 
-— U hali go'dak-ku, — dedi Garri/Volan-de-Mort, ovozini nazorat qilib.
+— Expelliarmus! — qo'shildi Drako.
 
-— Lekin unda onasining muhabbat bor. Sizning unga yo'llagan afsuningiz undan sapchib o'zingizga tegadi...
+Uchta afsun Delfiga bir vaqtda urildi. Uning hassasi havoga uchdi, tanasi qotib qoldi va u tosh polga yiqildi. Garri yugurib borib, hassasini olib qo'ydi.
 
-Garri/Volan-de-Mortning sochlari o'sa boshladi. U buni his qildi va yashirishga shoshdi. Vaqt tugayotgan edi.
+Hammasi tugadi.
 
-— Sizning vazifangiz xato! — dedi Delfi balandroq. — Garri Potterga hujum qilmasligingiz kerak!
+Delfi yerda yotardi — qotган, mag'lub, ojiz. Lekin uning ko'zlari hali ham yonardi, g'azab va nafratdan to'lib.
 
-Shu payt — Garri qiyofaga kirish afsunini yo'qotdi. Delfi ko'rdi — bu Volan-de-Mort emas. Bu Garri Potter.
 
-— YO'Q! — qichqirdi Delfi. — SEN! SEN!
+Germiona afsunni biroz bo'shashtirdi, shunda Delfi gapira oldi.
 
-Shu zahoti — eshiklar ochildi. Germiona, Ron, Drako, Jinni, Albus va Skorpius — hammasi bir vaqtda chiqdi. Tayoqchalar ko'tarildi.
+— O'ldiringlar meni, — dedi u xirillab. — Davom etinglar. Agar siz meni o'ldirmasangiz, men hech qachon to'xtamayman.
 
-— STUPEFY! — baqirdi Germiona.
+Garri uning oldida tiz cho'kdi. U Delfining yuziga qaradi — va u yerda dushmanni emas, balki adashgan, sevgisiz o'sgan bir qizni ko'rdi.
 
-— EKSPELIARMUS! — qo'shildi Albus.
+— Yo'q, — dedi u sokin ovozda. — Men seni o'ldirmayman.
 
-— IMPEDIMENTA! — Drako ham urdi.
+— Nega? — so'radi Delfi. Uning ovozida hayronlik bor edi.
 
-Delfi kuchli edi — u afsunlarni qaytardi, havoga ko'tarildi, qorong'ulik to'lqinlarini yo'lladi. Cherkov devorlari titrab, shamlar o'chdi.
+— Chunki men senga o'xshamayman, — dedi Garri. — Va men sening otangga ham o'xshamayman.
 
-Lekin ular ko'p edi. Va eng muhimi — ular birga edi. Ota va o'g'il. Do'stlar. Oila.
+Delfining ko'zlaridan yosh oqdi — birinchi marta. Voldemortning qizi yig'lardi.
 
-— PROTEGO MAXIMA! — Garri himoya qildi.
+— Men shunchaki... men shunchaki otam meni bilishini xohlagandim, — pichirladi u. — Men shunchaki kerakli bo'lishni xohlagandim.
 
-— PETRIFICUS TOTALUS! — Ron urdi.
+Garri bir lahza jim qoldi. Bu so'zlar uni Albus haqida o'ylashga majbur qildi.
 
-Delfi orqaga tisarildi. Uning tayoqchasi sinib, qo'llari bog'landi. U yerga yiqildi — yengilgan, himoyasiz.
+— Bilaman, — dedi u. — Bilaman bu nima ekanini. Lekin otang... otang hech qachon hech kimni sevmagan. U sevishni bilmaydi. Bu sening aybing emas. Lekin sen tanlov qila olasan. Sen u bo'lishing shart emas.
 
-— Ota... — pichirladi u. — Men faqat...
+— Mening xotiramni o'chiringlar, — dedi Delfi. — Shunda... shunda men buni bilmayman. Iltimos.
 
-— Sen endi otangni ko'rmaysan, — dedi Garri. — Hech qachon.
+— Yo'q, — dedi Germiona ohista. — Sen Azkabanda o'z jinoyatlaring uchun javob berasan. Lekin sen hayotda qolasan. Bu — sening otang hech qachon bera olmagan narsa.
 
-Delfi ko'zlarini yumdi. Uning yuzidan yosh oqdi — lekin bu aldov yoshi emas edi. Bu — haqiqiy og'riq. Hech qachon sevilmagan bolaning og'rig'i.
+
+Va shu payt — tashqarida, tunning qa'rida — bir tovush eshitildi.
+
+Sovuq. Uzoq. Va dahshatli darajada tanish.
+
+Garrining qoni muzladi. U bu ovozni minglab tushlarida eshitgan edi.
+
+Eshik tomonda, qorong'ulikda, oppoq bir qomat — haqiqiy qomat — paydo bo'la boshladi. Haqiqiy Voldemort. U Potterlarning uyiga ketayotgan edi. U o'sha tunda — aynan shu lahzada — Garrining ota-onasini o'ldirgani borardi.
+
+— Yashiringlar, — pichirladi Germiona shoshilinch. — Hammangiz. U bizni ko'rmasligi kerak. Tarix o'z yo'lidan ketishi kerak.
+
+Albus otasiga qaradi. Garrining yuzi oqarib ketgan edi.
+
+— Dada, — pichirladi Albus. — Bu... bu o'sha kecha. U sizning ota-onangizni o'ldirgani ketyapti. Biz... biz uni to'xtata olamizmi?
+
+Garri o'g'liga qaradi. Uning ko'zlarida butun umrlik og'riq jamlangan edi.
+
+— Yo'q, — dedi u zo'rg'a eshitiladigan ovozda. — Biz to'xtata olmaymiz. Agar to'xtatsak — hamma narsa buziladi. Mening ota-onam... ular bugun o'lishi kerak. Toki men yashashim uchun. Toki dunyo qutqarilishi uchun.
+
+Bu — uning hayotidagi eng og'ir so'zlar edi.
+
+Ular soyaga yashirinishdi. Va Garri — o'z ota-onasi o'limga ketayotganini bilib turib — hech narsa qila olmay, faqat qarab turishga majbur edi.
+
 
 
 XXVII BOB. QURBONLIK
 
-Godrik Jarligi. 1981-yil. 31-Oktabr kechasi.
+Godrik Jarligidagi kichik uy iliq va yorug' edi. Derazalardan oltinrang chiroq nuri to'kilardi. Va o'sha uyda — Garri ko'z yoshlari ichida kuzatib turgan uyda — uning ota-onasi yashardi. Hali tirik. Hali baxtli. Hali bir-birini sevib.
 
-Delfi ushlandi. Lekin muammo hali tugamagan edi. Ular 1981-yilda edi. Va bugun kechasi — Volan-de-Mort Potterlar uyiga keladi. Bugun kechasi — Lily va Jeyms Potter o'ladi. Va go'dak Garri yashaydi.
+Garri va Albus soyada, devor ortida turishar, o'sha so'nggi lahzalarning guvohi bo'lishardi.
 
-Hamma buni bilardi.
+Birdan eshik gumburlab ochildi. Jeyms Potter — Garrining otasi, yosh, kuchli, jasoratli — koridorga otildi.
 
-Garri cherkov oldida turdi. Uning atrofida — do'stlari, xotini, o'g'li. Lekin u yolg'iz edi — bu daqiqada, bu qaror oldida, u yolg'iz edi. Uzoqdan — Potterlar uyining derazasida — chiroq yonib turganini ko'rdi. O'sha uyda — uning onasi Lily bolasini uxlatayotgan edi. O'sha uyda — uning otasi Jeyms kitob o'qiyotgan edi. Ular — tirik. Ular — baxtli. Ular — o'limlari haqida hech narsa bilmasligi kerak.
+— Lili! U keldi! Garrini ol va qoch! Men uni ushlab turaman! Qoch!
 
-— Men... men ularni ko'rmoqchiman, — dedi Garri. Uning ovozi siniq edi.
+Lili Potter — Garrining onasi — go'dak Garrini bag'riga bosib, zinapoyaga yugurdi. Garri-katta o'zining onasiga — uni hech qachon eslamagan, lekin butun umr sog'ingan onasiga — qarab turardi. Albus otasining qo'lini mahkam ushlab oldi.
 
-— Bilaman, — dedi Jinni, uning qo'lini ushlab.
+Pastda, koridorda, yashil nur chaqnadi. Jeymsning tanasi polga quladi. Garrining otasi o'ldi — hassasini ko'tarishga ham ulgurmay, faqat oilasini qutqarish uchun o'zini qurbon qilib.
 
-— Lekin qutqara olmayman. Agar qutqarsam — hamma narsa barbod bo'ladi.
+Garri ko'zlarini yumdi. Lekin yoshlar baribir oqib chiqardi.
 
-— Ha, — dedi Albus, otasining yoniga kelib. — Bu adolatsiz.
+Yuqorida, bolalar xonasida, Lili go'dakni beshikka qo'ydi.
 
-— Adolatsiz. Lekin... ular men uchun o'lishdi. Menga hayot berishdi. Va men — shu hayot bilan — seni yaratdim. Seni va akang va singling. Va bu dunyo — bu tinch dunyo — ularning qurbonligi tufayli mavjud.
+— Garri, — pichirladi u. — Onang seni sevadi. Dadang seni sevadi. Garri, omon qol. Kuchli bo'l.
 
-Albus otasining qo'lini ushladi — mahkam, kuchli.
+Eshik ochildi. Voldemort ostonada turardi.
 
-— Sen bunga tayyor emassan, — dedi Jinni. — Hech kim tayyor emas.
+— Garrini menga ber, — dedi u sovuq ovozda. — Chetga sur, ahmoq qiz. Chetga sur, va sen yashaysan.
 
-— Lekin men bu yerda bo'lishim kerak, — dedi Garri. — Men... men ular bilan bo'lishim kerak. Hech bo'lmasa... shu.
+— Yo'q, — dedi Lili go'dakning oldiga turib. — Garrini emas. Iltimos. Meni o'ldiring. Uning o'rniga meni o'ldiring.
 
-Ular kutishdi. Cherkov oldida — sovuq kuz kechasida — kutishdi. Soatlar o'tdi. Qorong'ulik quyuqlashdi. Yulduzlar chiqdi — va yashirindi, bulutlar ortiga.
+— Bu sening so'nggi ogohlantirishing.
 
-Va keyin — u keldi.
+— Yo'q! Garrini emas! Iltimos... rahm qiling... rahm qiling...
 
-Uzoqdan — qora figura — Volan-de-Mort Potterlar uyiga yaqinlashdi. Uning ridosi yerda sudralardi. Uning qo'lida tayoqcha yaltirardi. U — dahshat tajassumi — kichkina uy eshigiga yaqinlashdi.
+Yana yashil nur. Va Lili Potter ham o'z bolasi uchun o'z jonini berdi.
 
-Garri ko'zlarini yummadi. Qaradi. Har bir lahzani ko'rdi.
+Albus otasiga qaradi. Garri yum-yum yig'lardi — ovozsiz, butun vujudi bilan.
 
-Uydan — yashil yashin chaqnadi. Jeymsning ovozi eshitildi — "Lily, uni ol va qoch!" Keyin — ikkinchi yashil yashin. Va — Lilyning qichqirig'i. "Garrini emas! Iltimos! Meni o'ldiring! Garrini emas!"
+— Dada, — pichirladi Albus, otasini quchoqlab. — Bu yerdan ketaylik. Sizning buni ko'rishingiz shart emas.
 
-Uchinchi yashil yashin.
+— Yo'q, — dedi Garri ko'z yoshlari ichida. — Men qolaman. Ular yolg'iz emasligini bilishlari kerak. Hatto ular meni ko'rmasa ham. Men shu yerdaman. Men ular bilan birgaman.
 
-Va keyin — jimlik.
+Va shunda — pastda — yana bir nur chaqnadi. Voldemort go'dak Garriga afsun yo'lladi. Ammo bu safar afsun qaytib, Voldemortning o'ziga urildi. Onaning sevgisi — Lilining qurbonligi — go'dakni himoya qilgan edi. Voldemortning tanasi parchalanib, kul bo'lib uchdi. Qora Lord mag'lub bo'ldi.
 
-Garri ko'zlarini yumdi. Ko'zyoshlari oqdi — issiq, shiddatli. Albus uning qo'lini yanada mahkam ushladi.
+Va shunday qilib — o'sha tunda — Garri Potter afsona bo'lib qoldi. Yashab qolgan Bola.
 
-— Men siz bilanman, dada. Doim.
 
-* * *
+Uy jimjit edi. Tutun va kul hidi havoda muallaq turardi. Garri va Albus hali ham soyada — endi vayron bo'lgan uyga qarab — turishardi. Vaqtni orqaga qaytaruvchi chig'iriq ularning qaytishigacha hali biroz vaqt bor edi.
 
-Ular hozirgi zamonga qaytishdi.
+Va shunda — tashqarida — og'ir qadam tovushlari eshitildi. Ulkan, baquvvat qadamlar.
 
-Delfi Azkabanga jo'natildi. Vaqt Chig'irig'i yo'q qilindi — Drakoning Vaqt Chig'irig'i ham. Hech qachon, hech kim endi o'tmishga qaytolmaydi.
+Eshikdan — yoki eshik bo'lib qolgan teshikdan — ulkan bir gavda kirib keldi. Xagrid. Yosh, lekin baribir ulkan. Uning yuzida qayg'u va g'amginlik bor edi.
 
-* * *
+U vayronalar orasidan ehtiyotkorlik bilan o'tdi, har bir qadamini avaylab bosdi, toki biror narsani bosib qo'ymasin. Va keyin — yuqorida, beshikda — u go'dakning yig'isini eshitdi.
 
-Xogvarts. Kuz. Bir necha hafta keyin.
+Xagrid zinapoyadan ko'tarildi, har bir zinani g'ijirlatib. Va u beshikka yetib borganda — go'dak Garrini ko'rganda — uning ulkan yuzida ajib bir mehr porladi.
 
-Albus va Skorpius ko'l bo'yida o'tirishardi. Suv tinch, osmon moviy. Shamol yumshoq esardi — kuz o'tib, qish yaqinlashardi. Hamma narsa — joy-joyida edi. Dunyo — to'g'ri dunyo — qaytgan edi.
+— Salom, — dedi u ohista, ovozini pasaytirib, go'dakni qo'rqitmaslik uchun. — Sen Garri bo'lsang kerak. Garri Potter.
 
-— Sedrikning qabriga bormoqchiman, — dedi Albus. — Unga gul qo'ymoqchiman. Uni qutqara olmadik. Lekin... uning xotirasini hurmat qilishimiz mumkin.
+U go'dakni ehtiyotkorlik bilan, o'zining ulkan qo'llari bilan ko'tardi. Go'dak uning bag'rida kichkinagina ko'rinardi.
 
-— Men ham boraman, — dedi Skorpius.
+— Xo'sh-xo'sh, yig'lama endi. Hammasi yaxshi bo'ladi. Senga bir narsa aytaymi? Sen mashhur bo'lasan. Hali bilmaysan-u, lekin sen juda mashhur bo'lasan.
 
-— Otamni ham olib boraman. U... u ham borishi kerak.
+Go'dak yig'idan to'xtadi va Xagridning soqoliga tikilib qoldi.
 
-Skorpius jilmaydi.
+— Bilaman, bilaman, — dedi Xagrid ko'zlaridagi yoshni artib. — Bu adolatsiz. Sen otangni ham, onangni ham eslamaysan. Lekin ular seni sevishgan, Garri. Juda-juda sevishgan. Va men... men senga yaxshi g'amxo'rlik qilaman. Men sen uchun shu yerdaman. Doim.
 
-— Roza oldimdan o'tib ketdi bugun. Menga qarab qo'ydi. Yomon qaramadi.
+U go'dakni bag'riga bosib, vayronalardan tashqariga — yulduzli tunga — chiqdi.
 
-— Bu katta yutuq, — kulib qo'ydi Albus.
+Garri-katta buni kuzatib turardi. Va uning yuzida — ko'z yoshlari orasida — bir tabassum paydo bo'ldi.
 
-— Bilaman! Meni "Nonbosh" demadi! Bu progress!
+— Bilasanmi, Albus, — dedi u ohista. — Men hech qachon bu lahzani ko'rmaganman. Men hech qachon bilmaganman — birinchi bo'lib meni kim qo'liga olgan. Bu Xagrid ekan. Mening eng yaqin do'stim. U meni o'sha tunda — hammasi yo'qolgan o'sha tunda — bag'riga olgan ekan.
 
-Ular kulib qo'yishdi. Ko'l yuzida to'lqinlar o'ynardi. Uzoqda — Xogvarts qasri — ming yillik, hashamatli, abadiy — quyosh nurida yaltirardi.
+— U yaxshi odam, — dedi Albus.
 
-* * *
+— Ha, — dedi Garri. — Eng yaxshilaridan biri.
 
-Sedrik Diggorining qabri.
 
-Garri va Albus yonma-yon turishardi. Ularning qo'llarida — gullar. Qabr toshi — oddiy, oq marmor — "Sedrik Diggori. Sevimli o'g'il. Haqiqiy chempion." deb yozilgan.
+Chig'iriq ohirgi marta aylandi. Dunyo gir aylanib, yillar bir-birining ustiga taxlandi va guruh — charchagan, lekin g'olib — o'z zamoniga, hozirgi kunga qaytdi.
 
-— Afsusdaman, — dedi Garri qabrga qarab. — Sen o'lmasliging kerak edi.
+Delfi Azkabanga jo'natildi. Dunyo — haqiqiy dunyo — joyida turardi. Hech narsa o'zgarmagan edi. Hamma narsa o'z o'rnida edi.
 
-— Biz uni qutqarishga urinib, hamma narsani buzib yubordik, — dedi Albus.
+Va hayot davom etdi.
 
-— Ha. Lekin... niyat yomon emas edi. Uni eslash — bu to'g'ri ish.
 
-Ular bir lahza jim turishdi. Shamol esdi. Daraxt barglari to'kildi.
+Xogvartsda kunlardan bir kun. Quyosh nurlari hovli ustiga to'kilardi. Skorpius va Albus darsdan keyin hovlida turishar, kelajak haqida — endi xavfsiz, oddiy kelajak haqida — gaplashishardi.
 
-— Dada, — dedi Albus.
+— Bilasanmi, — dedi Skorpius, — biz dunyoni qutqardik, lekin men hali ham uy vazifamni qila olmayapman.
 
-— Ha?
+Albus kulib yubordi.
 
-— Men... men seni yaxshi ko'raman.
+— Biz vaqt orqali sayohat qildik, Voldemortning qiziga qarshi kurashdik, va sen transfiguratsiya inshosi haqida tashvishlanayapsanmi?
 
-Garri o'g'liga qaradi. Albus — endi baland bo'yli, ozg'in yigitcha — uning ko'zlariga qarab turardi. Yashil ko'zlar — Lilyning ko'zlari — endi tashvish bilan emas, tinchlik bilan to'lgan edi.
+— Tashvishlanyapman, ha! Professor Makgonagall meni tiriklayin yeydi!
 
-— Men ham seni yaxshi ko'raman, Albus.
+Ular kulishdi. Va keyin — hovlining narigi chetida — Roza Granjer-Uizli paydo bo'ldi. U qo'lида kitoblar bilan o'tib borardi.
 
-— Bilaman, bu oson bo'lmaydi. Biz — biz ikkovimiz — oson bo'lmaymiz.
+Skorpiusning yuzi qizardi.
 
-— Ha. Hech qachon oson bo'lmagan, — jilmaydi Garri. — Lekin... harakat qilamiz. Birga.
+— Mana u, — pichirladi u. — Roza.
 
-— Birga.
+— Bor, gapir u bilan, — dedi Albus.
 
-Ota va o'g'il bir-biriga qarashdi. Va bu safar — hech qanday devor yo'q edi. Hech qanday masofayu yo'q edi. Faqat ikki inson — bir-birini sevadigan, bir-birini tushunishga harakat qiladigan ikki inson — qabriston bo'ylab yonma-yon ketishdi.
+— Yo'q. Yo'q, men qila olmayman. U meni yomon ko'radi. U meni "Chayonlar Qiroli" deb chaqiradi.
 
-Quyosh ufqqa botardi. Xogvarts derazalarida chiroqlar yondi. Va dunyo — bu go'zal, murakkab, ba'zan adolatsiz dunyo — davom etardi.
+— Bu shunchaki taxallus. Bor.
+
+Skorpius chuqur nafas oldi, sochlarini tuzatdi va Rozaga yaqinlashdi.
+
+— Roza, — dedi u titroq ovozda. — Salom. Men shunchaki... men o'ylab ko'rdim... balki, agar xohlasang... biz kvidish o'yiniga birga borarmiz? Do'st sifatida. Yoki... do'st emas. Bilmadim. Nimani xohlasang.
+
+Roza unga bir lahza tikilib qoldi. Uning yuzida o'qib bo'lmaydigan ifoda bor edi.
+
+— Yo'q, — dedi u. Lekin ovozida g'azab yo'q edi.
+
+— Mayli, — dedi Skorpius umidsizlanib.
+
+— Hozircha yo'q, — qo'shimcha qildi Roza, ketar ekan. Va uning lablarida — Skorpius sezmagan — kichik bir tabassum o'ynadi.
+
+Skorpius Albusning oldiga qaytdi.
+
+— U "hozircha" dedi, — dedi u hayrat bilan. — Bu... bu "ehtimol" degani-ku!
+
+— Bu "ehtimol" degani, — jilmaydi Albus.
+
+Ikki do'st — dunyoni qutqargan, lekin baribir oddiy o'smir bo'lib qolgan ikki do'st — yelkama-yelka turib, oldindagi kunlarning oddiy, go'zal tashvishlariga qaytishdi.
+
+
+
+Kuz edi. Bir go'zal tepalik ustida — shamol o'tlarni silkitardi, osmon tiniq va keng edi — Garri va Albus yonma-yon turishardi.
+
+Ular uzoq yo'l bosib, shu tepalikka chiqishgan edi. Albus otasi uni qayerga olib kelganini bilmasdi.
+
+— Rahmat, — dedi Garri.
+
+— Nima uchun? — so'radi Albus.
+
+— Kelganing uchun. Men bilan kelganing uchun. — Garri bir lahza jim qoldi. — Roza aytdiki, sen tashvishlanasan — meni ortiqcha tashvishlanaman deb. Men shundayman. Lekin men... men o'rganyapman.
+
+— Bu yer qayer, dada?
+
+Garri sekin tepalikning narigi tomoniga ishora qildi. U yerda — o'tlar orasida, sokin va yolg'iz — bir qabr tosh turardi.
+
+— Bu — Sedrik Diggorining qabri.
+
+Albusning nafasi bo'g'zida tiqildi. Sedrik — bu butun voqea o'shaning uchun boshlangan edi. Bu nomni eshitish — uni bezovta qildi.
+
+— Men har yili shu yerga kelaman, — dedi Garri. — Men bu... men buni hech kimga aytmaganman. Hatto onangga ham. Lekin men kelaman. Chunki men o'zimni aybdor his qilaman. U mening o'rnimda o'lgan bo'lishi mumkin edi. U... u juda yaxshi bola edi.
+
+— Biz uni qutqarishga urinib, hamma narsani buzib yubordik, — dedi Albus past ovozda.
+
+— Lekin biz o'rgandik, — dedi Garri. — Albus, men senga bir narsa aytmoqchiman. Men butun umrim davomida qo'rqib yashaganman. Voldemortdan qo'rqdim. Yolg'iz qolishdan qo'rqdim. Va keyin — sen tug'ilganingda — men ota bo'lishdan qo'rqdim. Men bilmasdim qanday qilib yaxshi ota bo'lishni. Menda hech qachon namuna bo'lmagan. Va men... men ko'p xatolar qildim. Senga nisbatan.
+
+— Dada...
+
+— Yo'q, quloq sol, — dedi Garri. — Men sendan yaxshiroq ota bo'lishni xohlardim. Lekin men adashdim. Men sendan men o'zim bo'lmagan narsani kutdim. Men senga o'zimning qo'rquvlarimni yukladim. Bu — adolatsiz edi. Kechir meni.
+
+Albusning ko'zlari namlandi.
+
+— Men ham xato qildim, dada. Men juda... men juda ahmoqlik qildim. Men shunchaki... men sizning soyangizda yashashni xohlamasdim. Men o'zim bo'lishni xohlardim.
+
+— Sen o'zingsan, — dedi Garri. — Sen Albus Severus Potter — eng jasur ikki insonning nomini olgan bola. Va sen ulardan ham jasurroqsan. Sen menga buni isbotlading.
+
+Shamol esardi. Sedrikning qabri ustidagi o'tlar tebrandi.
+
+— Bilasanmi, — davom etdi Garri, — bir vaqtlar men o'ylardimki, qahramon bo'lish — qo'rqmaslik degani. Lekin endi bilaman — qahramonlik bu qo'rqish, lekin baribir to'g'ri ishni qilish. Sen qo'rqqaning bilan — baribir do'stingni qutqarishga bording. Mana shu — haqiqiy jasorat.
+
+— Men hali ham qo'rqaman, — tan oldi Albus.
+
+— Men ham, — dedi Garri jilmaydi. — Har kuni.
+
+Ikkovi bir-biriga qarashdi. Va bu safar — birinchi marta — ular orasida hech qanday devor yo'q edi. Hech qanday g'azab, hech qanday tushunmovchilik. Faqat ota va o'g'il — bir-birini sevadigan, bir-birini nihoyat tushungan ikki inson.
+
+— Bu og'riydimi? — so'radi Albus to'satdan. — Sizning chandig'ingiz. Ba'zan og'riydi, deysiz.
+
+Garri qo'lini peshonasiga — mashhur chaqmoq shaklidagi chandig'iga — tegizdi.
+
+— Yo'q, — dedi u. — Yigirma yildan beri og'rimaydi. Hammasi yaxshi. Hammasi nihoyat... yaxshi.
+
+Quyosh tepalik ortiga oqib borardi. Osmon tilla va pushti ranglarga bo'yaldi. Sedrikning qabri sokin yotardi, va ikki Potter — ota va o'g'il — uning yonida turib, yangi bir kunning, yangi bir hayotning ostonasida turishardi.
+
+— Yur, uyga qaytaylik, — dedi Garri, qo'lini Albusning yelkasiga qo'yib. — Onang kutyapti. Jeyms va Lili ham.
+
+Albus bosh irg'adi. Va ular birga — yonma-yon, yelkama-yelka — tepalikdan pastga, uyga, kelajakka qarab yo'l olishdi.
+
+Garri bir lahza orqasiga, qabrga qaradi.
+
+— Bugun, — dedi u ohista, o'ziga-o'zi. — Bugun juda yaxshi kun bo'ladi.
 
 TAMOM
