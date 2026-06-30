@@ -199,3 +199,42 @@ tayanib yaratiladi (masalan, `make_pdf.py`):
   39 ta tasodifiy kirill harf homoglif sifatida lotinga o'girildi.)
 - **Atamalar:** kanonik shakllarga muvofiqligi (5-band va lug'at).
 - **Bob butunligi:** 29 ta bob, sarlavhalar va `* * *` ajratgichlari joyida.
+
+
+
+## 12. Yakuniy bosqich: HTML kitob (Kindle-ga o'xshash o'quvchi)
+
+**Talab:** barcha boblar uslubga o'tkazilib bo'lingach, romanning **o'qishga
+moslangan HTML versiyasi** ham tayyorlanadi — Kindle/elektron kitob o'quvchiga
+o'xshash, qulay va oson o'qiladigan qilib.
+
+### Holat: BARCHA BOBLAR TUGAGANDAN SO'NG bajariladi (hozir emas).
+
+### Texnik yondashuv
+HTML uchun hech qanday tashqi vosita kerak emas — sof Python skript
+(`make_html.py`) roman matnini bitta **mustaqil (self-contained) HTML
+faylga** aylantiradi: CSS va JavaScript bevosita fayl ichida bo'ladi
+(internetga ulanmasdan, oflayn ishlaydi). Natija:
+`Garri_Potter_va_Lanatlangan_Bola.html`.
+
+### Kindle-ga o'xshash funksiyalar
+- **Mundarija (TOC):** barcha 29 bobga bosib o'tish; yon panel yoki ochiladigan ro'yxat.
+- **Mavzu (tema) almashtirish:** kunduzgi / sepiya / tungi (dark mode) rejimlar.
+- **Shrift o'lchamini sozlash:** kattalashtirish/kichraytirish tugmalari.
+- **Qulay tipografika:** serif shrift, qulay qator uzunligi (~65–75 belgi),
+  kengaytirilgan qator oralig'i, markazlangan o'qish ustuni.
+- **O'qish holatini eslab qolish:** oxirgi o'qilgan joy `localStorage` da
+  saqlanadi — qayta ochilganda o'sha yerdan davom etadi.
+- **O'qish jarayoni ko'rsatkichi:** yuqorida progress-bar va "% o'qildi".
+- **Boblar orasida harakat:** Oldingi / Keyingi bob tugmalari, klaviatura
+  o'qlari (← →) bilan.
+- **Xatcho'p (bookmark):** istalgan joyni belgilab qo'yish (`localStorage`).
+- **Qidiruv:** kitob ichidan matn qidirish (ixtiyoriy).
+- **Moslashuvchan (responsive):** telefon, planshet va kompyuterda bir xil qulay.
+
+### Yakuniy chiqishlar (umumiy)
+| Fayl | Maqsadi |
+|------|---------|
+| `Garri_Potter_va_Lanatlangan_Bola.txt` | Asosiy manba (tahrir uchun) |
+| `Garri_Potter_va_Lanatlangan_Bola.pdf` | Chop etishga tayyor (10-band) |
+| `Garri_Potter_va_Lanatlangan_Bola.html` | O'qishga mos, Kindle-ga o'xshash (12-band) |
