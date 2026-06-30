@@ -3195,7 +3195,7 @@ Skorpius Germionaning stoliga yaqinlashdi. Germiona o'ziga yarashgan bir salobat
 
 Germiona unga ishonqiramay qaradi.
 
-— Ko'pchilik meni Grenjir deb biladi, men esa sening birorta so'zingga ham ishonmayman, Malfoy...
+— Ko'pchilik meni Grenjer deb biladi, men esa sening birorta so'zingga ham ishonmayman, Malfoy...
 
 — Bularning bari mening aybim. Mening va Albusning.
 
@@ -3233,7 +3233,7 @@ Germiona o'tirib, Vaqt Chig'irig'ini ko'zdan kechirdi. Ron bugungi ma'lumotlar b
 
 — Yo'q, o'ylab topmadim. Xo'sh, yordam berasizlarmi? — so'radi Skorpius.
 
-— Biz yordam bera oladigan yagona kishilarmiz, — dedi Ron. — Dambldor Armiyasi tarafdorlari avvalgidan ancha kamayib ketdi. Aslida tirik qolganlar — faqat bizmiz, lekin kurashda davom etyapmiz. Yashirinib yuribmiz. Ularning asabiga tegadigan har qanday ishni qilyapmiz. Grenjir bilan men birinchi raqamli qidiruvdamiz.
+— Biz yordam bera oladigan yagona kishilarmiz, — dedi Ron. — Dambldor Armiyasi tarafdorlari avvalgidan ancha kamayib ketdi. Aslida tirik qolganlar — faqat bizmiz, lekin kurashda davom etyapmiz. Yashirinib yuribmiz. Ularning asabiga tegadigan har qanday ishni qilyapmiz. Grenjer bilan men birinchi raqamli qidiruvdamiz.
 
 — To'g'rirog'i, sen ikkinchi raqamlisan, — quruqqina tuzatdi Sneyp.
 
@@ -3453,7 +3453,7 @@ To'satdan xonaga Germiona otilib kirdi.
 
 — Men nimani o'tkazib yubordim?
 
-— Xonaga kirishdan oldin eshik taqillatish kerakligini unutdingizmi, Germiona Grenjir? — qizishib dedi Makgonagal.
+— Xonaga kirishdan oldin eshik taqillatish kerakligini unutdingizmi, Germiona Grenjer? — qizishib dedi Makgonagal.
 
 — Ie, — o'z xatosini endi angladi Germiona.
 
@@ -4099,7 +4099,7 @@ Germionaning yuzi yumshadi.
 
 — Sen menga yana uylanmoqchimisan?
 
-— Biz birinchi marta juda yosh edik, men ozgina mast edim va... rostini aytsam, men o'sha kunning katta qismini eslay olmayman. Haqiqat shuki — men seni sevaman, Germiona Grenjir. Va men buni boshqa bir dunyoni ko'rgan odam sifatida, yana bir bor, qat'iy ravishda aytmoqchiman.
+— Biz birinchi marta juda yosh edik, men ozgina mast edim va... rostini aytsam, men o'sha kunning katta qismini eslay olmayman. Haqiqat shuki — men seni sevaman, Germiona Grenjer. Va men buni boshqa bir dunyoni ko'rgan odam sifatida, yana bir bor, qat'iy ravishda aytmoqchiman.
 
 Germiona unga qaradi, tabassum qildi, uni o'ziga tortdi va o'pdi.
 
@@ -4296,7 +4296,7 @@ Zal yana shivir-shivirga to'ldi. Makgonagalning yuzida g'azab bilan dahshat qori
 
 — Professor, sizni ishontirib aytishim kerakki...
 
-— Uyalishingiz kerak, Germiona Grenjir.
+— Uyalishingiz kerak, Germiona Grenjer.
 
 Germiona bu g'azab oldida chekindi. Biroq Garri oldinga chiqdi:
 
@@ -4702,7 +4702,7 @@ Drako oltin rangli, kichkina, ko'rkam soatni ko'rsatdi.
 
 — Kulayapsan, — dedi Garri.
 
-— Germiona Grenjir. U birinchisini mana nega yashirgan: ikkinchisi ham mavjudligidan qo'rqqan. Buni topshirsang, seni Azkabanga jo'natishlari mumkin edi.
+— Germiona Grenjer. U birinchisini mana nega yashirgan: ikkinchisi ham mavjudligidan qo'rqqan. Buni topshirsang, seni Azkabanga jo'natishlari mumkin edi.
 
 — Boshqa tomondan qarab ko'r: tasavvur qil, odamlar menda vaqt aro sayohat qilish imkoni borligini bilib qolsa, keng tarqalgan mish-mishlarga yetarli dalil bo'lardi.
 
@@ -4867,7 +4867,7 @@ Garri jim qoldi. Keyin sekin gapirdi:
 
 — Sevgi har doim ham qutqara olmaydi, — dedi Jinna asta. — Lekin u har doim biror narsani qoldiradi. Sening onang seni sevgani uchun o'lgan. Va o'sha sevgi seni butun umr himoya qilgan. O'sha sevgi seni Voldemortdan ham kuchli qilgan.
 
-Garrining ko'zlari namlandi. U boshini Jinnang yelkasiga qo'ydi.
+Garrining ko'zlari namlandi. U boshini Jinnaning yelkasiga qo'ydi.
 
 — Men Albusni yo'qotishdan qo'rqaman.
 
@@ -4930,7 +4930,7 @@ XXVIII BOB. YAKUNIY JANG
 
 Transformatsiya dahshatli edi.
 
-Garrining tanasi burishdi, suyaklari qayta shakllandi, terisi oqarib, oqarib — go'yo umuman qonsiz bo'lib qoldi. Burni yo'qolib, ilonnikiga o'xshash ikki tirqishga aylandi. Ko'zlari qizg'ish tusga kirdi. U endi Garri Potter emas edi — u Voldemort, Qora Lord, asrlar davomida sehrgarlar dunyosini larzaga solgan eng dahshatli mavjudot edi.
+Garrining tanasi burishdi — suyaklari sinib, qaytadan shakllanayotgandek dahshatli og'riq vujudini tildi; terisi oqarib, oqarib, go'yo undan butun qon so'rib olingandek rangsizlandi. Burni yo'qolib, ilonnikiga o'xshash ikki tirqishga aylandi. Ko'zlari qizg'ish, qonsovuq tusga kirdi. U endi Garri Potter emas edi — u Voldemort, Qora Lord, asrlar davomida sehrgarlar dunyosini larzaga solgan eng dahshatli mavjudot edi.
 
 — Bu... — Skorpiusning ovozi titradi. — Bu aniq u. Aniq o'sha.
 
@@ -4978,11 +4978,11 @@ Delfi buni payqadi. Uning yuzidagi intiqlik bir lahzada vahshatga, keyin g'azabg
 
 — Yo'q, — pichirladi u. — Yo'q. Sen u emassan. Sen... — Uning ovozi qichqiriqqa aylandi. — SEN GARRI POTTERSAN!
 
-U hassasini ko'tardi.
+U sehrli tayoqchasini ko'tardi.
 
 — Hammangiz chiqinglar! — qichqirdi Garri o'z ovozi bilan. — Hozir!
 
-Soyalardan figuralar otilib chiqdi. Ron, Germiona, Drako, Jinna — hassalarini ko'tarib, Delfini o'rab olishdi.
+Soyalardan figuralar otilib chiqdi. Ron, Germiona, Drako, Jinna — sehrli tayoqchalarini ko'tarib, Delfini o'rab olishdi.
 
 — Kollesho! — qichqirdi Delfi va eshiklar gumburlab yopildi, qulflar o'z-o'zidan tushdi. Endi hech kim chiqa olmasdi.
 
@@ -5001,7 +5001,7 @@ Ammo u bir narsani unutgan edi — Albusni.
 
 Cherkov polida, qadimiy bir tabaqa — yerto'laga olib boruvchi luk — bor edi. Albus o'sha tabaqani sekin ko'tarib, jang shovqini ostida sezdirmay sirg'alib chiqdi. U hech kimning e'tiborini tortmagan edi. Delfi uni hisobga olmagan edi.
 
-— Aloxomora! — qichqirdi Albus bor ovozi bilan, hassasini eshiklarga qaratib.
+— Aloxomora! — qichqirdi Albus bor ovozi bilan, sehrli tayoqchasini eshiklarga qaratib.
 
 Eshiklar gumburlab ochildi.
 
@@ -5013,7 +5013,7 @@ Delfi o'girilib qaradi — bir lahza chalg'idi. Va o'sha bir lahza yetarli edi.
 
 — Expelliarmus! — qo'shildi Drako.
 
-Uchta afsun Delfiga bir vaqtda urildi. Uning hassasi havoga uchdi, tanasi qotib qoldi va u tosh polga yiqildi. Garri yugurib borib, hassasini olib qo'ydi.
+Uchta afsun Delfiga bir vaqtda urildi. Uning sehrli tayoqchasi havoga uchdi, tanasi qotib qoldi va u tosh polga yiqildi. Garri yugurib borib, sehrli tayoqchasini olib qo'ydi.
 
 Hammasi tugadi.
 
@@ -5081,7 +5081,7 @@ Birdan eshik gumburlab ochildi. Jeyms Potter — Garrining otasi, yosh, kuchli, 
 
 Lili Potter — Garrining onasi — go'dak Garrini bag'riga bosib, zinapoyaga yugurdi. Garri-katta o'zining onasiga — uni hech qachon eslamagan, lekin butun umr sog'ingan onasiga — qarab turardi. Albus otasining qo'lini mahkam ushlab oldi.
 
-Pastda, koridorda, yashil nur chaqnadi. Jeymsning tanasi polga quladi. Garrining otasi o'ldi — hassasini ko'tarishga ham ulgurmay, faqat oilasini qutqarish uchun o'zini qurbon qilib.
+Pastda, koridorda, yashil nur chaqnadi. Jeymsning tanasi polga quladi. Garrining otasi o'ldi — sehrli tayoqchasini ko'tarishga ham ulgurmay, faqat oilasini qutqarish uchun o'zini qurbon qilib.
 
 Garri ko'zlarini yumdi. Lekin yoshlar baribir oqib chiqardi.
 
@@ -5143,7 +5143,7 @@ Garri-katta buni kuzatib turardi. Va uning yuzida — ko'z yoshlari orasida — 
 — Ha, — dedi Garri. — Eng yaxshilaridan biri.
 
 
-Chig'iriq ohirgi marta aylandi. Dunyo gir aylanib, yillar bir-birining ustiga taxlandi va guruh — charchagan, lekin g'olib — o'z zamoniga, hozirgi kunga qaytdi.
+Chig'iriq oxirgi marta aylandi. Dunyo gir aylanib, yillar bir-birining ustiga taxlandi va guruh — charchagan, lekin g'olib — o'z zamoniga, hozirgi kunga qaytdi.
 
 Delfi Azkabanga jo'natildi. Dunyo — haqiqiy dunyo — joyida turardi. Hech narsa o'zgarmagan edi. Hamma narsa o'z o'rnida edi.
 
@@ -5160,7 +5160,7 @@ Albus kulib yubordi.
 
 — Tashvishlanyapman, ha! Professor Makgonagal meni tiriklayin yeydi!
 
-Ular kulishdi. Va keyin — hovlining narigi chetida — Roza Granjer-Uizli paydo bo'ldi. U qo'lida kitoblar bilan o'tib borardi.
+Ular kulishdi. Va keyin — hovlining narigi chetida — Roza Grenjer-Uizli paydo bo'ldi. U qo'lida kitoblar bilan o'tib borardi.
 
 Skorpiusning yuzi qizardi.
 
@@ -5194,7 +5194,7 @@ Ikki do'st — dunyoni qutqargan, lekin baribir oddiy o'smir bo'lib qolgan ikki 
 
 
 
-Kuz edi. Bir go'zal tepalik ustida — shamol o'tlarni silkitardi, osmon tiniq va keng edi — Garri va Albus yonma-yon turishardi.
+Kuz edi. Tip-tiniq, salqin bir kun. Bir go'zal tepalik ustida — shamol sarg'ish o'tlarni mavj urdirib silkitar, uzoqlarda o'rmonlar zarhal va mis ranglarga burkangan, osmon esa beg'ubor va keng cho'zilib yotardi — Garri va Albus yonma-yon turishardi. Havoda nam yer va uzoqlardan kelgan xira tutun hidi sezilardi.
 
 Ular uzoq yo'l bosib, shu tepalikka chiqishgan edi. Albus otasi uni qayerga olib kelganini bilmasdi.
 
