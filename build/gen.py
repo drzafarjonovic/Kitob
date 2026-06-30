@@ -275,11 +275,14 @@ def build_book(book, head, chrome_top, chrome_bot, app_js, part2_js):
     ct = ct.replace('<div class="sub">Roman<br>J.K. Rouling, Jon Tiffani, Jek Torn pyesasiga asoslangan</div>',
                     '<div class="sub">%s<br>J.K. Rouling</div>' % html.escape(book["sub"]))
     h = h.replace('href="icons/icon.svg"', 'href="%s"' % FAVICON)
-    # back-to-library button before the TOC button
+    # back-to-library button before the TOC button.
+    # Works both standalone (navigate to index.html) and inside the library
+    # iframe (postMessage so the shell can hide the viewer without a reload).
     ct = ct.replace(
         '<button class="iconbtn" id="btn-toc" title="Mundarija (C)" aria-label="Mundarija">',
         '<a class="iconbtn" href="index.html" title="Kutubxona" aria-label="Kutubxona" '
-        'style="text-decoration:none">'
+        'style="text-decoration:none" '
+        "onclick=\"if(window.parent!==window){window.parent.postMessage('gp-back','*');return false;}\">"
         '<svg viewBox="0 0 24 24"><path d="M3 7v13h18V7M3 7l3-4h12l3 4M3 7h18"/>'
         '<line x1="12" y1="3" x2="12" y2="20"/></svg></a>'
         '<button class="iconbtn" id="btn-toc" title="Mundarija (C)" aria-label="Mundarija">')
@@ -295,16 +298,11 @@ def build_book(book, head, chrome_top, chrome_bot, app_js, part2_js):
              + "\n</script>\n</body>\n</html>\n")
     return final, len(chapters), total_words
 
-def build_single(summary, readers):
+def build_single(summary):
+    # Lightweight library shell. Books are NOT embedded here; each lives in its
+    # own kitob-N.html and is fetched on demand into the viewer iframe, so the
+    # landing page stays a few KB and only the opened book is ever in memory.
     books_json = json.dumps(summary, ensure_ascii=False)
-    # each reader's back button -> message the parent to show the library
-    rmap = {}
-    for n, rh in readers.items():
-        rh = rh.replace(
-            'href="index.html"',
-            "href=\"javascript:void(0)\" onclick=\"parent.postMessage('gp-back','*');return false;\"")
-        rmap[str(n)] = rh
-    readers_json = json.dumps(rmap, ensure_ascii=False)
     crest = (
         '<svg class="crest" viewBox="0 0 64 64" aria-hidden="true">'
         '<path d="M32 3l24 9v16c0 14-10 24-24 30C18 52 8 42 8 28V12z" fill="none" '
@@ -371,7 +369,6 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;font-family:system-u
 """
     js = """
 var BOOKS=__BOOKS__;
-var READERS=__READERS__;
 var COVERS={1:'#7b1113',2:'#1f6f4a',3:'#5b3a8a',4:'#b5651d',5:'#1d6fa5',6:'#7a5901',7:'#3a3a3a',8:'#0b5d63'};
 var THEMES=[['day','Light','#faf8f3','#7b1113'],['sepia','Sepia','#f4ecd8','#8a5a1a'],
 ['dark','Dark','#1a1c20','#e0934a'],['amoled','AMOLED','#000','#d98a3d'],
@@ -423,7 +420,7 @@ document.getElementById('themebtn').onclick=function(e){e.stopPropagation();docu
 document.addEventListener('click',function(){document.getElementById('themepop').classList.remove('open');});
 function openBook(n){
   var v=document.getElementById('viewer');
-  v.srcdoc=READERS[String(n)]||'';
+  v.src='kitob-'+n+'.html';
   v.hidden=false;
   document.getElementById('lib').style.display='none';
   document.body.classList.add('reading');
@@ -431,7 +428,7 @@ function openBook(n){
 }
 function showLibrary(){
   var v=document.getElementById('viewer');
-  v.hidden=true; v.removeAttribute('srcdoc');
+  v.hidden=true; v.src='about:blank'; v.removeAttribute('src');
   document.getElementById('lib').style.display='';
   document.body.classList.remove('reading');
   try{if(location.hash){history.replaceState(null,'',location.pathname+location.search);}}catch(e){}
@@ -448,10 +445,6 @@ buildThemePop();applyTheme(savedTheme);render();
 (function(){var m=/kitob-(\\d+)/.exec(location.hash);if(m){openBook(+m[1]);}})();
 """
     js = js.replace("__BOOKS__", books_json).replace("__CREST__", crest)
-    js = js.replace("__READERS__", readers_json)
-    # neutralise any </script> that appears inside the embedded reader HTML so
-    # it does not prematurely close the outer <script> element.
-    js = js.replace("</script>", "<\\/script>")
     doc = (
         '<!DOCTYPE html>\n<html lang="uz" data-theme="day">\n<head>\n'
         '<meta charset="utf-8">\n'
@@ -487,17 +480,18 @@ def main():
     app_js, part2_js = patch_engine(app_js, part2_js)
 
     summary = []
-    readers = {}
     for b in BOOKS:
         rh, nch, nw = build_book(b, head, chrome_top, chrome_bot, app_js, part2_js)
-        readers[b["n"]] = rh
+        # each book is now its own self-contained, lazily-loaded file
+        with open(os.path.join(ROOT, "kitob-%d.html" % b["n"]), "w", encoding="utf-8") as f:
+            f.write(rh)
         summary.append(dict(n=b["n"], key=b["key"], title=b["title"], sub=b["sub"],
                             accent=b["accent"], chapters=nch, words=nw))
         print("kitob-%d  %-20s  boblar=%-3d  so'z=%-7d  %d KB"
               % (b["n"], b["title"], nch, nw, len(rh) // 1024))
-    build_single(summary, readers)
+    build_single(summary)
     sz = os.path.getsize(os.path.join(ROOT, "index.html"))
-    print("index.html (yagona self-contained fayl): %.2f MB" % (sz / 1048576))
+    print("index.html (yengil kutubxona qobig'i): %.1f KB" % (sz / 1024))
     return summary
 
 if __name__ == "__main__":
