@@ -305,6 +305,61 @@ def build_single(summary, readers):
     # book HTML as JavaScript on startup. A book is only read out and rendered
     # (via the viewer iframe's srcdoc) when the reader actually opens it.
     books_json = json.dumps(summary, ensure_ascii=False)
+    # --- Saralash Qalpoqchasi (Sorting Hat) data, injected as JSON ---
+    houses = {
+        "gryffindor": {"name": "Gryffindor", "tag": "Jasorat, mardlik va olijanoblik",
+                       "c1": "#7b1113", "c2": "#d4af37",
+                       "desc": "Gryffindor jasur yuraklilarni qadrlaydi. Sen qiyinchilikdan "
+                               "qo'rqmaysan, haqiqat uchun kurashasan va do'stlaring uchun "
+                               "o'zingni ayamaysan."},
+        "slytherin": {"name": "Slizerin", "tag": "Topqirlik, iroda va maqsadga intilish",
+                      "c1": "#1a472a", "c2": "#a7b0b3",
+                      "desc": "Slizerin maqsadi aniq, zukko va qat'iyatli sehrgarlarni "
+                              "tanlaydi. Sen o'z yo'lingni bilasan va unga ishonch bilan "
+                              "boryapsan."},
+        "hufflepuff": {"name": "Puffenduy", "tag": "Sadoqat, halollik va mehnatsevarlik",
+                       "c1": "#d3a625", "c2": "#372e29",
+                       "desc": "Puffenduy mehnatkash, sodiq va adolatli qalblarni qadrlaydi. "
+                               "Sen sabrli, samimiy va ishonchli hamrohsan."},
+        "ravenclaw": {"name": "Kogtevran", "tag": "Donishmandlik, zukkolik va izlanish",
+                      "c1": "#0e1a40", "c2": "#946b2d",
+                      "desc": "Kogtevran bilim va ijodni sevuvchilarni tanlaydi. Sening "
+                              "qiziquvchanliging va o'tkir aqling seni boshqalardan ajratib "
+                              "turadi."},
+    }
+    quiz = [
+        {"q": "Kechki Hogvarts koridorida sirli ovoz eshitding. Nima qilasan?",
+         "a": [{"t": "Darhol borib o'zim tekshiraman.", "h": "gryffindor"},
+               {"t": "Avval kuzataman va mantiqan o'ylab ko'raman.", "h": "ravenclaw"},
+               {"t": "Do'stlarimni chaqirib, birga boramiz.", "h": "hufflepuff"},
+               {"t": "Menga foyda keltirsa, ehtiyotkorlik bilan yondashaman.", "h": "slytherin"}]},
+        {"q": "Sehrgarlikda eng qadrlaydigan fazilating qaysi?",
+         "a": [{"t": "Jasorat va mardlik.", "h": "gryffindor"},
+               {"t": "Aql, bilim va donishmandlik.", "h": "ravenclaw"},
+               {"t": "Halollik va sadoqat.", "h": "hufflepuff"},
+               {"t": "Topqirlik va maqsadga erishish.", "h": "slytherin"}]},
+        {"q": "Qaysi dars senga eng yoqadi?",
+         "a": [{"t": "Qorong'u kuchlardan himoya.", "h": "gryffindor"},
+               {"t": "Sehrlar va afsunlar.", "h": "ravenclaw"},
+               {"t": "Gerbologiya.", "h": "hufflepuff"},
+               {"t": "Iksirlar tayyorlash.", "h": "slytherin"}]},
+        {"q": "Sehrli tayoqchang nima uchun xizmat qilsin?",
+         "a": [{"t": "Adolat uchun kurashishga.", "h": "gryffindor"},
+               {"t": "Sirlarni ochish va o'rganishga.", "h": "ravenclaw"},
+               {"t": "Yaqinlarimni himoya qilishga.", "h": "hufflepuff"},
+               {"t": "O'z orzularimga erishishga.", "h": "slytherin"}]},
+    ]
+    ui_text = {
+        "sortTitle": "Saralash Qalpoqchasi",
+        "sortIntro": "Bir necha savolga javob ber \u2014 Saralash Qalpoqchasi seni Hogvartsning "
+                     "qaysi fakultetiga yo'naltirishini aytib beradi.",
+        "begin": "Boshlash", "close": "Yopish", "retake": "Qayta saralash",
+        "your": "Sening fakulteting", "q": "Savol", "result": "Saralash natijasi",
+        "tryHat": "Saralash Qalpoqchasini sina",
+    }
+    houses_json = json.dumps(houses, ensure_ascii=False)
+    quiz_json = json.dumps(quiz, ensure_ascii=False)
+    uitext_json = json.dumps(ui_text, ensure_ascii=False)
     # Escape only the closing script tag so the inner reader HTML cannot break
     # out of its text/plain wrapper. openBook() reverses this before rendering.
     data_blocks = "\n".join(
@@ -319,6 +374,12 @@ def build_single(summary, readers):
         '<path d="M32 14c4 5 4 10 0 15-4-5-4-10 0-15z" fill="currentColor"/>'
         '<circle cx="32" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2"/>'
         '<path d="M22 44h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+    )
+    hat_svg = (
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
+        'stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">'
+        '<path d="M12 3 L8.3 14 H15.7 Z"/>'
+        '<path d="M4.5 14 C8 16.2 16 16.2 19.5 14 L18.2 17.4 C14 19 10 19 5.8 17.4 Z"/></svg>'
     )
     css = """
 :root{--bg:#faf8f3;--bg2:#f1ede3;--fg:#2b2b2b;--muted:#7a7368;--accent:#7b1113;
@@ -375,13 +436,63 @@ text-decoration:none;color:inherit;display:flex;flex-direction:column;transition
 footer{text-align:center;color:var(--muted);font-size:.8rem;font-family:system-ui,sans-serif;margin-top:2.5rem;}
 @media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:.7rem;}
 .card .cover{height:130px;}.hero{flex-direction:column;text-align:center;}.hero .info{text-align:center;}}
+/* ===== Atmosfera (ambient canvas portal) ===== */
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;pointer-events:none;}
+.wrap{position:relative;z-index:1;}
+.theme-btn{transition:border-color .25s,transform .15s;}
+.theme-btn:active{transform:scale(.92);}
+.theme-btn svg{width:20px;height:20px;}
+header.top .actions{display:flex;gap:.5rem;align-items:center;}
+/* ===== Fakultet chip ===== */
+#housechip{margin:-0.5rem 0 1.5rem;}
+.chip{display:inline-flex;align-items:center;gap:.55rem;background:var(--panel);border:1px solid var(--border);
+color:var(--fg);font-family:system-ui,sans-serif;font-size:.84rem;padding:.5rem .9rem;border-radius:999px;
+cursor:pointer;box-shadow:0 5px 16px var(--shadow);transition:border-color .2s,transform .15s;}
+.chip:hover{border-color:var(--accent);transform:translateY(-1px);}
+.chip strong{font-weight:700;}
+.chip-dot{width:15px;height:15px;border-radius:50%;background:var(--accent);display:inline-block;
+box-shadow:0 0 0 2px var(--panel),0 0 9px var(--accent);}
+.chip-invite{color:var(--muted);}
+/* ===== Saralash Qalpoqchasi modal ===== */
+.hat-overlay{position:fixed;inset:0;z-index:80;background:rgba(8,6,10,.62);-webkit-backdrop-filter:blur(4px);
+backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:1.2rem;animation:hatfade .25s ease;}
+.hat-overlay[hidden]{display:none;}
+@keyframes hatfade{from{opacity:0}to{opacity:1}}
+.hat-card{position:relative;max-width:440px;width:100%;max-height:90vh;overflow:auto;background:var(--panel);
+color:var(--fg);border:1px solid var(--border);border-radius:22px;padding:1.7rem 1.5rem;
+box-shadow:0 26px 70px rgba(0,0,0,.55);text-align:center;animation:hatpop .32s cubic-bezier(.2,.85,.3,1);}
+@keyframes hatpop{from{transform:translateY(16px) scale(.96);opacity:0}to{transform:none;opacity:1}}
+.hat-card h2{margin:.35rem 0 .1rem;font-size:1.55rem;}
+.hat-card h3.hat-q{font-size:1.2rem;margin:.25rem 0 1.15rem;line-height:1.35;}
+.hat-card p{color:var(--muted);font-size:.93rem;line-height:1.55;font-family:system-ui,sans-serif;margin:.5rem 0 0;}
+.hat-x{position:absolute;top:.65rem;right:.7rem;width:34px;height:34px;border-radius:50%;border:1px solid var(--border);
+background:var(--panel2);color:var(--fg);font-size:1.25rem;cursor:pointer;line-height:1;}
+.hat-x:hover{border-color:var(--accent);}
+.hat-step{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);
+font-family:system-ui,sans-serif;font-weight:700;}
+.hat-emblem{color:var(--accent);margin-bottom:.2rem;}
+.hat-emblem .crest{width:58px;height:58px;}
+.hat-opts{display:flex;flex-direction:column;gap:.6rem;text-align:left;}
+.hat-opt{background:var(--panel2);border:1px solid var(--border);color:var(--fg);font-family:system-ui,sans-serif;
+font-size:.95rem;padding:.85rem 1rem;border-radius:13px;cursor:pointer;transition:transform .12s,border-color .12s,background .12s;}
+.hat-opt:hover{border-color:var(--accent);transform:translateX(3px);}
+.hat-actions{display:flex;gap:.6rem;justify-content:center;margin-top:1.3rem;flex-wrap:wrap;}
+.hat-go{background:var(--accent);color:#fff;border:0;padding:.72rem 1.6rem;border-radius:999px;cursor:pointer;
+font-family:system-ui,sans-serif;font-weight:600;font-size:.95rem;}
+.hat-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);padding:.72rem 1.2rem;
+border-radius:999px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.9rem;}
+.hat-ghost:hover{border-color:var(--accent);color:var(--fg);}
+.hat-house{width:98px;height:98px;border-radius:50%;margin:.7rem auto .3rem;display:flex;align-items:center;
+justify-content:center;box-shadow:0 12px 32px rgba(0,0,0,.42);}
+.hat-house .crest{width:54px;height:54px;color:#fff;}
+.hat-tag{color:var(--accent);font-family:system-ui,sans-serif;font-weight:600;font-size:.87rem;}
 """
     js = """
 var BOOKS=__BOOKS__;
 var COVERS={1:'#7b1113',2:'#1f6f4a',3:'#5b3a8a',4:'#b5651d',5:'#1d6fa5',6:'#7a5901',7:'#3a3a3a',8:'#0b5d63'};
-var THEMES=[['day','Light','#faf8f3','#7b1113'],['sepia','Sepia','#f4ecd8','#8a5a1a'],
-['dark','Dark','#1a1c20','#e0934a'],['amoled','AMOLED','#000','#d98a3d'],
-['night','Night','#0f1726','#5b9bd5'],['warm','Warm','#fbeee0','#c2541b']];
+var THEMES=[['day','Kunduzgi','#faf8f3','#7b1113'],['sepia','Sepiya','#f4ecd8','#8a5a1a'],
+['dark','Tungi','#1a1c20','#e0934a'],['amoled','AMOLED','#000','#d98a3d'],
+['night','Yarim tun','#0f1726','#5b9bd5'],['warm','Iliq','#fbeee0','#c2541b']];
 function gv(c){return 'linear-gradient(150deg,'+c+',rgba(0,0,0,.35))';}
 function prog(key){try{var d=JSON.parse(localStorage.getItem(key));return (d&&d.progress&&d.progress.pct)||0;}catch(e){return 0;}}
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
@@ -401,7 +512,7 @@ function render(){
         (p>0?'<div class="pbar"><i style="width:'+p+'%"></i></div>':'')+
       '</div></a>';
   }).join('');
-  renderHero();
+  renderHero();renderHouseChip();
 }
 function renderHero(){
   var host=document.getElementById('hero');var last=null;
@@ -421,7 +532,8 @@ function renderHero(){
 var root=document.documentElement;
 function applyTheme(t){root.setAttribute('data-theme',t);try{localStorage.setItem('gp_library_theme',t);}catch(e){}
   var mc=document.getElementById('mtc');if(mc){var m={day:'#7b1113',sepia:'#8a5a1a',dark:'#1a1c20',amoled:'#000',night:'#0f1726',warm:'#c2541b'};mc.setAttribute('content',m[t]||'#7b1113');}
-  Array.prototype.forEach.call(document.querySelectorAll('.theme-pop button'),function(x){x.classList.toggle('sel',x.dataset.t===t);});}
+  Array.prototype.forEach.call(document.querySelectorAll('.theme-pop button'),function(x){x.classList.toggle('sel',x.dataset.t===t);});
+  if(window.Portal){Portal.repaint();}}
 function buildThemePop(){var p=document.getElementById('themepop');
   p.innerHTML=THEMES.map(function(t){return '<button data-t="'+t[0]+'" title="'+t[1]+'" style="background:'+t[2]+';color:'+t[3]+'">Aa</button>';}).join('');
   Array.prototype.forEach.call(p.querySelectorAll('button'),function(x){x.onclick=function(){applyTheme(x.dataset.t);};});}
@@ -436,6 +548,7 @@ function openBook(n){
   v.hidden=false;
   document.getElementById('lib').style.display='none';
   document.body.classList.add('reading');
+  if(window.Portal){Portal.pause();}
   try{location.hash='kitob-'+n;}catch(e){}
 }
 function showLibrary(){
@@ -443,6 +556,7 @@ function showLibrary(){
   v.hidden=true; v.removeAttribute('srcdoc');
   document.getElementById('lib').style.display='';
   document.body.classList.remove('reading');
+  if(window.Portal){Portal.resume();}
   try{if(location.hash){history.replaceState(null,'',location.pathname+location.search);}}catch(e){}
   render();
 }
@@ -452,11 +566,78 @@ window.addEventListener('hashchange',function(){
   if(m){if(document.getElementById('viewer').hidden){openBook(+m[1]);}}
   else{if(!document.getElementById('viewer').hidden){showLibrary();}}
 });
+// ===== Saralash Qalpoqchasi (Sorting Hat) =====
+var HOUSES=__HOUSES__;var QUIZ=__QUIZ__;var T=__T__;
+function getHouse(){try{return localStorage.getItem('gp_house')||'';}catch(e){return '';}}
+function setHouse(h){try{localStorage.setItem('gp_house',h);}catch(e){}}
+var hatState=null;
+function hatShell(inner){return '<div class="hat-card" role="dialog" aria-modal="true"><button class="hat-x" id="hatx" aria-label="'+esc(T.close)+'">\\u00d7</button>'+inner+'</div>';}
+function bindClose(){var x=document.getElementById('hatx');if(x){x.onclick=hatClose;}}
+function hatClose(){document.getElementById('hatmodal').hidden=true;}
+function hatOpen(force){var h=getHouse();
+  if(h&&!force){hatResult(h);}else{hatState={i:0,score:{gryffindor:0,slytherin:0,hufflepuff:0,ravenclaw:0}};hatStep();}
+  document.getElementById('hatmodal').hidden=false;}
+function hatStep(){var m=document.getElementById('hatmodal');var i=hatState.i;
+  if(i===0){m.innerHTML=hatShell('<div class="hat-emblem">'+CREST+'</div><h2>'+esc(T.sortTitle)+'</h2><p>'+esc(T.sortIntro)+'</p><div class="hat-actions"><button class="hat-go" id="hatstart">'+esc(T.begin)+'</button></div>');
+    document.getElementById('hatstart').onclick=function(){hatState.i=1;hatStep();};bindClose();return;}
+  var q=QUIZ[i-1];
+  var opts=q.a.map(function(o){return '<button class="hat-opt" data-h="'+o.h+'">'+esc(o.t)+'</button>';}).join('');
+  m.innerHTML=hatShell('<div class="hat-step">'+esc(T.q)+' '+i+' / '+QUIZ.length+'</div><h3 class="hat-q">'+esc(q.q)+'</h3><div class="hat-opts">'+opts+'</div>');
+  Array.prototype.forEach.call(m.querySelectorAll('.hat-opt'),function(b){b.onclick=function(){hatState.score[b.getAttribute('data-h')]++;if(hatState.i>=QUIZ.length){hatFinish();}else{hatState.i++;hatStep();}};});
+  bindClose();}
+function hatFinish(){var s=hatState.score,best=[],max=-1;
+  for(var k in s){if(s[k]>max){max=s[k];best=[k];}else if(s[k]===max){best.push(k);}}
+  var h=best[Math.floor(Math.random()*best.length)];setHouse(h);hatResult(h);renderHouseChip();}
+function hatResult(h){var m=document.getElementById('hatmodal');var d=HOUSES[h];
+  m.innerHTML=hatShell('<div class="hat-step">'+esc(T.result)+'</div><div class="hat-house" style="background:linear-gradient(150deg,'+d.c1+','+d.c2+')">'+CREST+'</div><h2>'+esc(d.name)+'</h2><div class="hat-tag">'+esc(d.tag)+'</div><p>'+esc(d.desc)+'</p><div class="hat-actions"><button class="hat-go" id="hatok">'+esc(T.close)+'</button><button class="hat-ghost" id="hatretry">'+esc(T.retake)+'</button></div>');
+  document.getElementById('hatok').onclick=hatClose;document.getElementById('hatretry').onclick=function(){hatOpen(true);};bindClose();}
+function renderHouseChip(){var host=document.getElementById('housechip');if(!host){return;}
+  var h=getHouse();var hb=document.getElementById('hatbtn');
+  if(h){var d=HOUSES[h];host.innerHTML='<button class="chip" id="chipbtn"><span class="chip-dot" style="background:linear-gradient(150deg,'+d.c1+','+d.c2+')"></span>'+esc(T.your)+': <strong>'+esc(d.name)+'</strong></button>';if(hb){hb.style.borderColor=d.c1;}}
+  else{host.innerHTML='<button class="chip chip-invite" id="chipbtn"><span class="chip-dot"></span>'+esc(T.tryHat)+'</button>';if(hb){hb.style.borderColor='';}}
+  var cb=document.getElementById('chipbtn');if(cb){cb.onclick=function(){hatOpen(false);};}}
+document.getElementById('hatmodal').addEventListener('click',function(e){if(e.target===this){hatClose();}});
+document.getElementById('hatbtn').onclick=function(e){e.stopPropagation();hatOpen(false);};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'||e.keyCode===27){hatClose();}});
+
+// ===== Atmosfera: ambient canvas portal =====
+(function(){
+  var c=document.getElementById('bg');if(!c){return;}var ctx=c.getContext('2d');
+  var reduce=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  var W=0,H=0,parts=[],raf=0,paused=false,px=0,py=0,tx=0,ty=0;
+  function cssVar(n,f){var v=getComputedStyle(document.documentElement).getPropertyValue(n);return (v&&v.trim())||f;}
+  function toRGBA(hex,a){hex=(hex||'').replace('#','');if(hex.length===3){hex=hex.charAt(0)+hex.charAt(0)+hex.charAt(1)+hex.charAt(1)+hex.charAt(2)+hex.charAt(2);}
+    var r=parseInt(hex.substr(0,2),16),g=parseInt(hex.substr(2,2),16),b=parseInt(hex.substr(4,2),16);
+    if(isNaN(r)){return 'rgba(123,17,19,'+a+')';}return 'rgba('+r+','+g+','+b+','+a+')';}
+  function spawn(rand){return{x:Math.random()*W,y:rand?Math.random()*H:H+8*DPR,r:(Math.random()*1.5+0.5)*DPR,s:(Math.random()*0.45+0.12)*DPR,ph:Math.random()*6.283,sp:Math.random()*0.018+0.004,a:Math.random()*0.45+0.18};}
+  function build(){var n=Math.round(Math.min(110,Math.max(26,(window.innerWidth*window.innerHeight)/16000)));if(reduce){n=Math.min(n,36);}parts=[];for(var i=0;i<n;i++){parts.push(spawn(true));}}
+  function paint(){var bg=cssVar('--bg','#faf8f3'),ac=cssVar('--accent','#7b1113');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    var g=ctx.createRadialGradient(W*0.5,H*0.08,0,W*0.5,H*0.08,Math.max(W,H)*0.75);
+    g.addColorStop(0,toRGBA(ac,0.12));g.addColorStop(1,toRGBA(ac,0));ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    tx+=(px-tx)*0.05;ty+=(py-ty)*0.05;
+    for(var i=0;i<parts.length;i++){var p=parts[i];var fl=0.55+0.45*Math.sin(p.ph*2);
+      ctx.beginPath();ctx.arc(p.x+tx,p.y+ty,p.r,0,6.283);ctx.fillStyle=toRGBA(ac,p.a*fl);ctx.fill();}}
+  function frame(){for(var i=0;i<parts.length;i++){var p=parts[i];p.y-=p.s;p.ph+=p.sp;p.x+=Math.sin(p.ph)*0.3*DPR;if(p.y<-8*DPR){parts[i]=spawn(false);}}paint();raf=requestAnimationFrame(frame);}
+  function start(){if(raf||paused){return;}if(reduce){paint();return;}raf=requestAnimationFrame(frame);}
+  function stop(){if(raf){cancelAnimationFrame(raf);raf=0;}}
+  function resize(){DPR=Math.min(window.devicePixelRatio||1,2);c.width=Math.floor(window.innerWidth*DPR);c.height=Math.floor(window.innerHeight*DPR);W=c.width;H=c.height;c.style.width=window.innerWidth+'px';c.style.height=window.innerHeight+'px';build();paint();}
+  var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(resize,180);});
+  document.addEventListener('visibilitychange',function(){if(document.hidden){stop();}else if(!paused){start();}});
+  if(!('ontouchstart' in window)){window.addEventListener('pointermove',function(e){var cx=window.innerWidth/2,cy=window.innerHeight/2;px=(e.clientX-cx)/cx*8*DPR;py=(e.clientY-cy)/cy*8*DPR;});}
+  window.Portal={pause:function(){paused=true;stop();c.style.display='none';},resume:function(){paused=false;c.style.display='';start();},repaint:function(){if(reduce||!raf){paint();}}};
+  resize();start();
+})();
+
 var savedTheme='day';try{savedTheme=localStorage.getItem('gp_library_theme')||'day';}catch(e){}
 buildThemePop();applyTheme(savedTheme);render();
 (function(){var m=/kitob-(\\d+)/.exec(location.hash);if(m){openBook(+m[1]);}})();
 """
     js = js.replace("__BOOKS__", books_json).replace("__CREST__", crest)
+    js = (js.replace("__HOUSES__", houses_json)
+            .replace("__QUIZ__", quiz_json)
+            .replace("__T__", uitext_json))
     doc = (
         '<!DOCTYPE html>\n<html lang="uz" data-theme="day">\n<head>\n'
         '<meta charset="utf-8">\n'
@@ -465,17 +646,24 @@ buildThemePop();applyTheme(savedTheme);render();
         '<meta name="description" content="Garri Potter \u2014 o\'zbekcha elektron kutubxona. 8 kitob, premium o\'quvchi.">\n'
         '<link rel="icon" type="image/svg+xml" href="' + FAVICON + '">\n'
         '<title>Garri Potter \u2014 Kutubxona</title>\n<style>' + css + '</style>\n</head>\n<body>\n'
+        '<canvas id="bg" aria-hidden="true"></canvas>\n'
         '<div id="themepop" class="theme-pop"></div>\n'
         '<div class="wrap" id="lib">\n'
         '<header class="top"><span class="logo">'
-        + crest.replace('class="crest"', 'class="crest"')
+        + crest
         + '<h1>Garri Potter<small>O\'zbekcha kutubxona \u00b7 8 kitob</small></h1></span>'
-        '<button class="theme-btn" id="themebtn" title="Mavzu" aria-label="Mavzu">\u25d0</button></header>\n'
+        '<span class="actions">'
+        '<button class="theme-btn" id="hatbtn" title="Saralash Qalpoqchasi" '
+        'aria-label="Saralash Qalpoqchasi">' + hat_svg + '</button>'
+        '<button class="theme-btn" id="themebtn" title="Mavzu" aria-label="Mavzu">\u25d0</button>'
+        '</span></header>\n'
         '<div class="hero" id="hero"></div>\n'
+        '<div id="housechip"></div>\n'
         '<div class="section-title">Barcha kitoblar</div>\n'
         '<div class="grid" id="grid"></div>\n'
-        '<footer>J.K. Rouling \u00b7 o\'zbek tilidagi tarjima \u00b7 Premium Reader</footer>\n'
+        '<footer>J.K. Rouling \u00b7 o\'zbek tilidagi tarjima \u00b7 Premium o\'quvchi</footer>\n'
         '</div>\n'
+        '<div id="hatmodal" class="hat-overlay" hidden></div>\n'
         '<iframe id="viewer" hidden title="O\'qish oynasi"></iframe>\n'
         + data_blocks + '\n'
         '<script>\n' + js + '\n</script>\n</body>\n</html>\n'
