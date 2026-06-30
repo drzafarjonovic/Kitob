@@ -247,7 +247,9 @@ def patch_engine(app_js, part2_js):
                                 'var GLOSSARY = (window.BOOK && window.BOOK.glossary) || {', 1)
     return app_js, part2_js
 
-def build_book(book, head, chrome_top, chrome_bot, app_js, part2_js):
+def build_chapters(book):
+    """Return (chapters_html, n_chapters, n_words) for one book.
+    This is the only per-book unique payload now — the reader engine is shared."""
     path = os.path.join(BOOKDIR, book["folder"], "matn.txt")
     raw = load_lines(path)
     lines = clean_lines(raw, book.get("cut_at"))
@@ -258,26 +260,28 @@ def build_book(book, head, chrome_top, chrome_bot, app_js, part2_js):
         paras = reflow(body)
         total_words += sum(len(p.split()) for p in paras if p != "@@SEP@@")
         parts.append(chapter_html(i, title, paras))
-    chapters_html = "\n".join(parts)
+    return "\n".join(parts), len(chapters), total_words
 
-    disp = html.escape(book["title"])
-    # head: title + accent
+
+def build_shell(head, chrome_top, chrome_bot, app_js, part2_js):
+    """Build the ONE shared reader template (~90 KB) stored a single time.
+
+    Per-book values are placeholders that openBook() substitutes at runtime:
+      @@TITLE@@  @@SUB@@  @@ACCENT@@  @@BOOKCFG@@  @@CHAPTERS@@
+    This removes the previous 8x duplication of the engine (CSS+JS)."""
     h = head.replace("<title>GARRI POTTER VA LA&#x27;NATLANGAN BOLA</title>",
-                     "<title>Garri Potter \u2014 %s</title>" % disp)
-    h = h.replace('  --accent: #7b1113;',
-                  '  --accent: %s;' % book["accent"])
+                     "<title>Garri Potter \u2014 @@TITLE@@</title>")
+    h = h.replace('  --accent: #7b1113;', '  --accent: @@ACCENT@@;')
+    h = h.replace('href="icons/icon.svg"', 'href="%s"' % FAVICON)
     # chrome_top: topbar title + cover
     ct = chrome_top.replace(
         '<span class="title" id="cur-chapter-title">GARRI POTTER VA LA&#x27;NATLANGAN BOLA</span>',
-        '<span class="title" id="cur-chapter-title">%s</span>' % disp)
+        '<span class="title" id="cur-chapter-title">@@TITLE@@</span>')
     ct = ct.replace('<h1 class="big">GARRI POTTER VA LA&#x27;NATLANGAN BOLA</h1>',
-                    '<h1 class="big">%s</h1>' % disp)
+                    '<h1 class="big">@@TITLE@@</h1>')
     ct = ct.replace('<div class="sub">Roman<br>J.K. Rouling, Jon Tiffani, Jek Torn pyesasiga asoslangan</div>',
-                    '<div class="sub">%s<br>J.K. Rouling</div>' % html.escape(book["sub"]))
-    h = h.replace('href="icons/icon.svg"', 'href="%s"' % FAVICON)
+                    '<div class="sub">@@SUB@@<br>J.K. Rouling</div>')
     # back-to-library button before the TOC button.
-    # Works both standalone (navigate to index.html) and inside the library
-    # iframe (postMessage so the shell can hide the viewer without a reload).
     ct = ct.replace(
         '<button class="iconbtn" id="btn-toc" title="Mundarija (C)" aria-label="Mundarija">',
         '<a class="iconbtn" href="index.html" title="Kutubxona" aria-label="Kutubxona" '
@@ -287,24 +291,22 @@ def build_book(book, head, chrome_top, chrome_bot, app_js, part2_js):
         '<line x1="12" y1="3" x2="12" y2="20"/></svg></a>'
         '<button class="iconbtn" id="btn-toc" title="Mundarija (C)" aria-label="Mundarija">')
 
-    cfg = {"key": book["key"], "id": book["n"], "title": book["title"]}
-    if book["n"] != 8:
-        cfg["glossary"] = GLOSSARY
-    cfg_script = "<script>window.BOOK=%s;</script>\n" % json.dumps(cfg, ensure_ascii=False)
-
-    final = (h.rstrip() + "\n" + ct.rstrip() + "\n" + chapters_html + "\n"
+    cfg_script = "<script>window.BOOK=@@BOOKCFG@@;</script>\n"
+    final = (h.rstrip() + "\n" + ct.rstrip() + "\n@@CHAPTERS@@\n"
              + chrome_bot.rstrip() + "\n" + cfg_script
              + "<script>\n" + app_js.rstrip() + "\n" + part2_js.rstrip()
              + "\n</script>\n</body>\n</html>\n")
-    return final, len(chapters), total_words
+    return final
 
-def build_single(summary, readers):
+def build_single(summary, shell, chapters_map):
     # Single self-contained file (per the spec's "platforma bitta HTML fayl").
-    # Every book is embedded, but as an INERT <script type="text/plain"> block
-    # rather than a parsed JS object, so the browser does NOT parse ~13MB of
-    # book HTML as JavaScript on startup. A book is only read out and rendered
-    # (via the viewer iframe's srcdoc) when the reader actually opens it.
+    # The reader ENGINE (CSS + ~60 KB JS) is stored ONCE in #reader-shell.
+    # Each book contributes only its chapter HTML in #bookdata-N. openBook()
+    # stitches shell + chapters together (via the viewer iframe's srcdoc) only
+    # when a book is actually opened — so nothing heavy parses on startup and
+    # the engine is no longer duplicated 8x.
     books_json = json.dumps(summary, ensure_ascii=False)
+    gloss_json = json.dumps(GLOSSARY, ensure_ascii=False)
     # --- Saralash Qalpoqchasi (Sorting Hat) data, injected as JSON ---
     houses = {
         "gryffindor": {"name": "Gryffindor", "tag": "Jasorat, mardlik va olijanoblik",
@@ -362,10 +364,12 @@ def build_single(summary, readers):
     uitext_json = json.dumps(ui_text, ensure_ascii=False)
     # Escape only the closing script tag so the inner reader HTML cannot break
     # out of its text/plain wrapper. openBook() reverses this before rendering.
+    reader_shell_block = ('<script type="text/plain" id="reader-shell">%s</script>'
+                          % shell.replace("</script>", "<\\/script>"))
     data_blocks = "\n".join(
         '<script type="text/plain" id="bookdata-%d">%s</script>'
-        % (n, readers[n].replace("</script>", "<\\/script>"))
-        for n in sorted(readers)
+        % (n, chapters_map[n].replace("</script>", "<\\/script>"))
+        for n in sorted(chapters_map)
     )
     crest = (
         '<svg class="crest" viewBox="0 0 64 64" aria-hidden="true">'
@@ -489,6 +493,7 @@ justify-content:center;box-shadow:0 12px 32px rgba(0,0,0,.42);}
 """
     js = """
 var BOOKS=__BOOKS__;
+var GLOSSARY_SHARED=__GLOSS__;
 var COVERS={1:'#7b1113',2:'#1f6f4a',3:'#5b3a8a',4:'#b5651d',5:'#1d6fa5',6:'#7a5901',7:'#3a3a3a',8:'#0b5d63'};
 var THEMES=[['day','Kunduzgi','#faf8f3','#7b1113'],['sepia','Sepiya','#f4ecd8','#8a5a1a'],
 ['dark','Tungi','#1a1c20','#e0934a'],['amoled','AMOLED','#000','#d98a3d'],
@@ -502,7 +507,7 @@ function render(){
   var grid=document.getElementById('grid');
   grid.innerHTML=BOOKS.map(function(b){
     var p=prog(b.key);var col=COVERS[b.n]||b.accent;
-    return '<a class="card" href="javascript:void(0)" onclick="openBook('+b.n+');return false;">'+
+    return '<a class="card" href="#kitob-'+b.n+'">'+
       '<div class="cover" style="background:'+gv(col)+'">'+
         '<span class="bnum">'+b.n+'-kitob</span>'+(p>=99?'<span class="done">\\u2713</span>':'')+
         CREST+'</div>'+
@@ -526,7 +531,7 @@ function renderHero(){
     '<div class="info"><div class="lbl">Davom etish</div><h2>'+esc(b.title)+'</h2>'+
     '<div class="pbar"><i style="width:'+p+'%"></i></div>'+
     '<div class="pct">'+p+'% o\\'qildi \\u00b7 '+b.chapters+' bob</div>'+
-    '<a class="go" href="javascript:void(0)" onclick="openBook('+b.n+');return false;">O\\'qishni davom ettirish</a></div>';
+    '<a class="go" href="#kitob-'+b.n+'">O\\'qishni davom ettirish</a></div>';
 }
 // theme
 var root=document.documentElement;
@@ -541,14 +546,28 @@ document.getElementById('themebtn').onclick=function(e){e.stopPropagation();docu
 document.addEventListener('click',function(){document.getElementById('themepop').classList.remove('open');});
 function openBook(n){
   var v=document.getElementById('viewer');
-  var el=document.getElementById('bookdata-'+n);
-  // restore the escaped closing script tag, then render only this book
+  var shellEl=document.getElementById('reader-shell');
+  var dataEl=document.getElementById('bookdata-'+n);
+  if(!shellEl||!dataEl){return;}
+  // restore the escaped closing script tags in both the shared shell and the
+  // book's chapters, then stitch them together for this book only.
   var bad='<'+String.fromCharCode(92)+'/script>';var good='<'+'/script>';
-  v.srcdoc=el?el.textContent.split(bad).join(good):'';
+  var shell=shellEl.textContent.split(bad).join(good);
+  var chapters=dataEl.textContent.split(bad).join(good);
+  var b=null;for(var i=0;i<BOOKS.length;i++){if(BOOKS[i].n===n){b=BOOKS[i];break;}}
+  if(!b){return;}
+  var cfg={key:b.key,id:b.n,title:b.title};
+  if(b.gloss){cfg.glossary=GLOSSARY_SHARED;}
+  v.srcdoc=shell.split('@@TITLE@@').join(b.title)
+    .split('@@SUB@@').join(b.sub)
+    .split('@@ACCENT@@').join(b.accent)
+    .split('@@BOOKCFG@@').join(JSON.stringify(cfg))
+    .split('@@CHAPTERS@@').join(chapters);
   v.hidden=false;
   document.getElementById('lib').style.display='none';
   document.body.classList.add('reading');
   if(window.Portal){Portal.pause();}
+  try{v.focus();}catch(e){}
   try{location.hash='kitob-'+n;}catch(e){}
 }
 function showLibrary(){
@@ -635,6 +654,7 @@ buildThemePop();applyTheme(savedTheme);render();
 (function(){var m=/kitob-(\\d+)/.exec(location.hash);if(m){openBook(+m[1]);}})();
 """
     js = js.replace("__BOOKS__", books_json).replace("__CREST__", crest)
+    js = js.replace("__GLOSS__", gloss_json)
     js = (js.replace("__HOUSES__", houses_json)
             .replace("__QUIZ__", quiz_json)
             .replace("__T__", uitext_json))
@@ -665,6 +685,7 @@ buildThemePop();applyTheme(savedTheme);render();
         '</div>\n'
         '<div id="hatmodal" class="hat-overlay" hidden></div>\n'
         '<iframe id="viewer" hidden title="O\'qish oynasi"></iframe>\n'
+        + reader_shell_block + '\n'
         + data_blocks + '\n'
         '<script>\n' + js + '\n</script>\n</body>\n</html>\n'
     )
@@ -681,15 +702,17 @@ def main():
     app_js, part2_js = patch_engine(app_js, part2_js)
 
     summary = []
-    readers = {}
+    chapters_map = {}
+    shell = build_shell(head, chrome_top, chrome_bot, app_js, part2_js)
     for b in BOOKS:
-        rh, nch, nw = build_book(b, head, chrome_top, chrome_bot, app_js, part2_js)
-        readers[b["n"]] = rh
+        ch_html, nch, nw = build_chapters(b)
+        chapters_map[b["n"]] = ch_html
         summary.append(dict(n=b["n"], key=b["key"], title=b["title"], sub=b["sub"],
-                            accent=b["accent"], chapters=nch, words=nw))
+                            accent=b["accent"], chapters=nch, words=nw,
+                            gloss=(b["n"] != 8)))
         print("kitob-%d  %-20s  boblar=%-3d  so'z=%-7d  %d KB"
-              % (b["n"], b["title"], nch, nw, len(rh) // 1024))
-    build_single(summary, readers)
+              % (b["n"], b["title"], nch, nw, len(ch_html) // 1024))
+    build_single(summary, shell, chapters_map)
     sz = os.path.getsize(os.path.join(ROOT, "index.html"))
     print("index.html (yagona self-contained fayl): %.2f MB" % (sz / 1048576))
     return summary

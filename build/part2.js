@@ -8,7 +8,7 @@
     var text = PARA_TEXT[idx];
     var hs = S.highlights.filter(function (h) { return h.p === idx; });
     var fs = FIND_HITS.filter(function (f) { return f.p === idx; });
-    if (!hs.length && !fs.length) { p.textContent = text; return; }
+    if (!hs.length && !fs.length) { p.textContent = disp(text); return; }
     var pts = {}; pts[0] = 1; pts[text.length] = 1;
     hs.forEach(function (h) { pts[clamp(h.start,0,text.length)] = 1; pts[clamp(h.end,0,text.length)] = 1; });
     fs.forEach(function (f) { pts[clamp(f.start,0,text.length)] = 1; pts[clamp(f.start + f.len,0,text.length)] = 1; });
@@ -16,7 +16,7 @@
     var html = "";
     for (var i = 0; i < arr.length - 1; i++) {
       var a = arr[i], b = arr[i + 1]; if (b <= a) continue;
-      var seg = esc(text.slice(a, b));
+      var seg = esc(disp(text.slice(a, b)));
       var h = null, f = null, j;
       for (j = 0; j < hs.length; j++) { if (hs[j].start <= a && hs[j].end >= b) { h = hs[j]; break; } }
       for (j = 0; j < fs.length; j++) { if (fs[j].start <= a && fs[j].start + fs[j].len >= b) { f = fs[j]; break; } }
@@ -34,6 +34,17 @@
   var searchBox = $("#searchbox"), searchInput = $("#search-input"), searchCount = $("#search-count"), searchResults = $("#search-results");
   var searchOpts = { case: false, word: false, regex: false, hilite: true };
   var searchMatches = [], searchPos = -1, searchDebounce;
+
+  // Search corpus: in Latin mode we search the transliterated text and keep a
+  // map back to canonical (Cyrillic) offsets so highlighting still lines up.
+  var SCORPUS = null;
+  function searchCorpus(i) {
+    if (!SCORPUS) SCORPUS = new Array(PARA_TEXT.length);
+    if (SCORPUS[i]) return SCORPUS[i];
+    SCORPUS[i] = SCRIPT.latin ? translitCore(PARA_TEXT[i], true) : { t: PARA_TEXT[i], map: null };
+    return SCORPUS[i];
+  }
+  function invalidateCorpus() { SCORPUS = null; }
 
   function openSearch() {
     closePanels();
@@ -67,12 +78,14 @@
     if (!re) { searchCount.textContent = "xato regex"; searchResults.innerHTML = '<div class="search-hint">Regulyar ifoda noto\'g\'ri</div>'; return; }
     var total = 0, cap = 800;
     for (var pi = 0; pi < PARA_TEXT.length; pi++) {
-      var text = PARA_TEXT[pi], m; re.lastIndex = 0;
+      var c = searchCorpus(pi), text = c.t, m; re.lastIndex = 0;
       while ((m = re.exec(text)) !== null) {
         if (m[0].length === 0) { re.lastIndex++; continue; }
         total++;
         if (searchMatches.length < cap) {
-          searchMatches.push({ id: "f" + searchMatches.length, p: pi, start: m.index, len: m[0].length });
+          var cs = c.map ? c.map[m.index] : m.index;
+          var ce = c.map ? c.map[m.index + m[0].length] : (m.index + m[0].length);
+          searchMatches.push({ id: "f" + searchMatches.length, p: pi, start: cs, len: ce - cs });
         }
         if (total > 5000) break;
       }
@@ -93,11 +106,11 @@
     searchResults.innerHTML = searchMatches.slice(0, 120).map(function (m, i) {
       var text = PARA_TEXT[m.p];
       var from = Math.max(0, m.start - 40), to = Math.min(text.length, m.start + m.len + 50);
-      var pre = (from > 0 ? "…" : "") + esc(text.slice(from, m.start));
-      var hit = "<mark>" + esc(text.slice(m.start, m.start + m.len)) + "</mark>";
-      var post = esc(text.slice(m.start + m.len, to)) + (to < text.length ? "…" : "");
+      var pre = (from > 0 ? "…" : "") + esc(disp(text.slice(from, m.start)));
+      var hit = "<mark>" + esc(disp(text.slice(m.start, m.start + m.len))) + "</mark>";
+      var post = esc(disp(text.slice(m.start + m.len, to))) + (to < text.length ? "…" : "");
       var ci = chapterOfPara(m.p);
-      return '<div class="res" data-i="' + i + '"><span class="loc">' + esc(chapterMeta[ci] ? chapterMeta[ci].title : "") + '</span>' + pre + hit + post + '</div>';
+      return '<div class="res" data-i="' + i + '"><span class="loc">' + esc(disp(chapterMeta[ci] ? chapterMeta[ci].title : "")) + '</span>' + pre + hit + post + '</div>';
     }).join("");
     $$("#search-results .res").forEach(function (r) {
       on(r, "click", function () { searchPos = +r.dataset.i; gotoMatch(searchPos, true); });
@@ -474,12 +487,39 @@
   function smoothBehavior() { return (S.settings.anim > 0 && !S.settings.reduceMotion) ? "smooth" : "auto"; }
 
   /* ============================================================
-     PWA
+     ALIFBO ALMASHTIRISH (Lotin / Kirill)
      ============================================================ */
-  function registerSW() {
-    if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
-      navigator.serviceWorker.register("sw.js").catch(function () {});
-    }
+  function repaintAllParas() {
+    for (var i = 0; i < paras.length; i++) paintPara(i);
+  }
+  function applyScript() {
+    invalidateCorpus();
+    // chapter headings + numbers
+    chapterMeta.forEach(function (c) {
+      var t = c.el.querySelector(".chapter-title"); if (t) t.textContent = disp(c.title);
+      var nEl = c.el.querySelector(".chapter-num"); if (nEl) nEl.textContent = disp(c.num);
+    });
+    repaintAllParas();
+    buildTOC();
+    updateTOCActive(curChapter);
+    if (chapterMeta[curChapter]) curTitle.textContent = disp(chapterMeta[curChapter].title);
+    updateNavButtons();
+    Library.render();
+    if (searchBox.classList.contains("open") && searchInput.value.trim().length >= 2) doSearch();
+    updateScriptBtn();
+  }
+  function updateScriptBtn() {
+    var b = $("#btn-script"); if (!b) return;
+    var lab = b.querySelector(".script-ab");
+    if (lab) lab.textContent = SCRIPT.latin ? "Aa" : "Аа";
+    b.classList.toggle("active", SCRIPT.latin);
+    b.setAttribute("title", SCRIPT.latin ? "Alifbo: Lotin (Kirillga o'tish)" : "Alifbo: Kirill (Lotinga o'tish)");
+  }
+  function toggleScript() {
+    SCRIPT.latin = !SCRIPT.latin;
+    try { localStorage.setItem("gp_script", SCRIPT.latin ? "latin" : "cyrillic"); } catch (e) {}
+    applyScript();
+    toast(SCRIPT.latin ? "Lotin alifbosi" : "Kirill alifbosi");
   }
 
   /* ============================================================
@@ -497,6 +537,7 @@
     on($("#fab-bookmark"), "click", function () { addBookmark(); });
     on($("#fab-up"), "click", function () { smoothScrollTo(0); });
     on($("#add-bookmark"), "click", function () { addBookmark(); });
+    on($("#btn-script"), "click", function () { toggleScript(); });
   }
 
   function init() {
@@ -521,6 +562,7 @@
     bindRipples();
     renderAllHighlights();
     updateLibBadge();
+    applyScript();   // dastlabki ko'rinishni tanlangan alifboga moslash
 
     // restore reading position
     if (S.progress.scroll > 0) {
@@ -553,7 +595,6 @@
     // stats ticker
     setInterval(function () { Stats.tick(); }, 1000);
 
-    // registerSW();  // PWA hozircha o'chirilgan (arxivda) — keyinroq yoqiladi
     // welcome
     setTimeout(function () { if (!S.progress.scroll) toast("Xush kelibsiz — yoqimli o'qish!"); }, 800);
   }
