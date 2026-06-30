@@ -164,3 +164,38 @@ Loyiha boshqa sessiyada ham uzilishsiz davom etishi uchun:
 > bajarildi (Xogvars→Xogvarts, Volan-de-Mort→Voldemort,
 > Vaqt aylanasi→Vaqt Chig'irig'i, Jinni→Jinna, Makgonagall→Makgonagal).
 > Kanonik shakllar `.kiro/steering/uslub.md` dagi "ATAMALAR LUG'ATI" da.
+
+
+
+## 10. Yakuniy bosqich: bitta PDF fayl
+
+**Talab:** barcha boblar badiiy uslubga o'tkazilib bo'lingach, butun roman
+**bitta PDF faylga** jamlanadi (chop etishga/tarqatishga tayyor kitob).
+
+### Holat: BARCHA BOBLAR TUGAGANDAN SO'NG bajariladi (hozir emas).
+
+### Texnik reja
+Sandboxda PDF vositalari yo'q (`pandoc`, `wkhtmltopdf`, `libreoffice`,
+`pdflatex` — hech biri), `pip install` ham ishlamaydi. Shuning uchun PDF
+**sof Python (faqat stdlib)** bilan, `extract_pdf.py` dagi PDF bilimiga
+tayanib yaratiladi (masalan, `make_pdf.py`):
+
+- Matndagi yagona muhim ASCII bo'lmagan belgi — **uzun tire (—, U+2014)**;
+  apostrof oddiy ASCII (`'`). Shu bois standart PDF shrifti
+  (Times-Roman, WinAnsiEncoding) yetarli — tire WinAnsi'da `0x97` ga moslanadi.
+- Kerak bo'lsa, chiroyliroq ko'rinish uchun TTF (Noto) shrifti ichiga joylanadi.
+- PDF tarkibi: sarlavha sahifasi (asar nomi, mualliflar, tarjima izohi),
+  boblar (har biri yangi sahifadan, sarlavha + matn), so'z bo'yicha qator
+  bo'lish (word-wrap), sahifa raqamlari.
+- Natija: `Garri_Potter_va_Lanatlangan_Bola.pdf`.
+
+> Eslatma: chiqarishdan oldin matn yana bir bart kirill harflar va imlo
+> bo'yicha tekshiriladi (quyidagi 11-bandga qarang).
+
+## 11. Sifat tekshiruvlari (har doim)
+
+- **Kirill harflar:** `grep -nP "[А-Яа-яЁёҚқҒғҲҳЎў]"` — natija 0 bo'lishi shart.
+  (Bir marta butun kitob bo'yicha tozalandi: lotin so'zlar ichiga tushib qolgan
+  39 ta tasodifiy kirill harf homoglif sifatida lotinga o'girildi.)
+- **Atamalar:** kanonik shakllarga muvofiqligi (5-band va lug'at).
+- **Bob butunligi:** 29 ta bob, sarlavhalar va `* * *` ajratgichlari joyida.
