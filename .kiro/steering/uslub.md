@@ -1,3 +1,7 @@
+---
+inclusion: always
+---
+
 # Badiiy uslub qo'llanmasi — "Ajal Tuhfalari" namunasi
 
 Bu qo'llanma "Garri Potter va Ajal Tuhfalari" (tarjimon Shokir Zokirovich
@@ -68,3 +72,77 @@ nimadan qo'rqqani bevosita beriladi, ammo tirnoq ichida emas.
 - Ortiqcha qadimiy/tushunarsiz so'zlar bilan matnni og'irlashtirmaslik —
   o'qishga ravon bo'lib qolsin.
 - Mazmunni o'zgartiradigan yangi voqea yoki dialog qo'shmaslik.
+
+
+
+## ATAMALAR LUG'ATI (kanonik shakllar — drift'ning oldini olish)
+
+Ismlar va takroriy atamalar BUTUN romanda quyidagi yagona shaklda yoziladi.
+Yangi bob yozilganda yoki tahrirlanganda shu ro'yxatga qat'iy amal qilinadi:
+
+| Kanonik shakl | Ishlatilmaydigan variantlar |
+|---------------|------------------------------|
+| Voldemort | Volan-de-Mort, Voldemord |
+| Xogvarts | Xogvars |
+| Vaqt Chig'irig'i | Vaqt aylanasi, Vaqt Aylanasi |
+| Jinni (Garrining rafiqasi) | Jinna |
+| Germiona | Germione |
+| Garri | Harri |
+| Albus, Skorpius, Roza, Drako, Delfi, Ron | — (o'zgarmaydi) |
+| Sedrik Diggori, Amos Diggori | — |
+| Makgonagal, Dambldor, Sneyp, Xagrid | Makanagal, Makgonagall |
+| kabinet (ish xonasi) | ofis, offis |
+| budka (telefon) | butka |
+| rido (plash) | — |
+| Slizerin, Griffindor | — |
+
+> Eslatma: hozirgi qo'lyozmada bu atamalar hali to'liq birxillashtirilmagan
+> (eski boblarda aralash uchraydi). Uslub tatbiqi davomida har bir bob
+> shu kanonik shaklga keltiriladi.
+
+## KONKRET NAMUNALAR (oldin → keyin)
+
+Uslub aynan shu yo'sinda qo'llanadi:
+
+**1-namuna (tasvir):**
+- Oldin: "Kuzning iliq shamoli titragan daraxt barglarini stansiya tomi ostiga
+  haydab kelardi."
+- Keyin: "Kuzning iliq shamoli sarg'aygan, titroq barglarni stansiya tomi
+  ostiga quvib kelar, baland ustunlar orasida g'uvillab aylanardi."
+
+**2-namuna (gap fe'li + ravishdosh):**
+- Oldin: "— Dada! — xitob qildi Albus, aravaning dastasini ushlab."
+- Keyin: "— Dada! — aravaning dastasini mahkam changallagancha otasiga
+  o'girilib xitob qildi Albus."
+
+**3-namuna (hissiyot — tana harakati orqali):**
+- Oldin: "Garri hayratga tushdi."
+- Keyin: "Garri hayratdan dovdirab qoldi."
+
+**4-namuna (atmosfera qo'shish):**
+- Oldin: "Buyuk Zal yangi o'quvchilarni kutib oldi."
+- Keyin: "Buyuk Zal butun dabdabasi bilan yangi o'quvchilarni qarshi oldi.
+  Uning sehrlangan shifti — yulduzlar qadalgan zangori-qora osmon qatlami —
+  go'yo tom umuman yo'qdek tuyulardi."
+
+## ISH USULI (bob qanday qayta ishlanadi)
+
+1. Bobni va (kerak bo'lsa) `text/part1.txt`/`text/part2.txt` dagi mos sahnani
+   o'qib chiqish.
+2. Bobni **paragrafma-paragraf (bo'lakma-bo'lak)** `str_replace` bilan
+   qayta yozish — har bo'lak ~15–45 qator.
+3. Dialog mazmuni va voqealar ketma-ketligi **o'zgartirilmaydi**.
+4. Imloviy xatolar, tasodifiy kirill harflar, kanonik atamalar yo'l-yo'lakay
+   tuzatiladi.
+5. Bob tugagach, kirill harflar tekshiruvi:
+   `grep -nP "[А-Яа-яЁёҚқҒғҲҳЎў]"`.
+6. Boblar 5 tadan partiyalanadi; har partiya alohida commit + push;
+   har partiyadan keyin foydalanuvchidan ruxsat so'raladi.
+
+## TO'XTASH NUQTASI (resume point)
+
+- **Tayyor:** Uslub qo'llanmasi + I–IX boblar (branch: `uslub-tatbiq`).
+- **Navbatdagi partiya:** X–XIV boblar (Germionaning kabineti, Voldemortning
+  ovozi, Taqiqlangan o'rmon, Uch Afsungar Bellashuvi, O'zgargan dunyo).
+- Eng ishonchli uslub namunasi — allaqachon o'tkazilgan **I–IX boblar**:
+  yangi bobni ularga ohangdosh qilib yozish kerak.

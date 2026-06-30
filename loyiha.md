@@ -144,3 +144,23 @@ hujjatlashtirilgan. Qisqacha:
   TrueType subset font (ToUnicode'siz) bo'lgani uchun u skript bilan
   chiqarilmagan; uning TXT versiyasini foydalanuvchi qo'lda tayyorlab,
   `text/` papkasiga joylagan.
+
+
+
+## 9. Davom ettirish (continuity) — "davom et" deyilganda
+
+Loyiha boshqa sessiyada ham uzilishsiz davom etishi uchun:
+
+- `.kiro/steering/uslub.md` fayli **avtomatik yuklanadi** (`inclusion: always`),
+  shuning uchun uslub tamoyillari, **atamalar lug'ati**, **konkret namunalar**
+  va **to'xtash nuqtasi** har doim ko'z oldida bo'ladi.
+- "Davom et" deyilganda ish **X bobdan** (uslub tatbiqi bo'yicha) — yoki
+  `uslub.md` dagi "TO'XTASH NUQTASI" bo'limida ko'rsatilgan joydan — davom etadi.
+- **Drift (uslubiy/atamaviy tebranish) xavfi** atamalar lug'ati va allaqachon
+  o'tkazilgan I–IX boblar yordamida minimallashtirilgan. Eng ishonchli langar —
+  shu I–IX boblarning ohangiga monand davom etish.
+
+> Ochiq masala: qo'lyozmada ayrim atamalar hali aralash yozilgan
+> (Xogvars/Xogvarts, Voldemort/Volan-de-Mort, Vaqt Chig'irig'i/Vaqt aylanasi,
+> Jinna/Jinni). Bular uslub tatbiqi davomida bob-bob kanonik shaklga keltiriladi;
+> istalsa, butun kitob bo'yicha bir martalik birxillashtirish ham mumkin.
