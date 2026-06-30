@@ -1,10 +1,10 @@
 {
-  "name": "Garri Potter va La'natlangan Bola",
+  "name": "Garri Potter — O'zbekcha kutubxona",
   "short_name": "Garri Potter",
-  "description": "Premium elektron kitob o'quvchi — Garri Potter va La'natlangan Bola.",
+  "description": "Garri Potter — o'zbek tilidagi 8 kitob. Premium elektron kitob o'quvchi.",
   "lang": "uz",
   "dir": "ltr",
-  "start_url": "./Garri_Potter_va_Lanatlangan_Bola.html",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",

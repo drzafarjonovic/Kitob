@@ -500,6 +500,11 @@
   }
 
   function init() {
+    try {
+      if (window.BOOK && window.BOOK.id) {
+        localStorage.setItem("gp_last_book", JSON.stringify({ id: window.BOOK.id, t: Date.now() }));
+      }
+    } catch (e) {}
     buildModel();
     buildTOC();
     buildThemeGrid();
