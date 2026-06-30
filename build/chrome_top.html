@@ -1,0 +1,279 @@
+<body>
+<div id="brightness-overlay" aria-hidden="true"></div>
+<div id="progress-track" role="progressbar" aria-label="O'qish jarayoni" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-bar"></div></div>
+
+<!-- ============ TOP BAR ============ -->
+<header id="topbar">
+  <button class="iconbtn" id="btn-toc" title="Mundarija (C)" aria-label="Mundarija">
+    <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg>
+  </button>
+  <span class="title" id="cur-chapter-title">GARRI POTTER VA LA&#x27;NATLANGAN BOLA</span>
+  <span class="pct" id="pct-label">0%</span>
+  <button class="iconbtn" id="btn-search" title="Qidiruv (Ctrl+F)" aria-label="Qidiruv">
+    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+  </button>
+  <button class="iconbtn" id="btn-library" title="Xatcho'plar, izohlar (B)" aria-label="Kutubxona">
+    <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18l-6-3-6 3z"/></svg>
+    <span class="dot"></span>
+  </button>
+  <button class="iconbtn" id="btn-settings" title="Sozlamalar (S)" aria-label="Sozlamalar">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+  </button>
+</header>
+
+<!-- ============ SEARCH ============ -->
+<div id="searchbox" role="search">
+  <div class="search-input-row">
+    <input type="text" id="search-input" placeholder="Kitob ichidan qidirish..." autocomplete="off" aria-label="Qidiruv matni" spellcheck="false">
+    <div class="search-nav">
+      <button class="iconbtn" id="search-prev" title="Oldingi (Shift+Enter)" aria-label="Oldingi natija"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="iconbtn" id="search-next" title="Keyingi (Enter)" aria-label="Keyingi natija"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+  <div class="search-opts">
+    <span class="opt" data-opt="case" title="Katta-kichik harf">Aa</span>
+    <span class="opt" data-opt="word" title="Butun so'z">“So'z”</span>
+    <span class="opt" data-opt="regex" title="Regulyar ifoda">.*</span>
+    <span class="opt on" data-opt="hilite" title="Hammasini belgilash">Belgilash</span>
+    <span class="search-count" id="search-count"></span>
+  </div>
+  <div id="search-results"></div>
+</div>
+
+<!-- ============ OVERLAY + DRAWERS ============ -->
+<div id="overlay"></div>
+
+<!-- TOC -->
+<aside id="sidebar" class="drawer" aria-label="Mundarija">
+  <h3 class="drawer-head"><span class="grow">Mundarija</span>
+    <button class="iconbtn" id="btn-toc-close" aria-label="Yopish"><svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+  </h3>
+  <div class="drawer-body"><ul id="toc"></ul></div>
+</aside>
+
+<!-- Library: bookmarks / highlights / notes / stats / glossary -->
+<aside id="library" class="drawer right" aria-label="Kutubxona">
+  <h3 class="drawer-head"><span class="grow">Kutubxona</span>
+    <button class="iconbtn" id="btn-library-close" aria-label="Yopish"><svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+  </h3>
+  <div class="drawer-tabs" id="lib-tabs">
+    <button data-tab="bookmarks" class="sel">Xatcho'plar</button>
+    <button data-tab="highlights">Belgilashlar</button>
+    <button data-tab="notes">Izohlar</button>
+    <button data-tab="stats">Statistika</button>
+    <button data-tab="glossary">Lug'at</button>
+    <button data-tab="data">Ma'lumot</button>
+  </div>
+  <div class="drawer-body">
+    <div class="tabpane sel" id="tab-bookmarks">
+      <div class="row-actions"><button class="btn primary" id="add-bookmark"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Joriy joyni saqlash</button></div>
+      <div id="bookmarks-list"></div>
+    </div>
+    <div class="tabpane" id="tab-highlights"><div id="highlights-list"></div></div>
+    <div class="tabpane" id="tab-notes">
+      <div class="row-actions"><input type="text" class="field" id="notes-search" placeholder="Izohlarni qidirish..." style="max-width:100%"></div>
+      <div id="notes-list"></div>
+    </div>
+    <div class="tabpane" id="tab-stats">
+      <div class="stat-grid">
+        <div class="stat-card"><div class="v" id="st-today">0d</div><div class="l">Bugun</div></div>
+        <div class="stat-card"><div class="v" id="st-week">0d</div><div class="l">Hafta</div></div>
+        <div class="stat-card"><div class="v" id="st-month">0d</div><div class="l">Oy</div></div>
+        <div class="stat-card"><div class="v" id="st-total">0d</div><div class="l">Jami</div></div>
+        <div class="stat-card"><div class="v" id="st-wpm">—</div><div class="l">So'z / daqiqa</div></div>
+        <div class="stat-card"><div class="v" id="st-eta">—</div><div class="l">Tugashga</div></div>
+      </div>
+      <div class="chart-wrap"><div class="ct">So'nggi 7 kun</div><canvas id="weekChart" width="600" height="240"></canvas></div>
+      <div class="chart-wrap"><div class="ct">Tafsilotlar</div>
+        <div class="card" style="cursor:default"><div class="c-text" id="st-details"></div></div>
+      </div>
+    </div>
+    <div class="tabpane" id="tab-glossary"><div id="glossary-list"></div></div>
+    <div class="tabpane" id="tab-data">
+      <div class="set-group">
+        <span class="set-label">Eksport</span>
+        <div class="row-actions">
+          <button class="btn" data-export="json"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JSON</button>
+          <button class="btn" data-export="csv">CSV</button>
+          <button class="btn" data-export="txt">TXT</button>
+        </div>
+      </div>
+      <div class="set-group">
+        <span class="set-label">Import</span>
+        <div class="row-actions">
+          <button class="btn" id="import-btn"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>JSON yuklash</button>
+          <input type="file" id="import-file" accept="application/json,.json" hidden>
+        </div>
+      </div>
+      <div class="set-group">
+        <span class="set-label">Boshqaruv</span>
+        <div class="row-actions">
+          <button class="btn" id="print-btn"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Chop etish</button>
+          <button class="btn" id="reset-btn" style="color:var(--accent)">Hammasini tozalash</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- Settings -->
+<aside id="settings" class="drawer right" aria-label="Sozlamalar">
+  <h3 class="drawer-head"><span class="grow">Sozlamalar</span>
+    <button class="iconbtn" id="btn-settings-close" aria-label="Yopish"><svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+  </h3>
+  <div class="drawer-body" style="padding:.9rem 1.1rem 2rem">
+
+    <div class="set-group">
+      <label>Mavzu</label>
+      <div class="theme-grid" id="theme-grid"></div>
+    </div>
+
+    <div class="set-group">
+      <label>Tayyor andozalar</label>
+      <div class="preset-row" id="preset-row"></div>
+    </div>
+
+    <div class="set-group">
+      <label>Shrift turi</label>
+      <select class="field" id="font-family-sel">
+        <option value="Georgia, 'Times New Roman', serif">Georgia (Serif)</option>
+        <option value="'Iowan Old Style', 'Palatino Linotype', Palatino, serif">Palatino (Serif)</option>
+        <option value="'Times New Roman', Times, serif">Times</option>
+        <option value="'Charter', 'Bitstream Charter', Georgia, serif">Charter</option>
+        <option value="-apple-system, 'Segoe UI', Roboto, system-ui, sans-serif">System (Sans)</option>
+        <option value="'Helvetica Neue', Arial, sans-serif">Helvetica (Sans)</option>
+        <option value="'Verdana', Geneva, sans-serif">Verdana (Sans)</option>
+        <option value="'Trebuchet MS', sans-serif">Trebuchet</option>
+        <option value="'OpenDyslexic', 'Comic Sans MS', sans-serif">Disleksiya uchun</option>
+      </select>
+    </div>
+
+    <div class="set-group">
+      <label>Shrift o'lchami <span class="set-val" id="font-val">100%</span></label>
+      <div class="stepper">
+        <button id="font-dec" aria-label="Kichraytirish">A&minus;</button>
+        <div class="v"><input type="range" id="font-range" min="0.8" max="2.2" step="0.05" value="1"></div>
+        <button id="font-inc" aria-label="Kattalashtirish">A&plus;</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>Qator balandligi <span class="set-val" id="lh-val">1.78</span></label>
+      <input type="range" id="lh-range" min="1.2" max="2.4" step="0.02" value="1.78">
+    </div>
+
+    <div class="set-group">
+      <label>Paragraf oralig'i <span class="set-val" id="ps-val">1.15</span></label>
+      <input type="range" id="ps-range" min="0" max="2.5" step="0.05" value="1.15">
+    </div>
+
+    <div class="set-group">
+      <label>So'z oralig'i <span class="set-val" id="ws-val">0</span></label>
+      <input type="range" id="ws-range" min="0" max="0.6" step="0.02" value="0">
+    </div>
+
+    <div class="set-group">
+      <label>Harf oralig'i <span class="set-val" id="ls-val">0</span></label>
+      <input type="range" id="ls-range" min="-0.03" max="0.12" step="0.005" value="0">
+    </div>
+
+    <div class="set-group">
+      <label>Qator kengligi</label>
+      <div class="seg" id="width-seg">
+        <button data-width="narrow">Tor</button>
+        <button data-width="normal">O'rta</button>
+        <button data-width="wide">Keng</button>
+        <button data-width="full">To'liq</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>Sahifa cheti <span class="set-val" id="pm-val">1.25</span></label>
+      <input type="range" id="pm-range" min="0.5" max="4" step="0.05" value="1.25">
+    </div>
+
+    <div class="set-group">
+      <label>Matn tekislash</label>
+      <div class="seg" id="align-seg">
+        <button data-align="left">Chap</button>
+        <button data-align="justify">Teng</button>
+        <button data-align="center">Markaz</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>Harf qalinligi</label>
+      <div class="seg" id="weight-seg">
+        <button data-weight="300">Ingichka</button>
+        <button data-weight="400">Oddiy</button>
+        <button data-weight="600">Qalin</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>Yorqinlik <span class="set-val" id="br-val">100%</span></label>
+      <input type="range" id="br-range" min="0" max="0.75" step="0.01" value="0">
+    </div>
+
+    <div class="set-group">
+      <label>Animatsiya tezligi</label>
+      <div class="seg" id="anim-seg">
+        <button data-anim="0">O'chiq</button>
+        <button data-anim="0.6">Tez</button>
+        <button data-anim="1">Oddiy</button>
+        <button data-anim="1.6">Sekin</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <span class="set-label">Qo'shimcha</span>
+      <div class="switch"><span>Bosh harf bezagi (drop cap)</span><button class="tg" id="tg-dropcap" role="switch" aria-label="Drop cap"></button></div>
+      <div class="switch"><span>Harakatni kamaytirish</span><button class="tg" id="tg-reduce" role="switch" aria-label="Reduce motion"></button></div>
+      <div class="switch"><span>Klaviatura ko'rsatkichi</span><button class="tg on" id="tg-focus" role="switch" aria-label="Focus ring"></button></div>
+      <div class="switch"><span>Avtomatik panel yashirish</span><button class="tg on" id="tg-autohide" role="switch" aria-label="Auto hide"></button></div>
+    </div>
+
+    <div class="set-group" style="border-bottom:none">
+      <button class="btn" id="reset-settings" style="width:100%;justify-content:center">Sozlamalarni asliga qaytarish</button>
+    </div>
+  </div>
+</aside>
+
+<!-- Selection toolbar -->
+<div id="sel-toolbar" role="toolbar" aria-label="Belgilash">
+  <span class="sw" style="background:var(--hl-yellow)" data-color="yellow" title="Sariq"></span>
+  <span class="sw" style="background:var(--hl-blue)" data-color="blue" title="Ko'k"></span>
+  <span class="sw" style="background:var(--hl-green)" data-color="green" title="Yashil"></span>
+  <span class="sw" style="background:var(--hl-pink)" data-color="pink" title="Pushti"></span>
+  <span class="sw" style="background:var(--hl-orange)" data-color="orange" title="To'q sariq"></span>
+  <span class="sw" style="background:var(--hl-purple)" data-color="purple" title="Binafsha"></span>
+  <span class="sep"></span>
+  <button class="act" id="sel-note" title="Izoh qo'shish"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></button>
+  <button class="act" id="sel-copy" title="Nusxalash"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+  <button class="act" id="sel-remove" title="Belgini olib tashlash" style="display:none"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+</div>
+
+<!-- FAB stack -->
+<div id="fab-stack">
+  <button class="fab small" id="fab-up" title="Tepaga" aria-label="Tepaga"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <button class="fab" id="fab-bookmark" title="Xatcho'p (M)" aria-label="Xatcho'p qo'yish"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+</div>
+
+<!-- Toast + dialog -->
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="dialog-back"><div class="dialog" id="dialog" role="dialog" aria-modal="true"></div></div>
+
+<!-- ============ BOOK ============ -->
+<main id="book">
+  <div class="cover">
+    <svg class="crest" viewBox="0 0 64 64" aria-hidden="true">
+      <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--ring)"/></linearGradient></defs>
+      <path d="M32 3l24 9v16c0 14-10 24-24 30C18 52 8 42 8 28V12z" fill="none" stroke="url(#cg)" stroke-width="2.5"/>
+      <path d="M32 14c4 5 4 10 0 15-4-5-4-10 0-15z" fill="url(#cg)"/>
+      <circle cx="32" cy="36" r="4" fill="none" stroke="url(#cg)" stroke-width="2"/>
+      <path d="M22 44h20" stroke="url(#cg)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <h1 class="big">GARRI POTTER VA LA&#x27;NATLANGAN BOLA</h1>
+    <div class="rule"></div>
+    <div class="sub">Roman<br>J.K. Rouling, Jon Tiffani, Jek Torn pyesasiga asoslangan</div>
+  </div>
