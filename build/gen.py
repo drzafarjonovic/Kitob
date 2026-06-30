@@ -24,22 +24,22 @@ BOOKDIR = os.path.join(ROOT, "Garri Potter kitoblari")
 # ----------------------------------------------------------------------------
 BOOKS = [
     dict(n=1, key="gp_reader_b1", folder="1 - Afsungarlar Toshi",
-         title="Afsungarlar Toshi", sub="Birinchi kitob \u00b7 Falsafiy Tosh",
+         title="Falsafiy Tosh", sub="Birinchi kitob",
          accent="#7b1113"),
     dict(n=2, key="gp_reader_b2", folder="2 - Sirlar Xonasi",
-         title="Sirlar Xonasi", sub="Ikkinchi kitob \u00b7 Maxfiy Xona",
+         title="Maxfiy Xona", sub="Ikkinchi kitob",
          accent="#1f6f4a"),
     dict(n=3, key="gp_reader_b3", folder="3 - Azkaban Mahbusi",
          title="Azkaban Mahbusi", sub="Uchinchi kitob",
          accent="#5b3a8a"),
     dict(n=4, key="gp_reader_b4", folder="4 - Olovli Kosa",
-         title="Olovli Kosa", sub="To\u02bbrtinchi kitob \u00b7 Otashli Jom",
+         title="Otashli Jom", sub="To\u02bbrtinchi kitob",
          accent="#b5651d"),
     dict(n=5, key="gp_reader_b5", folder="5 - Feniks Ordeni",
-         title="Feniks Ordeni", sub="Beshinchi kitob \u00b7 Qaqnus Ordeni",
+         title="Qaqnus Ordeni", sub="Beshinchi kitob",
          accent="#1d6fa5"),
     dict(n=6, key="gp_reader_b6", folder="6 - Yarim Qonli Shahzoda",
-         title="Yarim Qonli Shahzoda", sub="Oltinchi kitob \u00b7 Chala Zot Shahzoda",
+         title="Chala Zot Shahzoda", sub="Oltinchi kitob",
          accent="#7a5901"),
     dict(n=7, key="gp_reader_b7", folder="7 - Ajal Tuhfalari",
          title="Ajal Tuhfalari", sub="Yettinchi kitob",
@@ -90,11 +90,13 @@ def load_lines(path):
 def clean_lines(raw, cut_at=None):
     if cut_at:
         raw = raw[:cut_at]
-    # frequency of short lines -> repeated running headers
+    # frequency of short lines -> repeated running headers.
+    # Restrict to UPPERCASE-dominant lines so we never strip real dialogue
+    # like "Garri." or "Germiona." that legitimately repeats.
     freq = {}
     for ln in raw:
         s = ln.strip()
-        if s and len(s) < 50:
+        if s and len(s) < 50 and s == s.upper() and any(c.isalpha() for c in s):
             freq[s] = freq.get(s, 0) + 1
     repeated = set(s for s, c in freq.items()
                    if c > 4 and not is_heading(s) and not PAGENUM.match(s))
