@@ -172,7 +172,9 @@ Loyiha boshqa sessiyada ham uzilishsiz davom etishi uchun:
 **Talab:** barcha boblar badiiy uslubga o'tkazilib bo'lingach, butun roman
 **bitta PDF faylga** jamlanadi (chop etishga/tarqatishga tayyor kitob).
 
-### Holat: BARCHA BOBLAR TUGAGANDAN SO'NG bajariladi (hozir emas).
+### Holat: ✅ BAJARILDI — `make_pdf.py` → `Garri_Potter_va_Lanatlangan_Bola.pdf`
+(6x9 dyuymli kitob, 184 sahifa, Times-Roman/Bold WinAnsi, ikki tomonga
+tekislash, sarlavha sahifasi, sahifa raqamlari, em-dash 0x97 ga moslangan).
 
 ### Texnik reja
 Sandboxda PDF vositalari yo'q (`pandoc`, `wkhtmltopdf`, `libreoffice`,
@@ -208,7 +210,9 @@ tayanib yaratiladi (masalan, `make_pdf.py`):
 moslangan HTML versiyasi** ham tayyorlanadi — Kindle/elektron kitob o'quvchiga
 o'xshash, qulay va oson o'qiladigan qilib.
 
-### Holat: BARCHA BOBLAR TUGAGANDAN SO'NG bajariladi (hozir emas).
+### Holat: ✅ BAJARILDI — `make_html.py` → `Garri_Potter_va_Lanatlangan_Bola.html`
+(mustaqil/self-contained, 332 KB, oflayn ishlaydi; quyidagi barcha
+Kindle-ga o'xshash funksiyalar bilan).
 
 ### Texnik yondashuv
 HTML uchun hech qanday tashqi vosita kerak emas — sof Python skript
