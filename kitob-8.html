@@ -8,8 +8,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Garri Potter">
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
 <title>Garri Potter — La&#x27;natlangan Bola</title>
 <style>
@@ -4962,7 +4960,7 @@ mark.find-hit.current { background: #ff8c00; color: #fff; box-shadow: 0 0 0 2px 
     // stats ticker
     setInterval(function () { Stats.tick(); }, 1000);
 
-    registerSW();
+    // registerSW();  // PWA hozircha o'chirilgan (arxivda) — keyinroq yoqiladi
     // welcome
     setTimeout(function () { if (!S.progress.scroll) toast("Xush kelibsiz — yoqimli o'qish!"); }, 800);
   }

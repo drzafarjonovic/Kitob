@@ -553,7 +553,7 @@
     // stats ticker
     setInterval(function () { Stats.tick(); }, 1000);
 
-    registerSW();
+    // registerSW();  // PWA hozircha o'chirilgan (arxivda) — keyinroq yoqiladi
     // welcome
     setTimeout(function () { if (!S.progress.scroll) toast("Xush kelibsiz — yoqimli o'qish!"); }, 800);
   }

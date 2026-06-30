@@ -413,8 +413,6 @@ buildThemePop();applyTheme(savedTheme);render();
         '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">\n'
         '<meta name="theme-color" content="#7b1113" id="mtc">\n'
         '<meta name="description" content="Garri Potter \u2014 o\'zbekcha elektron kutubxona. 8 kitob, premium o\'quvchi.">\n'
-        '<link rel="manifest" href="manifest.json">\n'
-        '<link rel="apple-touch-icon" href="icons/icon-192.png">\n'
         '<link rel="icon" type="image/svg+xml" href="icons/icon.svg">\n'
         '<title>Garri Potter \u2014 Kutubxona</title>\n<style>' + css + '</style>\n</head>\n<body>\n'
         '<div id="themepop" class="theme-pop"></div>\n'
