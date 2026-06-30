@@ -12,11 +12,14 @@ Sof Python stdlib. Tashqi kutubxona kerak emas.
 
 import html
 import json
+import os
 import re
 import sys
 
-SRC = "Garri_Potter_va_Lanatlangan_Bola_Roman.txt"
-OUT = "Garri_Potter_va_Lanatlangan_Bola.html"
+# Skript arxiv/ papkasida, manba va chiqish fayllari esa loyiha ildizida.
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+SRC = os.path.join(ROOT, "Garri_Potter_va_Lanatlangan_Bola_Roman.txt")
+OUT = os.path.join(ROOT, "Garri_Potter_va_Lanatlangan_Bola.html")
 
 CHAPTER_RE = re.compile(r"^([IVXLC]+)\s+BOB\.\s+(.+)$")
 SCENE_SEP = "* * *"

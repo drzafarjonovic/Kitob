@@ -10,12 +10,15 @@ Matndagi yagona ASCII bo'lmagan belgi — uzun tire (—, U+2014) — WinAnsi'da
 spacing) operatori orqali amalga oshiriladi. Kitob formati 6x9 dyuym.
 """
 
+import os
 import re
 import sys
 import zlib
 
-SRC = "Garri_Potter_va_Lanatlangan_Bola_Roman.txt"
-OUT = "Garri_Potter_va_Lanatlangan_Bola.pdf"
+# Skript arxiv/ papkasida, manba va chiqish fayllari esa loyiha ildizida.
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+SRC = os.path.join(ROOT, "Garri_Potter_va_Lanatlangan_Bola_Roman.txt")
+OUT = os.path.join(ROOT, "Garri_Potter_va_Lanatlangan_Bola.pdf")
 
 # --- Sahifa geometriyasi (1 dyuym = 72 punkt). 6 x 9 dyuym kitob ---
 PAGE_W = 432.0   # 6"
