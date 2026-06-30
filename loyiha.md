@@ -160,7 +160,7 @@ Loyiha boshqa sessiyada ham uzilishsiz davom etishi uchun:
   o'tkazilgan I–IX boblar yordamida minimallashtirilgan. Eng ishonchli langar —
   shu I–IX boblarning ohangiga monand davom etish.
 
-> Ochiq masala: qo'lyozmada ayrim atamalar hali aralash yozilgan
-> (Xogvars/Xogvarts, Voldemort/Volan-de-Mort, Vaqt Chig'irig'i/Vaqt aylanasi,
-> Jinna/Jinni). Bular uslub tatbiqi davomida bob-bob kanonik shaklga keltiriladi;
-> istalsa, butun kitob bo'yicha bir martalik birxillashtirish ham mumkin.
+> Atamalar izchilligi: butun kitob bo'yicha bir martalik birxillashtirish
+> bajarildi (Xogvars→Xogvarts, Volan-de-Mort→Voldemort,
+> Vaqt aylanasi→Vaqt Chig'irig'i, Jinni→Jinna, Makgonagall→Makgonagal).
+> Kanonik shakllar `.kiro/steering/uslub.md` dagi "ATAMALAR LUG'ATI" da.

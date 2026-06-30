@@ -85,7 +85,7 @@ Yangi bob yozilganda yoki tahrirlanganda shu ro'yxatga qat'iy amal qilinadi:
 | Voldemort | Volan-de-Mort, Voldemord |
 | Xogvarts | Xogvars |
 | Vaqt Chig'irig'i | Vaqt aylanasi, Vaqt Aylanasi |
-| Jinni (Garrining rafiqasi) | Jinna |
+| Jinna (Garrining rafiqasi) | Jinni |
 | Germiona | Germione |
 | Garri | Harri |
 | Albus, Skorpius, Roza, Drako, Delfi, Ron | — (o'zgarmaydi) |
@@ -96,9 +96,10 @@ Yangi bob yozilganda yoki tahrirlanganda shu ro'yxatga qat'iy amal qilinadi:
 | rido (plash) | — |
 | Slizerin, Griffindor | — |
 
-> Eslatma: hozirgi qo'lyozmada bu atamalar hali to'liq birxillashtirilmagan
-> (eski boblarda aralash uchraydi). Uslub tatbiqi davomida har bir bob
-> shu kanonik shaklga keltiriladi.
+> Eslatma: butun qo'lyozma bo'yicha atamalar bir martalik birxillashtirildi
+> (Volan-de-Mort→Voldemort, Xogvars→Xogvarts, Vaqt aylanasi→Vaqt Chig'irig'i,
+> Jinni→Jinna, Makgonagall→Makgonagal). Yangi yoki tahrirlangan boblarda ham
+> shu kanonik shakllar saqlanadi.
 
 ## KONKRET NAMUNALAR (oldin → keyin)
 
