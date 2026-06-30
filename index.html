@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#7b1113" id="mtc">
+<meta name="description" content="Garri Potter — o'zbekcha elektron kutubxona. 8 kitob, premium o'quvchi.">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<title>Garri Potter — Kutubxona</title>
+<style>
+:root{--bg:#faf8f3;--bg2:#f1ede3;--fg:#2b2b2b;--muted:#7a7368;--accent:#7b1113;
+--panel:#fff;--panel2:#f6f3ec;--border:#e6e0d4;--shadow:rgba(40,30,10,.14);--shadow2:rgba(40,30,10,.28);}
+[data-theme="sepia"]{--bg:#f4ecd8;--bg2:#ece1c6;--fg:#4b3f2f;--muted:#8a795d;--accent:#8a5a1a;--panel:#fbf4e3;--panel2:#f2e8cf;--border:#e3d6b8;--shadow:rgba(80,55,15,.16);--shadow2:rgba(80,55,15,.3);}
+[data-theme="dark"]{--bg:#1a1c20;--bg2:#15171a;--fg:#d6d9dd;--muted:#8b9197;--accent:#e0934a;--panel:#23262c;--panel2:#2b2f36;--border:#353a42;--shadow:rgba(0,0,0,.45);--shadow2:rgba(0,0,0,.65);}
+[data-theme="amoled"]{--bg:#000;--bg2:#050505;--fg:#d8dadd;--muted:#7f8489;--accent:#d98a3d;--panel:#0c0c0e;--panel2:#131316;--border:#232327;--shadow:rgba(0,0,0,.8);--shadow2:rgba(0,0,0,.95);}
+[data-theme="night"]{--bg:#0f1726;--bg2:#0b111d;--fg:#c5d2e6;--muted:#7585a0;--accent:#5b9bd5;--panel:#162032;--panel2:#1c293f;--border:#273349;--shadow:rgba(0,0,0,.5);--shadow2:rgba(0,0,0,.7);}
+[data-theme="warm"]{--bg:#fbeee0;--bg2:#f4e0cc;--fg:#432e1f;--muted:#9b7a5e;--accent:#c2541b;--panel:#fdf3e8;--panel2:#f6e6d4;--border:#ecd7bf;--shadow:rgba(120,70,20,.16);--shadow2:rgba(120,70,20,.3);}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg);color:var(--fg);font-family:Georgia,'Times New Roman',serif;
+-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;min-height:100vh;}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem 1.1rem 4rem;}
+header.top{display:flex;align-items:center;gap:.8rem;padding:.6rem 0 1.4rem;}
+header.top .logo{display:flex;align-items:center;gap:.7rem;flex:1;min-width:0;}
+header.top .crest{width:40px;height:40px;color:var(--accent);flex:none;}
+header.top h1{font-size:1.25rem;margin:0;line-height:1.1;}
+header.top h1 small{display:block;font-size:.72rem;color:var(--muted);font-weight:400;letter-spacing:.04em;text-transform:uppercase;margin-top:.15rem;font-family:system-ui,sans-serif;}
+.theme-btn{width:42px;height:42px;border-radius:11px;border:1px solid var(--border);background:var(--panel);color:var(--fg);cursor:pointer;font-size:1.1rem;display:inline-flex;align-items:center;justify-content:center;}
+.theme-pop{position:absolute;right:1.1rem;top:64px;background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 40px var(--shadow2);padding:.6rem;display:none;grid-template-columns:repeat(4,1fr);gap:.4rem;z-index:20;}
+.theme-pop.open{display:grid;}
+.theme-pop button{width:46px;height:40px;border-radius:9px;border:2px solid var(--border);cursor:pointer;font-weight:700;font-family:Georgia,serif;}
+.theme-pop button.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent) inset;}
+.hero{background:linear-gradient(135deg,var(--panel),var(--panel2));border:1px solid var(--border);
+border-radius:20px;padding:1.3rem;margin-bottom:1.8rem;display:flex;gap:1.2rem;align-items:center;box-shadow:0 8px 28px var(--shadow);}
+.hero .mini{width:74px;height:104px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 6px 18px var(--shadow2);}
+.hero .mini .crest{width:42px;height:42px;color:#fff;}
+.hero .info{flex:1;min-width:0;}
+.hero .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-family:system-ui,sans-serif;font-weight:700;}
+.hero h2{margin:.2rem 0 .3rem;font-size:1.3rem;}
+.hero .pbar{height:6px;background:var(--bg2);border-radius:6px;overflow:hidden;margin:.7rem 0 .2rem;}
+.hero .pbar i{display:block;height:100%;background:var(--accent);border-radius:6px;}
+.hero .pct{font-size:.78rem;color:var(--muted);font-family:system-ui,sans-serif;}
+.hero .go{margin-top:.8rem;display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+padding:.6rem 1.3rem;border-radius:999px;font-family:system-ui,sans-serif;font-weight:600;font-size:.9rem;}
+.section-title{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-family:system-ui,sans-serif;font-weight:700;margin:0 0 .9rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.1rem;}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden;
+text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px var(--shadow2);border-color:var(--accent);}
+.card .cover{height:158px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;position:relative;gap:.5rem;}
+.card .cover .crest{width:48px;height:48px;color:rgba(255,255,255,.92);}
+.card .cover .bnum{position:absolute;top:.6rem;left:.7rem;font-size:.72rem;font-family:system-ui,sans-serif;background:rgba(255,255,255,.2);padding:.15rem .5rem;border-radius:999px;}
+.card .cover .done{position:absolute;top:.6rem;right:.7rem;font-size:.9rem;}
+.card .meta{padding:.8rem .9rem 1rem;flex:1;display:flex;flex-direction:column;}
+.card .meta h3{margin:0 0 .25rem;font-size:1.04rem;line-height:1.2;}
+.card .meta .sub{font-size:.78rem;color:var(--muted);font-family:system-ui,sans-serif;flex:1;}
+.card .meta .stat{font-size:.72rem;color:var(--muted);font-family:system-ui,sans-serif;margin-top:.55rem;display:flex;justify-content:space-between;}
+.card .pbar{height:5px;background:var(--bg2);border-radius:5px;overflow:hidden;margin-top:.55rem;}
+.card .pbar i{display:block;height:100%;background:var(--accent);}
+footer{text-align:center;color:var(--muted);font-size:.8rem;font-family:system-ui,sans-serif;margin-top:2.5rem;}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:.7rem;}
+.card .cover{height:130px;}.hero{flex-direction:column;text-align:center;}.hero .info{text-align:center;}}
+</style>
+</head>
+<body>
+<div id="themepop" class="theme-pop"></div>
+<div class="wrap">
+<header class="top"><span class="logo"><svg class="crest" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3l24 9v16c0 14-10 24-24 30C18 52 8 42 8 28V12z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M32 14c4 5 4 10 0 15-4-5-4-10 0-15z" fill="currentColor"/><circle cx="32" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 44h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h1>Garri Potter<small>O'zbekcha kutubxona · 8 kitob</small></h1></span><button class="theme-btn" id="themebtn" title="Mavzu" aria-label="Mavzu">◐</button></header>
+<div class="hero" id="hero"></div>
+<div class="section-title">Barcha kitoblar</div>
+<div class="grid" id="grid"></div>
+<footer>J.K. Rouling · o'zbek tilidagi tarjima · Premium Reader</footer>
+</div>
+<script>
+
+var BOOKS=[{"n": 1, "key": "gp_reader_b1", "title": "Falsafiy Tosh", "sub": "Birinchi kitob", "accent": "#7b1113", "chapters": 17, "words": 74605}, {"n": 2, "key": "gp_reader_b2", "title": "Maxfiy Xona", "sub": "Ikkinchi kitob", "accent": "#1f6f4a", "chapters": 18, "words": 83748}, {"n": 3, "key": "gp_reader_b3", "title": "Azkaban Mahbusi", "sub": "Uchinchi kitob", "accent": "#5b3a8a", "chapters": 22, "words": 101734}, {"n": 4, "key": "gp_reader_b4", "title": "Otashli Jom", "sub": "Toʻrtinchi kitob", "accent": "#b5651d", "chapters": 37, "words": 171868}, {"n": 5, "key": "gp_reader_b5", "title": "Qaqnus Ordeni", "sub": "Beshinchi kitob", "accent": "#1d6fa5", "chapters": 38, "words": 211901}, {"n": 6, "key": "gp_reader_b6", "title": "Chala Zot Shahzoda", "sub": "Oltinchi kitob", "accent": "#7a5901", "chapters": 30, "words": 142819}, {"n": 7, "key": "gp_reader_b7", "title": "Ajal Tuhfalari", "sub": "Yettinchi kitob", "accent": "#4a4a4a", "chapters": 37, "words": 163693}, {"n": 8, "key": "gp_reader_b8", "title": "La'natlangan Bola", "sub": "Sakkizinchi kitob · Sahna asari", "accent": "#0b5d63", "chapters": 29, "words": 36042}];
+var COVERS={1:'#7b1113',2:'#1f6f4a',3:'#5b3a8a',4:'#b5651d',5:'#1d6fa5',6:'#7a5901',7:'#3a3a3a',8:'#0b5d63'};
+var THEMES=[['day','Light','#faf8f3','#7b1113'],['sepia','Sepia','#f4ecd8','#8a5a1a'],
+['dark','Dark','#1a1c20','#e0934a'],['amoled','AMOLED','#000','#d98a3d'],
+['night','Night','#0f1726','#5b9bd5'],['warm','Warm','#fbeee0','#c2541b']];
+function gv(c){return 'linear-gradient(150deg,'+c+',rgba(0,0,0,.35))';}
+function prog(key){try{var d=JSON.parse(localStorage.getItem(key));return (d&&d.progress&&d.progress.pct)||0;}catch(e){return 0;}}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+function fmtW(w){return w>=1000?Math.round(w/1000)+'k':w;}
+var CREST='<svg class="crest" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3l24 9v16c0 14-10 24-24 30C18 52 8 42 8 28V12z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M32 14c4 5 4 10 0 15-4-5-4-10 0-15z" fill="currentColor"/><circle cx="32" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 44h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+function render(){
+  var grid=document.getElementById('grid');
+  grid.innerHTML=BOOKS.map(function(b){
+    var p=prog(b.key);var col=COVERS[b.n]||b.accent;
+    return '<a class="card" href="kitob-'+b.n+'.html">'+
+      '<div class="cover" style="background:'+gv(col)+'">'+
+        '<span class="bnum">'+b.n+'-kitob</span>'+(p>=99?'<span class="done">\u2713</span>':'')+
+        CREST+'</div>'+
+      '<div class="meta"><h3>'+esc(b.title)+'</h3>'+
+        '<div class="sub">'+esc(b.sub)+'</div>'+
+        '<div class="stat"><span>'+b.chapters+' bob</span><span>'+fmtW(b.words)+" so'z</span></div>"+
+        (p>0?'<div class="pbar"><i style="width:'+p+'%"></i></div>':'')+
+      '</div></a>';
+  }).join('');
+  renderHero();
+}
+function renderHero(){
+  var host=document.getElementById('hero');var last=null;
+  try{last=JSON.parse(localStorage.getItem('gp_last_book'));}catch(e){}
+  var b=null;
+  if(last&&last.id){b=BOOKS.filter(function(x){return x.n===last.id;})[0];}
+  if(!b){host.style.display='none';return;}
+  var p=prog(b.key);var col=COVERS[b.n]||b.accent;
+  host.style.display='flex';
+  host.innerHTML='<div class="mini" style="background:'+gv(col)+'">'+CREST+'</div>'+
+    '<div class="info"><div class="lbl">Davom etish</div><h2>'+esc(b.title)+'</h2>'+
+    '<div class="pbar"><i style="width:'+p+'%"></i></div>'+
+    '<div class="pct">'+p+'% o\'qildi \u00b7 '+b.chapters+' bob</div>'+
+    '<a class="go" href="kitob-'+b.n+'.html">O\'qishni davom ettirish</a></div>';
+}
+// theme
+var root=document.documentElement;
+function applyTheme(t){root.setAttribute('data-theme',t);try{localStorage.setItem('gp_library_theme',t);}catch(e){}
+  var mc=document.getElementById('mtc');if(mc){var m={day:'#7b1113',sepia:'#8a5a1a',dark:'#1a1c20',amoled:'#000',night:'#0f1726',warm:'#c2541b'};mc.setAttribute('content',m[t]||'#7b1113');}
+  Array.prototype.forEach.call(document.querySelectorAll('.theme-pop button'),function(x){x.classList.toggle('sel',x.dataset.t===t);});}
+function buildThemePop(){var p=document.getElementById('themepop');
+  p.innerHTML=THEMES.map(function(t){return '<button data-t="'+t[0]+'" title="'+t[1]+'" style="background:'+t[2]+';color:'+t[3]+'">Aa</button>';}).join('');
+  Array.prototype.forEach.call(p.querySelectorAll('button'),function(x){x.onclick=function(){applyTheme(x.dataset.t);};});}
+document.getElementById('themebtn').onclick=function(e){e.stopPropagation();document.getElementById('themepop').classList.toggle('open');};
+document.addEventListener('click',function(){document.getElementById('themepop').classList.remove('open');});
+var savedTheme='day';try{savedTheme=localStorage.getItem('gp_library_theme')||'day';}catch(e){}
+buildThemePop();applyTheme(savedTheme);render();
+
+</script>
+</body>
+</html>

@@ -1,14 +1,16 @@
-/* Service Worker — offline-first cache for the premium reader. */
-var CACHE = "gp-reader-v2";
+/* Service Worker — offline-first cache for the multi-book premium reader. */
+var CACHE = "gp-reader-v3";
 var ASSETS = [
   "./",
-  "./Garri_Potter_va_Lanatlangan_Bola.html",
+  "./index.html",
   "./manifest.json",
   "./icons/icon.svg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png"
 ];
+/* Book reader pages are cached on demand by the fetch handler below
+   (they are large, so we avoid pre-caching all of them at install time). */
 
 self.addEventListener("install", function (e) {
   self.skipWaiting();
@@ -41,7 +43,7 @@ self.addEventListener("fetch", function (e) {
         caches.open(CACHE).then(function (c) { c.put(e.request, copy).catch(function () {}); });
         return res;
       }).catch(function () {
-        return caches.match("./Garri_Potter_va_Lanatlangan_Bola.html");
+        return caches.match("./index.html");
       });
     })
   );

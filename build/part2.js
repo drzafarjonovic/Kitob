@@ -500,6 +500,11 @@
   }
 
   function init() {
+    try {
+      if (window.BOOK && window.BOOK.id) {
+        localStorage.setItem("gp_last_book", JSON.stringify({ id: window.BOOK.id, t: Date.now() }));
+      }
+    } catch (e) {}
     buildModel();
     buildTOC();
     buildThemeGrid();
@@ -548,7 +553,7 @@
     // stats ticker
     setInterval(function () { Stats.tick(); }, 1000);
 
-    registerSW();
+    // registerSW();  // PWA hozircha o'chirilgan (arxivda) — keyinroq yoqiladi
     // welcome
     setTimeout(function () { if (!S.progress.scroll) toast("Xush kelibsiz — yoqimli o'qish!"); }, 800);
   }
