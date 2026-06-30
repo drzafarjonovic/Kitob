@@ -17,6 +17,55 @@
   function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
 
+  /* ============================================================
+     ALIFBO: Kirill -> Lotin transliteratsiya (faqat ko'rsatish uchun)
+     Kitob matni asli kirillda saqlanadi (offset/qidiruv/belgilash shu
+     bo'yicha ishlaydi). Lotin rejimida matn faqat ekranda o'giriladi.
+     ============================================================ */
+  var CYR_MAP = {
+    "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "yo",
+    "ж": "j", "з": "z", "и": "i", "й": "y", "к": "k", "л": "l", "м": "m",
+    "н": "n", "о": "o", "п": "p", "р": "r", "с": "s", "т": "t", "у": "u",
+    "ф": "f", "х": "x", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "sh",
+    "ъ": "'", "ы": "i", "ь": "", "э": "e", "ю": "yu", "я": "ya",
+    "ў": "o'", "қ": "q", "ғ": "g'", "ҳ": "h"
+  };
+  function isLetter(ch) { return !!ch && ch.toLowerCase() !== ch.toUpperCase(); }
+  function isUpper(ch) { return isLetter(ch) && ch === ch.toUpperCase(); }
+  // Core transliterator. wantMap=true returns {t, map} where map[i] is the
+  // canonical (source) index for output char i (used to map search hits back).
+  function translitCore(s, wantMap) {
+    if (!s) return wantMap ? { t: s || "", map: [0] } : s;
+    var out = "", map = wantMap ? [] : null, prevUpper = false;
+    for (var i = 0; i < s.length; i++) {
+      var ch = s[i], low = ch.toLowerCase(), piece;
+      if (Object.prototype.hasOwnProperty.call(CYR_MAP, low)) {
+        var m = CYR_MAP[low];
+        if (ch === low) { piece = m; }                 // lowercase source
+        else if (m.length <= 1) { piece = m.toUpperCase(); }
+        else {                                          // uppercase multigraph
+          var nx = s[i + 1];
+          var allcaps = (isLetter(nx) && isUpper(nx)) || (!isLetter(nx) && prevUpper);
+          piece = allcaps ? m.toUpperCase() : (m.charAt(0).toUpperCase() + m.slice(1));
+        }
+        prevUpper = (ch !== low);
+      } else {
+        piece = ch;
+        prevUpper = isUpper(ch);
+      }
+      out += piece;
+      if (map) { for (var k = 0; k < piece.length; k++) map.push(i); }
+    }
+    if (map) map.push(s.length);
+    return wantMap ? { t: out, map: map } : out;
+  }
+  function cyr2lat(s) { return translitCore(s, false); }
+
+  var SCRIPT = { latin: true };
+  try { SCRIPT.latin = (localStorage.getItem("gp_script") || "latin") !== "cyrillic"; } catch (e) {}
+  // disp(): transform a canonical (Cyrillic) string for display
+  function disp(s) { return SCRIPT.latin ? cyr2lat(s) : s; }
+
   /* ---------- safe storage ---------- */
   var KEY = "gp_reader_v2";
   var Store = {
@@ -299,8 +348,8 @@
     var ul = $("#toc");
     ul.innerHTML = chapterMeta.map(function (c) {
       return '<li><a href="#' + c.el.id + '" data-idx="' + c.idx + '">' +
-        '<span class="toc-num">' + esc(c.num || ("§" + (c.idx + 1))) + '</span>' +
-        '<span class="toc-name">' + esc(c.title) + '</span>' +
+        '<span class="toc-num">' + esc(disp(c.num) || ("§" + (c.idx + 1))) + '</span>' +
+        '<span class="toc-name">' + esc(disp(c.title)) + '</span>' +
         '<span class="toc-pct" data-pct="' + c.idx + '"></span></a></li>';
     }).join("");
     $$("#toc a").forEach(function (a) {
@@ -371,7 +420,7 @@
     if (idx !== curChapter) {
       curChapter = idx;
       updateTOCActive(idx);
-      curTitle.textContent = chapterMeta[idx].title;
+      curTitle.textContent = disp(chapterMeta[idx].title);
     } else {
       var ae = $("#toc a.active .toc-pct");
       if (ae) ae.textContent = chapterReadPct(idx) + "%";
@@ -386,9 +435,9 @@
   function updateNavButtons() {
     var prev = $("#nav-prev"), next = $("#nav-next");
     var pi = curChapter - 1, ni = curChapter + 1;
-    if (pi >= 0) { prev.disabled = false; $("#nav-prev-t").textContent = chapterMeta[pi].title; }
+    if (pi >= 0) { prev.disabled = false; $("#nav-prev-t").textContent = disp(chapterMeta[pi].title); }
     else { prev.disabled = true; $("#nav-prev-t").textContent = "—"; }
-    if (ni < chapterMeta.length) { next.disabled = false; $("#nav-next-t").textContent = chapterMeta[ni].title; }
+    if (ni < chapterMeta.length) { next.disabled = false; $("#nav-next-t").textContent = disp(chapterMeta[ni].title); }
     else { next.disabled = true; $("#nav-next-t").textContent = "—"; }
   }
 
@@ -693,9 +742,9 @@
       if (!S.bookmarks.length) { box.innerHTML = empty("Hali xatcho'p yo'q.<br>O'qiyotgan joyingizni saqlang."); return; }
       box.innerHTML = S.bookmarks.map(function (b) {
         return '<div class="card" data-bm="' + b.id + '">' +
-          '<div class="c-loc">' + esc(b.chapter) + ' · ' + b.pct + '%</div>' +
-          '<div class="c-title">' + esc(b.name) + '</div>' +
-          (b.excerpt ? '<div class="c-text">' + esc(b.excerpt) + '…</div>' : '') +
+          '<div class="c-loc">' + esc(disp(b.chapter)) + ' · ' + b.pct + '%</div>' +
+          '<div class="c-title">' + esc(disp(b.name)) + '</div>' +
+          (b.excerpt ? '<div class="c-text">' + esc(disp(b.excerpt)) + '…</div>' : '') +
           '<div class="c-meta"><span>' + fmtDate(b.ts) + '</span><span class="c-actions">' +
             '<button data-act="rename" title="Tahrirlash">' + icon("edit") + '</button>' +
             '<button data-act="del" title="O\'chirish">' + icon("trash") + '</button>' +
@@ -710,8 +759,8 @@
       var sorted = S.highlights.slice().sort(function (a, b) { return a.p - b.p || a.start - b.start; });
       box.innerHTML = sorted.map(function (h) {
         return '<div class="card" data-hl="' + h.id + '">' +
-          '<div class="c-loc"><span class="swatch" style="background:var(--hl-' + h.color + ')"></span>' + esc(chapterMeta[h.ci] ? chapterMeta[h.ci].title : "") + '</div>' +
-          '<div class="c-quote">' + esc(h.text.slice(0, 240)) + '</div>' +
+          '<div class="c-loc"><span class="swatch" style="background:var(--hl-' + h.color + ')"></span>' + esc(disp(chapterMeta[h.ci] ? chapterMeta[h.ci].title : "")) + '</div>' +
+          '<div class="c-quote">' + esc(disp(h.text.slice(0, 240))) + '</div>' +
           (h.note ? '<div class="c-text">📝 ' + esc(h.note) + '</div>' : '') +
           '<div class="c-meta"><span>' + fmtDate(h.ts) + '</span><span class="c-actions">' +
             '<button data-act="note" title="Izoh">' + icon("note") + '</button>' +
@@ -733,8 +782,8 @@
       if (!withNotes.length) { box.innerHTML = empty(q ? "Topilmadi." : "Izoh yo'q.<br>Belgilashga izoh qo'shing."); return; }
       box.innerHTML = withNotes.sort(function (a, b) { return b.ts - a.ts; }).map(function (h) {
         return '<div class="card" data-hl="' + h.id + '">' +
-          '<div class="c-loc"><span class="swatch" style="background:var(--hl-' + h.color + ')"></span>' + esc(chapterMeta[h.ci] ? chapterMeta[h.ci].title : "") + '</div>' +
-          '<div class="c-quote">' + esc(h.text.slice(0, 160)) + '</div>' +
+          '<div class="c-loc"><span class="swatch" style="background:var(--hl-' + h.color + ')"></span>' + esc(disp(chapterMeta[h.ci] ? chapterMeta[h.ci].title : "")) + '</div>' +
+          '<div class="c-quote">' + esc(disp(h.text.slice(0, 160))) + '</div>' +
           '<div class="c-text">' + esc(h.note) + '</div>' +
           '<div class="c-meta"><span>' + fmtDate(h.ts) + '</span><span class="c-actions">' +
             '<button data-act="note" title="Tahrirlash">' + icon("edit") + '</button>' +
