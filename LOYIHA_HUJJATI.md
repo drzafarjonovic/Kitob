@@ -75,7 +75,28 @@ Har bir bob uchun:
 
 ---
 
-## HOZIRGI HOLAT
+## HOZIRGI HOLAT (yangilangan: 30-iyun 2026)
+
+### Tekshiruvdan o'tdi. Tuzatish boshlandi.
+
+**Bajarilgan tuzatishlar:**
+- ✅ XI bob kengaytirildi (406 → 767 so'z)
+
+**Navbatdagi tuzatishlar (prioritet bo'yicha):**
+1. XVII bob kengaytirish (849 so'z) — Akt3, 3-5 pardalar qo'shish (Drako Vazir, Kutubxona, Damlamalar xonasi)
+2. XXV bob kengaytirish (730 so'z) — Garri Volan-de-Mort qiyofasiga kirish dialoglari to'liq yozish
+3. XXVI bob kengaytirish (767 so'z) — Delfi bilan uchrashish dialoglari (parseltong, uchish, "Ota")
+4. XXVII bob kengaytirish (701 so'z) — Qurbonlik sahnasi, yakuniy Sedrik qabri dialoglari
+5. IV bob kengaytirish (614 so'z) — Germiona bilan dialog to'liq qo'shish
+6. XIV bob kengaytirish (870 so'z) — Makgonagal xarita sahnasi qo'shish
+7. XVI bob kengaytirish (860 so'z) — Garri-Mirtl dialogi qo'shish
+8. XXII bob kengaytirish (390 so'z) — Vokzal sahnasi muhit tasviri qo'shish
+
+**TEXNIK ESLATMA:** text/ papkasi git ga qo'shilmagan. Har sessiyada qayta chiqarish kerak (yuqoridagi Python skript). Hozir `text/part2.txt` mavjud, lekin commit qilinmagan.
+
+---
+
+## ESKI HOLAT
 
 ### Yozilgan boblar (I-X):
 
