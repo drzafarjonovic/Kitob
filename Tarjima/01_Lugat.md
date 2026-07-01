@@ -142,6 +142,24 @@ qilinib **yakuniy qulflandi**:
 | restricted section (kutubxona) | тақиқланган бўлим | 🔧 |
 | geek | китобхўр | 🔧 |
 
+## Bob 4 da qo'shilgan
+| English | O'zbekcha | St |
+|---|---|---|
+| Mudblood | маглвачча | ✅ (b2: «жирканч маглвачча» = filthy little Mudblood) |
+| Chaser (takror) | Ҳужумчи | 🔧 |
+| Herbology | Гербология | ✅ |
+| Professor Longbottom / Neville | профессор Лонгботтом / Невилль | ✅ |
+| Potions (dars) | дамламалар тайёрлаш дарси | ✅ (7 kitobda «дамламалар тайёрлаш дарси») |
+| potion | дамлама | ✅ |
+| cauldron | қозон | ✅ |
+| Dungbomb | Тезакбомба | 🔧 (7 kitobda yo'q; konventsiya) |
+| Bicorn (horn of) | Бикорн (шохи) | 🔧 |
+| salamander blood | саламандра қони | 🔧 |
+| Aunt Angelina | Ангелина хола | ✅ (b2: «Ангелина») |
+| Polly Chapman | Полли Чапман | 🔧 (7 kitobda yo'q; konventsiya) |
+| Karl Jenkins | Карл Женкинс | 🔧 (7 kitobda yo'q; konventsiya) |
+| owl post (xat) | укки почтаси | ✅ |
+
 ## ⚠️ TARJIMADA UCHRAGANDA TEKSHIRILADI
 - **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda 7 kitobdan
   tekshiriladi; topilmasa konventsiya bo'yicha hosil qilinib shu faylga qo'shiladi.

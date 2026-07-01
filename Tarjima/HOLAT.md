@@ -128,7 +128,7 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 
 ## 6. HOZIRGI HOLAT
 
-**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 3/77.**
+**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 4/77.**
 
 | Bosqich | Holat |
 |---|---|
@@ -137,17 +137,17 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 | 2. Lug'at (`01_Lugat.md`) | ✅ (tasdiqlangan; tarjima davomida kengaytiriladi) |
 | 3. Style Guide (`02_Style_Guide.md`) | ✅ |
 | Foydalanuvchi tasdig'i (0–3) | ✅ |
-| 4. Bobma-bob tarjima | 🔄 3/77 |
+| 4. Bobma-bob tarjima | 🔄 4/77 |
 | 5. Yakuniy yig'ish | ⬜ |
 
 **📍 SATRMA-SATR HOLAT (manba `Harry_Potter_and_the.html`):**
-- Tarjima qilingan: **1–3-boblar** = manba satrlari **84–133** (Bob 1: 84–86, Bob 2: 105–107, Bob 3: 130–133).
-- Oxirgi tarjima qilingan manba satri: **133** (Bob 3 `userstuff` oxiri; `/chapter content` marker 134-satrda).
+- Tarjima qilingan: **1–4-boblar** = manba satrlari **84–158** (Bob 1: 84–86, Bob 2: 105–107, Bob 3: 130–133, Bob 4: 156–158).
+- Oxirgi tarjima qilingan manba satri: **158** (Bob 4 `userstuff` oxiri; `/chapter content` marker 159-satrda).
 - To'liq satr xaritasi — pastdagi «BOBLAR HOLATI» jadvalida (har bob uchun aniq satrlar).
 
-**➡️ KEYINGI QADAM:** `Bob_04` — «Act One: Scene Four Part Three» → «4-боб. Биринчи парда, тўртинчи саҳна, учинчи қисм».
-- Manba satrlari: **userstuff 156–158** (markerlar 155–159).
-- Ajratish: 4-chi `<!--chapter content-->` blokini `read_file` (offset≈154) bilan o'qi.
+**➡️ KEYINGI QADAM:** `Bob_05` — «Act One: Scene Four Part Four» → «5-боб. Биринчи парда, тўртинчи саҳна, тўртинчи қисм».
+- Manba satrlari: **userstuff 181–188** (markerlar 180–189).
+- Ajratish: 5-chi `<!--chapter content-->` blokini `read_file` (offset≈179) bilan o'qi.
 
 ---
 
@@ -250,6 +250,31 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 - **Reader:** `build_reader.py` → 3 bob, placeholderlar 0.
 - **Push:** `main`.
 
+### 2026-07-01 — Bob 4 tarjimasi (`boblar/Bob_04.html`) ✅
+- **Nima:** 4-bob to'liq tarjima — «4-боб. Биринчи парда, тўртинчи саҳна, учинчи қисм».
+  Bu ham muallif qo'shgan "roman" bob — Альбуснинг **иккинчи йили** (bir yil qamrab
+  oladi). Mazmun: Кингс Кросс платформасида отаси Гарри билан оғриқли суҳбат («мендан
+  нарироқ туринг», «Гарри Поттернинг слизеринлик ўғли»), Жеймснинг мазаху ҳайдаши,
+  Роза билан совуқ видолашув (қон-қариндошлик, «маглвачча» ҳақорати, садоқат),
+  Скорпиуснинг келиши; Розанинг «Гриффиндор»га Ҳужумчи бўлиши ва Макгонагаллнинг
+  бир тарафлама мақтови; дамламалар тайёрлаш дарсидаги фалокат (Полли Чапман, Карл
+  Женкинс таъналари, қозон портлаши); Альбуснинг ўсиб-улғайиши ва ўқишдаги ютуқлари
+  (Гербология, Сеҳргарлик тарихи — Скорпиус ёрдамида); Скорпиус онасининг бетоблиги;
+  йил охирида поездда сукунат ва платформада Драконинг ўғлига меҳри. Bosh qismidagi
+  muallif izohi (blockquote «Chapter Notes» — hikoya emas) tarjima QILINMADI.
+- **Qanday:** Manba 156–158-qatorlar (userstuff). Skelet `fs_write` + matn 7 qismda
+  `fs_append`. **Kanon tekshiruvi (7 kitobdan grep):** Mudblood = «маглвачча»
+  (b2: «жирканч маглвачча»), Potions class = «дамламалар тайёрлаш дарси» (b1, 10 marta),
+  potion = «дамлама», cauldron = «қозон», Herbology = «Гербология», Neville Longbottom =
+  «Невилль/Лонгботтом», Aunt Angelina = «Ангелина хола» (b2 imlosi «Ангелина»),
+  owl post = «укки почтаси». 🔧: Полли Чапман, Карл Женкинс, Тезакбомба (Dungbomb),
+  бикорн шохи, саламандра қони. Barchasi lug'atga qo'shildi.
+- **Nazorat:** 114/114 `<p>` (aynan mos), 7 ta `+++` (manbadek), 3/3 `<em>`, terminlar
+  to'g'ri, xato/eski terminlar 0, matnda lotin harf yo'q.
+- **Reader:** `build_reader.py` → 4 bob (~13989 so'z), standalone placeholderlar 0,
+  index.html 9 bookdata skript, eski 8-kitob (gp_reader_b8) joyida.
+- **Push:** `main`.
+
 ---
 
 ## 8. BOBLAR HOLATI (77 bob)
@@ -264,7 +289,7 @@ Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+nazoratdan o'tgan+pus
 | 1 | Act One: Scenes One, Two, and Three | 84–86 | ✅ `boblar/Bob_01.html` |
 | 2 | Act One Scene Four Part One | 105–107 | ✅ `boblar/Bob_02.html` |
 | 3 | Act One: Scene Four Part Two | 130–133 | ✅ `boblar/Bob_03.html` |
-| 4 | Act One: Scene Four Part Three | 156–158 | ⬜ |
+| 4 | Act One: Scene Four Part Three | 156–158 | ✅ `boblar/Bob_04.html` |
 | 5 | Act One: Scene Four Part Four | 181–188 | ⬜ |
 | 6 | Act One: Scene Four Part Five | 211–225 | ⬜ |
 | 7 | Act One: Scene Five | 248–252 | ⬜ |
