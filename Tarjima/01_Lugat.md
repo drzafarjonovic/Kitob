@@ -176,6 +176,22 @@ qilinib **yakuniy qulflandi**:
 | Luna | Луна | ✅ |
 | funeral | дафн маросими | 🔧 |
 
+## Bob 6 da qo'shilgan
+| English | O'zbekcha | St |
+|---|---|---|
+| Hagrid | Хагрид | ✅ (7 kitob, 1896 marta — DIQQAT: «Ҳагрид» EMAS, «Хагрид») |
+| Care of Magical Creatures (fan) | Сеҳрли ҳайвонларни парвариш қилиш (фани) | ✅ (b3 dan) |
+| Study of Ancient Runes (fan) | Қадимги руналарни ўрганиш (фани) | ✅ (b3: «қадимги руналар») |
+| Exploding Snap (o'yin) | Портловчи қарталар | ✅ (b4: «портловчи қарталар») |
+| flobberworm | флоббер қурти | ✅ (7 kitob) |
+| wreath | гулчамбар | ✅ |
+| cane (asо) | ҳасса | ✅ |
+| Ministry official | Вазирлик расмий шахси | ✅ |
+| Healer | шифокор | ✅ |
+| Malfoy Manor | Малфой қасри | 🔧 (7 kitobda tilga olinmaydi; konventsiya) |
+| Aunt Daphne / Daphne Greengrass | Дафна холаси / Дафна Гринграсс | 🔧 |
+| Astoria Malfoy | Асториа (Малфой) | 🔧 (7 kitobda ismi tilga olinmaydi; lotin talaffuziga yaqin shakl tanlandi va Bob 6 ichida birxillashtirildi) |
+
 ## ⚠️ TARJIMADA UCHRAGANDA TEKSHIRILADI
 - **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda 7 kitobdan
   tekshiriladi; topilmasa konventsiya bo'yicha hosil qilinib shu faylga qo'shiladi.

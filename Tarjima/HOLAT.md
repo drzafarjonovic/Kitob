@@ -128,7 +128,7 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 
 ## 6. HOZIRGI HOLAT
 
-**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 5/77.**
+**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 6/77.**
 
 | Bosqich | Holat |
 |---|---|
@@ -137,16 +137,16 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 | 2. Lug'at (`01_Lugat.md`) | ✅ (tasdiqlangan; tarjima davomida kengaytiriladi) |
 | 3. Style Guide (`02_Style_Guide.md`) | ✅ |
 | Foydalanuvchi tasdig'i (0–3) | ✅ |
-| 4. Bobma-bob tarjima | 🔄 5/77 |
+| 4. Bobma-bob tarjima | 🔄 6/77 |
 | 5. Yakuniy yig'ish | ⬜ |
 
 **📍 SATRMA-SATR HOLAT (manba `Harry_Potter_and_the.html`):**
-- Tarjima qilingan: **1–5-boblar** = manba satrlari **84–188** (Bob 1: 84–86, Bob 2: 105–107, Bob 3: 130–133, Bob 4: 156–158, Bob 5: 181–188).
-- Oxirgi tarjima qilingan manba satri: **188** (Bob 5 `userstuff` oxiri; `/chapter content` marker 189-satrda).
+- Tarjima qilingan: **1–6-boblar** = manba satrlari **84–225** (Bob 1: 84–86, Bob 2: 105–107, Bob 3: 130–133, Bob 4: 156–158, Bob 5: 181–188, Bob 6: 211–225).
+- Oxirgi tarjima qilingan manba satri: **225** (Bob 6 `userstuff` oxiri; `/chapter content` marker 226-satrda).
 - To'liq satr xaritasi — pastdagi «BOBLAR HOLATI» jadvalida (har bob uchun aniq satrlar).
+- **DIQQAT (Bob 6dan muhim eslatma):** Hagrid ismi manbada 7 kitobda **«Хагрид»** (Ҳ EMAS, Х). Tarjima paytida xato qilib «Ҳагрид» yozib qo'yilgan, keyin butunlay tuzatildi — keyingi boblarda ham albatta «Хагрид» ishlatilsin.
 
-**➡️ KEYINGI QADAM:** `Bob_06` — «Act One: Scene Five» → «6-боб. Биринчи парда, бешинчи саҳна».
-- Ajratish: 6-chi `<!--chapter content-->` blokini top (grep `<!--chapter content-->`), heading + userstuff'ni `read_file` bilan o'qi.
+**➡️ KEYINGI QADAM:** `Bob_07` — keyingi `<!--chapter content-->` blokini top (grep `<!--chapter content-->`, taxminan 235-qatordan boshlanadi), heading + userstuff'ni `read_file` bilan o'qi.
 
 ---
 
@@ -249,6 +249,34 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 - **Reader:** `build_reader.py` → 3 bob, placeholderlar 0.
 - **Push:** `main`.
 
+### 2026-07-01 — Bob 6 tarjimasi (`boblar/Bob_06.html`) ✅
+- **Nima:** 6-bob to'liq tarjima — «6-боб. Биринчи парда, тўртинчи саҳна, бешинчи қисм».
+  Muallifning o'z izohicha (Chapter Notes), bu bob **butunlay muallif tomonidan yozilgan**
+  — pyesada uchinchi yil ko'rsatilmagan, shuning uchun bo'shliqni to'ldirish uchun yozilgan.
+  Boshdagi blockquote (Chapter Notes) tarjima QILINMADI. Mazmun: Асториа Малфойнинг дафн
+  маросими (Уилтшир, Драко, Дафна хола, гулчамбар); дафндан кейинги ҳафталар; учинчи курс
+  танлов фанлари (Сеҳрли ҳайвонларни парвариш қилиш, Қадимги руналарни ўрганиш);
+  Хагрид билан муносабат («Слизеринда Поттер?!» ва Скорпиус haqidagi og'ir gap);
+  Рождество Хогварцда; Хогсмёдга бормаслик; кўл бўйидаги зуғум саҳналари; йил охирида
+  платформада Скорпиус ва Драконинг учрашуви олдидан суҳбат.
+- **Qanday:** Manba 211–225-qatorlar (userstuff). Skelet + matn 4 qismda `fs_append`.
+  **Kanon (7 kitobdan grep):** Care of Magical Creatures = «Сеҳрли ҳайвонларни парвариш
+  қилиш» (b3 dan), Study of Ancient Runes = «Қадимги руналарни ўрганиш» (b3: «қадимги
+  руналар»), Exploding Snap = «Портловчи қарталар» (b4), flobberworm = «флоббер қурти»,
+  wreath = «гулчамбар», cane = «ҳасса». **MUHIM TUZATISH: Hagrid ismini boshida xato
+  qilib «Ҳагрид» deb yozgandim — 7 kitobda aniq «Хагрид» (Ҳ emas, Х) ekanini tekshirib,
+  hammasini (11 o'rin) tuzatdim.** Astoria ismi 7 kitobda umuman tilga olinmagani uchun
+  «Асториа» shakli tanlandi va bob ichida (avval «Асориа»/«Асториа» aralash edi) to'liq
+  birxillashtirildi.
+- **Nazorat:** 80/80 `<p>` (aynan mos), 4 ta `+++`, 8/8 `<em>` (2 tasi dialogdagi kursiv
+  urg'u — "doing"/"love" — birinchi o'tishda tushib qolgan, keyin qo'shildi), Latin harf 0,
+  mid-word bosh harf xatolari (10+ ta, «ҲАРАКАТ» kabi) butunlay topib tuzatildi.
+- **Reader:** `build_reader.py` → 6 bob (~18939 so'z), placeholderlar 0, index.html 9 bookdata,
+  eski 8-kitob (gp_reader_b8) joyida.
+- **Push:** `main`.
+
+---
+
 ### 2026-07-01 — Bob 5 tarjimasi (`boblar/Bob_05.html`) ✅
 - **Nima:** 5-bob to'liq tarjima — «5-боб. Биринчи парда, тўртинчи саҳна, тўртинчи қисм».
   Scene Four'ning oxirgi qismi; Альбуснинг **учинчи йили** arafasi va boshlanishi.
@@ -314,7 +342,7 @@ Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+nazoratdan o'tgan+pus
 | 3 | Act One: Scene Four Part Two | 130–133 | ✅ `boblar/Bob_03.html` |
 | 4 | Act One: Scene Four Part Three | 156–158 | ✅ `boblar/Bob_04.html` |
 | 5 | Act One: Scene Four Part Four | 181–188 | ✅ `boblar/Bob_05.html` |
-| 6 | Act One: Scene Four Part Five | 211–225 | ⬜ |
+| 6 | Act One: Scene Four Part Five | 211–225 | ✅ `boblar/Bob_06.html` |
 | 7 | Act One: Scene Five | 248–252 | ⬜ |
 | 8 | Act One: Scene Six | 275–277 | ⬜ |
 | 9 | Act One: Scene Seven | 300–302 | ⬜ |
