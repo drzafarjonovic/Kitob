@@ -135,6 +135,13 @@ qilinib **yakuniy qulflandi**:
 | Malfoy Manor | Малфойлар қасри | 🔧 |
 | Dark Wizard | қора сеҳргар | 🔧 |
 
+## Bob 3 da qo'shilgan
+| English | O'zbekcha | St |
+|---|---|---|
+| History of Magic (fan) | Сеҳргарлик тарихи | ✅ (46 marta) |
+| restricted section (kutubxona) | тақиқланган бўлим | 🔧 |
+| geek | китобхўр | 🔧 |
+
 ## ⚠️ TARJIMADA UCHRAGANDA TEKSHIRILADI
 - **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda 7 kitobdan
   tekshiriladi; topilmasa konventsiya bo'yicha hosil qilinib shu faylga qo'shiladi.
