@@ -547,6 +547,262 @@ WORLD = {
 }
 
 # ----------------------------------------------------------------------------
+# Personajlarning to'liq biografiyasi. Har maydon [label, qiymat, book]:
+# `book` > o'quvchi darajasidan bo'lsa, maydon "keyinroq ochiladi" holatida
+# yashiriladi (maydon-darajasida spoiler himoyasi). facts: [book, matn].
+# ----------------------------------------------------------------------------
+CHARBIO = {
+    "garri": {"rows": [
+        ["To'liq ism", "Garri Jeyms Potter", 1],
+        ["Tug'ilgan", "31-iyul, 1980-yil", 1],
+        ["Qon maqomi", "Yarim qonli", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Tayoqcha", "Chsetan (holli), 11 dyuym, feniks pati", 1],
+        ["Patronus", "Bug'u (kiyik)", 3],
+        ["Oilasi", "Jeyms va Lili Potter (ota-ona)", 1],
+        ["Kasbi", "O'quvchi; keyinchalik auror", 1],
+    ], "facts": [
+        [1, "Bir yoshida Voldemort hujumidan omon qoldi; peshonasida chaqmoq izi qoldi."],
+        [1, "O'n bir yoshida sehrgar ekanini bilib, Xogvartsga o'qishga bordi."],
+        [1, "Ron va Germiona bilan Falsafiy toshni Voldemortdan asrab qoldi."],
+        [3, "Dementorlardan himoya uchun kuchli Patronus sehrini o'rgandi."],
+        [4, "Uch Afsungar Bellashuviga majburan tortildi."],
+        [5, "Do'stlari bilan Dumbledor Armiyasini tuzdi."],
+    ]},
+    "ron": {"rows": [
+        ["To'liq ism", "Ronald Bilius Uizli", 1],
+        ["Tug'ilgan", "1-mart, 1980-yil", 1],
+        ["Qon maqomi", "Sof qonli", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Patronus", "Jek-rassel terer (it)", 5],
+        ["Oilasi", "Uizlilar oilasi (kenja o'g'il)", 1],
+        ["Kasbi", "O'quvchi", 1],
+    ], "facts": [
+        [1, "Xogvarts poyezdida Garri bilan tanishib, eng yaqin do'stiga aylandi."],
+        [1, "Ulkan sehrli shaxmat o'yinida o'zini qurbon qildi."],
+        [2, "Buzuq uchar mashinada Xogvartsga bordi."],
+    ]},
+    "germiona": {"rows": [
+        ["To'liq ism", "Germiona Jin Greynjer", 1],
+        ["Tug'ilgan", "19-sentyabr, 1979-yil", 1],
+        ["Qon maqomi", "Maripat (Muggle) oilasidan", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Tayoqcha", "Uzum, ajdaho yurak tomiri", 1],
+        ["Patronus", "Suvsar", 5],
+        ["Kasbi", "O'quvchi; keyinchalik Vazirlikda", 1],
+    ], "facts": [
+        [1, "O'tkir aqli bilan uchlikni ko'p bor qutqardi."],
+        [3, "Vaqt Aylantirgich yordamida bir vaqtda ko'proq dars oldi."],
+    ]},
+    "dambldor": {"rows": [
+        ["To'liq ism", "Albus Persival Vulfrik Brayan Dambldor", 1],
+        ["Tug'ilgan", "1881-yil", 1],
+        ["Qon maqomi", "Yarim qonli", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Patronus", "Feniks", 5],
+        ["Kasbi", "Xogvarts bosh direktori", 1],
+        ["Tayoqcha", "(7-kitobda oydinlashadi)", 7],
+    ], "facts": [
+        [1, "Chaqaloq Garrini Dursllar eshigi oldiga qoldirdi."],
+        [2, "Feniksi orqali Garriga Maxfiy Xonada yordam yubordi."],
+        [5, "Voldemortga qarshi Feniks Ordenini boshqardi."],
+        [6, "Voldemortning o'tmishi va xorkrukslar sirini Garriga ocha boshladi."],
+    ]},
+    "hagrid": {"rows": [
+        ["To'liq ism", "Rubeus Hagrid", 1],
+        ["Tug'ilgan", "6-dekabr, 1928-yil", 1],
+        ["Qon maqomi", "Yarim-gigant", 1],
+        ["Fakultet", "Gryffindor (o'qigan)", 1],
+        ["Kasbi", "O'rmonboni; keyin ustoz", 1],
+    ], "facts": [
+        [1, "Garriga sehrgar ekanini aytib, uni Xogvartsga olib keldi."],
+        [1, "Yashirincha ajdaho tuxumini boqishga urindi."],
+        [3, "Sehrli mavjudotlarni parvarishlash ustozi bo'ldi."],
+    ]},
+    "snegg": {"rows": [
+        ["To'liq ism", "Severus Snegg", 1],
+        ["Tug'ilgan", "9-yanvar, 1960-yil", 1],
+        ["Qon maqomi", "Yarim qonli", 6],
+        ["Fakultet", "Slizerin", 1],
+        ["Kasbi", "Iksirlar ustozi; Slizerin dekani", 1],
+        ["Patronus", "Kiyik (bug'u)", 7],
+    ], "facts": [
+        [1, "Garriga nisbatan sovuq va qattiqqo'l munosabatda bo'ldi."],
+        [6, "O'zini 'Chala Zot Shahzoda' deb atagani ma'lum bo'ldi."],
+        [7, "Uning haqiqiy sadoqati va Liliga bo'lgan muhabbati ochildi."],
+    ]},
+    "makgonagal": {"rows": [
+        ["To'liq ism", "Minerva Makgonagal", 1],
+        ["Tug'ilgan", "4-oktabr, 1935-yil", 1],
+        ["Qon maqomi", "Yarim qonli", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Kasbi", "Transfiguratsiya ustozi; Gryffindor dekani", 1],
+        ["Alohida", "Anigamag \u2014 mushukka aylanadi", 1],
+    ], "facts": [
+        [1, "Yangi o'quvchilarni saralash marosimida boshchilik qildi."],
+    ]},
+    "voldemort": {"rows": [
+        ["To'liq ism", "Tom Marvolo Ridl", 2],
+        ["Tug'ilgan", "31-dekabr, 1926-yil", 6],
+        ["Qon maqomi", "Yarim qonli", 6],
+        ["Fakultet", "Slizerin", 2],
+        ["Tayoqcha", "Zarnab (yew), 13.5 dyuym, feniks pati", 4],
+        ["Kasbi", "Qora sehrgar", 1],
+    ], "facts": [
+        [1, "Garrining ota-onasini o'ldirgan, so'ng sirli ravishda yo'qolgan kuch."],
+        [2, "Yosh Tom Ridl xotirasi kundalik orqali qaytishga urindi."],
+        [4, "To'liq tanaga qaytib, kuch-qudratini tikladi."],
+        [6, "O'tmishi va xorkrukslari asta-sekin ochila boshladi."],
+    ]},
+    "draco": {"rows": [
+        ["To'liq ism", "Drako Lyusius Malfoy", 1],
+        ["Tug'ilgan", "5-iyun, 1980-yil", 1],
+        ["Qon maqomi", "Sof qonli", 1],
+        ["Fakultet", "Slizerin", 1],
+        ["Tayoqcha", "Do'lana, 10 dyuym, edinrog tuki", 1],
+        ["Oilasi", "Lyusius va Narsissa Malfoy", 1],
+    ], "facts": [
+        [1, "Garriga do'stlik taklif qildi; rad etilgach, raqibiga aylandi."],
+        [6, "Voldemortdan og'ir va sirli vazifa oldi."],
+    ]},
+    "nevill": {"rows": [
+        ["To'liq ism", "Nevill Longbottom", 1],
+        ["Tug'ilgan", "30-iyul, 1980-yil", 1],
+        ["Qon maqomi", "Sof qonli", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Kasbi", "O'quvchi; keyin Gerbologiya ustozi", 1],
+    ], "facts": [
+        [1, "Dastlab uquvsiz ko'rindi, ammo jasoratini namoyon qildi."],
+        [5, "Voldemortga qarshi kurashga qo'shildi."],
+    ]},
+    "jinni": {"rows": [
+        ["To'liq ism", "Jinevra (Jinni) Molli Uizli", 2],
+        ["Tug'ilgan", "11-avgust, 1981-yil", 2],
+        ["Qon maqomi", "Sof qonli", 2],
+        ["Fakultet", "Gryffindor", 2],
+        ["Oilasi", "Uizlilar oilasi (yagona qiz)", 2],
+    ], "facts": [
+        [2, "Ridl kundaligining sirli ta'siriga tushib qoldi."],
+    ]},
+    "dobbi": {"rows": [
+        ["To'liq ism", "Dobbi", 2],
+        ["Qon maqomi", "Uy-elfi", 2],
+        ["Kasbi", "(dastlab) Malfoylar xizmatkori", 2],
+    ], "facts": [
+        [2, "Garrini yaqinlashayotgan xavfdan ogohlantirishga urindi."],
+        [2, "Garri hiyla ishlatib, uni ozodlikka chiqardi."],
+    ]},
+    "sirius": {"rows": [
+        ["To'liq ism", "Sirius Blek", 3],
+        ["Tug'ilgan", "1959-yil", 3],
+        ["Qon maqomi", "Sof qonli", 3],
+        ["Fakultet", "Gryffindor", 3],
+        ["Alohida", "Anigamag \u2014 qora itga aylanadi", 3],
+        ["Oilasi", "Garrining cho'qintirgan otasi", 3],
+    ], "facts": [
+        [3, "Azkabandan qochib, o'zining begunohligini isbotladi."],
+    ]},
+    "lyupin": {"rows": [
+        ["To'liq ism", "Remus Jon Lyupin", 3],
+        ["Tug'ilgan", "10-mart, 1960-yil", 3],
+        ["Qon maqomi", "Yarim qonli", 3],
+        ["Fakultet", "Gryffindor", 3],
+        ["Kasbi", "Qora kuchlardan himoya ustozi", 3],
+        ["Alohida", "Bo'ri-odam", 3],
+    ], "facts": [
+        [3, "Garriga Patronus sehrini sabr bilan o'rgatdi."],
+    ]},
+    "petigryu": {"rows": [
+        ["To'liq ism", "Piter Petigryu", 3],
+        ["Qon maqomi", "Sof qonli", 3],
+        ["Fakultet", "Gryffindor", 3],
+        ["Alohida", "Anigamag \u2014 kalamush (Korason)", 3],
+    ], "facts": [
+        [3, "O'n ikki yil kalamush qiyofasida yashiringani fosh bo'ldi."],
+    ]},
+    "sedrik": {"rows": [
+        ["To'liq ism", "Sedrik Diggori", 4],
+        ["Qon maqomi", "Sof qonli", 4],
+        ["Fakultet", "Puffenduy", 4],
+        ["Kasbi", "O'quvchi; Xogvarts chempioni", 4],
+    ], "facts": [
+        [4, "Uch Afsungar Bellashuvida Xogvartsni sharaf bilan ifodaladi."],
+    ]},
+    "muudi": {"rows": [
+        ["To'liq ism", "Alastor Muudi", 4],
+        ["Qon maqomi", "Sof qonli", 4],
+        ["Kasbi", "Auror (sehrgar-ovchi)", 4],
+        ["Alohida", "Sehrli ko'z; shiori \u2014 \"Doimo hushyor!\"", 4],
+    ], "facts": [
+        [4, "Qora kuchlardan himoya darsini o'tdi."],
+    ]},
+    "umbrij": {"rows": [
+        ["To'liq ism", "Doloris Jeyn Umbrij", 5],
+        ["Qon maqomi", "Yarim qonli", 5],
+        ["Fakultet", "Slizerin (o'qigan)", 5],
+        ["Kasbi", "Vazirlik amaldori; Bosh inkvizitor", 5],
+    ], "facts": [
+        [5, "Xogvartsda zolim va qattiq tartib o'rnatdi."],
+    ]},
+    "bellatrisa": {"rows": [
+        ["To'liq ism", "Bellatrisa Lestranj (Blek)", 5],
+        ["Qon maqomi", "Sof qonli", 5],
+        ["Fakultet", "Slizerin", 5],
+        ["Tayoqcha", "Yong'oq, ajdaho yurak tomiri", 5],
+        ["Kasbi", "O'lim Yeguvchi", 5],
+    ], "facts": [
+        [5, "Vazirlikdagi jangda faol qatnashdi."],
+    ]},
+    "luna": {"rows": [
+        ["To'liq ism", "Luna Lavgud", 5],
+        ["Tug'ilgan", "13-fevral, 1981-yil", 5],
+        ["Qon maqomi", "Sof qonli", 5],
+        ["Fakultet", "Kogtevran", 5],
+    ], "facts": [
+        [5, "Garrining eng samimiy va sodiq do'stlaridan biriga aylandi."],
+    ]},
+    "slughorn": {"rows": [
+        ["To'liq ism", "Horas Slughorn", 6],
+        ["Qon maqomi", "Sof qonli", 6],
+        ["Fakultet", "Slizerin", 6],
+        ["Kasbi", "Iksirlar ustozi", 6],
+    ], "facts": [
+        [6, "Voldemortning o'tmishiga oid muhim sirni saqlab kelardi."],
+    ]},
+    "fred_jorj": {"rows": [
+        ["To'liq ism", "Fred va Jorj Uizli", 1],
+        ["Tug'ilgan", "1-aprel, 1978-yil", 1],
+        ["Qon maqomi", "Sof qonli", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Kasbi", "Hazil-mutoyiba do'koni asoschilari", 1],
+    ], "facts": [
+        [1, "Hazillari bilan Garrini kuldirib, unga g'amxo'rlik qilishdi."],
+        [3, "Qaroqchilar xaritasini Garriga sovg'a qilishdi."],
+    ]},
+    "moli": {"rows": [
+        ["To'liq ism", "Molli Uizli (Prevett)", 1],
+        ["Qon maqomi", "Sof qonli", 1],
+        ["Fakultet", "Gryffindor (o'qigan)", 1],
+        ["Kasbi", "Uy bekasi; Feniks Ordeni a'zosi", 1],
+    ], "facts": [
+        [1, "Platformada Garriga yo'l ko'rsatdi."],
+        [2, "Garrini o'z uyida iliq kutib oldi."],
+    ]},
+    "lily_james": {"rows": [
+        ["To'liq ism", "Jeyms Potter va Lili Potter (Evans)", 1],
+        ["Qon maqomi", "Jeyms \u2014 sof qonli; Lili \u2014 Muggle oilasidan", 1],
+        ["Fakultet", "Gryffindor", 1],
+        ["Kasbi", "Feniks Ordeni a'zolari", 1],
+    ], "facts": [
+        [1, "Garrini himoya qilib halok bo'lishdi; Lilining muhabbati Garrini asrab qoldi."],
+    ]},
+}
+for _c in WORLD["entries"]:
+    if _c["id"] in CHARBIO:
+        _c["rows"] = CHARBIO[_c["id"]]["rows"]
+        _c["facts"] = CHARBIO[_c["id"]]["facts"]
+
+# ----------------------------------------------------------------------------
 # Assemble readers
 # ----------------------------------------------------------------------------
 def read(p):
@@ -883,6 +1139,16 @@ font-family:system-ui,sans-serif;font-weight:700;margin-bottom:.5rem;}
 .wd-rel button{background:var(--panel2);border:1px solid var(--border);color:var(--fg);font-family:system-ui,sans-serif;
 font-size:.8rem;padding:.4rem .8rem;border-radius:999px;cursor:pointer;}
 .wd-rel button:hover{border-color:var(--accent);color:var(--accent);}
+.wd-facts{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:.7rem .85rem;margin-bottom:1.1rem;}
+.wf-row{display:flex;gap:.7rem;font-family:system-ui,sans-serif;font-size:.86rem;line-height:1.45;padding:.28rem 0;border-bottom:1px solid var(--border);}
+.wf-row:last-child{border-bottom:0;}
+.wf-l{flex:none;width:40%;color:var(--muted);}
+.wf-v{flex:1;font-weight:600;}
+.wd-lock{color:var(--accent);font-weight:600;font-size:.82rem;font-style:italic;}
+.wd-facts-list{display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.1rem;}
+.wfact{font-family:system-ui,sans-serif;font-size:.88rem;line-height:1.55;padding-left:.75rem;border-left:3px solid var(--accent);}
+.wfact-b{display:inline-block;font-size:.66rem;font-weight:800;color:var(--accent);letter-spacing:.02em;margin-right:.45rem;text-transform:uppercase;}
+.wfact-hid{font-family:system-ui,sans-serif;font-size:.8rem;color:var(--muted);font-style:italic;padding-left:.75rem;}
 /* timeline */
 .world-tl{position:relative;padding-left:1.4rem;}
 .world-tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--border);}
@@ -1132,10 +1398,20 @@ function wDetailHTML(id){var e=wById(id);if(!e)return '<div class="world-empty">
     '<div class="wd-rel"><button data-reveal="'+e.id+'">Baribir ko\\u02bbrsatish</button></div>';}
   var meta='<span class="wd-chip">'+WCAT[e.cat][0]+'</span><span class="wd-chip">'+e.book+'-kitob</span>';
   if(e.house&&HCOL[e.house])meta+='<span class="wd-chip">\\uD83D\\uDEE1 '+HCOL[e.house][2]+'</span>';
+  var fr=wFrontier();
+  var bio='';
+  if(e.rows&&e.rows.length){bio='<div class="wd-facts">'+e.rows.map(function(r){
+    var v=(r[2]>fr)?'<span class="wd-lock">\\uD83D\\uDD12 keyinroq ochiladi</span>':esc(r[1]);
+    return '<div class="wf-row"><span class="wf-l">'+esc(r[0])+'</span><span class="wf-v">'+v+'</span></div>';}).join('')+'</div>';}
+  var facts='';
+  if(e.facts&&e.facts.length){var vis=e.facts.filter(function(f){return f[0]<=fr;});var hid=e.facts.length-vis.length;
+    if(vis.length||hid){facts='<div class="wd-rel-t">Muhim voqealar</div><div class="wd-facts-list">'+
+      vis.map(function(f){return '<div class="wfact"><span class="wfact-b">'+f[0]+'-kitob</span>'+esc(f[1])+'</div>';}).join('')+
+      (hid>0?'<div class="wfact-hid">\\uD83D\\uDD12 Yana '+hid+' ta voqea keyingi kitoblarda ochiladi</div>':'')+'</div>';}}
   var rels=e.rel.map(function(rid){var r=wById(rid);return r?'<button data-id="'+rid+'">'+esc(r.name)+'</button>':'';}).join('');
   return '<button class="wd-back" data-back="1">\\u2039 Orqaga</button>'+
     '<div class="wd-hero" style="background:'+wGrad(e)+'"><div class="wd-ic">'+WCAT[e.cat][1]+'</div><h3>'+esc(e.name)+'</h3><div class="wd-tag">'+esc(e.tag)+'</div></div>'+
-    '<div class="wd-meta">'+meta+'</div><p class="wd-desc">'+esc(e.desc)+'</p>'+
+    '<div class="wd-meta">'+meta+'</div><p class="wd-desc">'+esc(e.desc)+'</p>'+bio+facts+
     (rels?'<div class="wd-rel-t">Bog\\u02bbliq maqolalar</div><div class="wd-rel">'+rels+'</div>':'');}
 function wBindDetail(body){var back=body.querySelector('[data-back]');if(back)back.onclick=function(){wState.detail=null;worldRenderBody();};
   var rev=body.querySelector('[data-reveal]');if(rev)rev.onclick=function(){wRevealed[rev.getAttribute('data-reveal')]=1;worldRenderBody();};
