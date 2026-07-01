@@ -95,13 +95,19 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
      terminlar (масалан «Хогвартс», «қум соатча», «тарафдорлари») **0** bo'lsin.
    - Mazmun to'liq, personaj ovozi izchil, grammatika/imlo toza.
 7. `HOLAT.md` da bobni ✅ belgila, «Joriy holat» va «LOG» ni yangila.
-8. **PREMIUM READER'ni qayta qur:** `python3 Tarjima/build_reader.py` (bu barcha tayyor
-   boblarni `Garri_Potter_va_Lanatlangan_Bola.html` ga yig'adi — foydalanuvchi shuni o'qiydi).
-   Skript `index.html` dagi reader-shell'ni ishlatadi; placeholderlar (0 bo'lsin) va
-   bob soni to'g'riligini `grep` bilan tekshir.
-9. `git add` (bob fayli + `Garri_Potter_va_Lanatlangan_Bola.html` + HOLAT.md + agar
-   o'zgargan bo'lsa 01_Lugat.md) → `git commit` → github power `push_to_remote` (`main`).
-10. Qisqa "tayyor" deb bildir.
+8. **HAR BOB 3 JOYGA SAQLANADI:**
+   - (a) `Tarjima/boblar/Bob_NN.html` — bob tarjimasi (toza manba matn; yuqorida yozildi).
+   - (b) `python3 Tarjima/build_reader.py` ni ishga tushir — bitta skript qolgan IKKI joyni
+     avtomatik yangilaydi: **standalone o'quvchi** `Tarjima/Garri_Potter_va_Lanatlangan_Bola.html`
+     va **`index.html` kutubxonasidagi 9-kitob** (bookdata-9 + BOOKS n:9 + COVERS).
+   - Tekshir: standalone'da `@@` placeholder 0; `index.html`da 9 ta bookdata skript va
+     eski 8-kitob (`gp_reader_b8`) joyida turibdi.
+9. `HOLAT.md` ni yangila: «HOZIRGI HOLAT» (tayyor N/77 + satr holati), «BOBLAR HOLATI»
+   jadvalida bobni ✅ qil, «LOG» ga yozuv qo'sh.
+10. `git add` (`boblar/Bob_NN.html` + `Garri_Potter_va_Lanatlangan_Bola.html` + `index.html`
+    + `Tarjima/HOLAT.md` + o'zgargan bo'lsa `01_Lugat.md`) → `git commit`
+    → github power `push_to_remote` (`main`).
+11. Qisqa "tayyor" deb bildir.
 
 > ℹ️ **Premium reader haqida:** har bob toza `boblar/Bob_NN.html` sifatida yoziladi
 > (tarjima manbai). `build_reader.py` ularni (a) standalone o'quvchi
@@ -134,10 +140,14 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 | 4. Bobma-bob tarjima | 🔄 3/77 |
 | 5. Yakuniy yig'ish | ⬜ |
 
-**➡️ KEYINGI QADAM:** `Bob_04` — «Act One: Scene Four Part Three».
-Manbada bobni ajratish: `<!--chapter content-->` / `<!--/chapter content-->` markerlari
-orasidagi 4-chi `userstuff` bloki (grep bilan aniqla). Bob nomi: «4-боб. Биринчи парда,
-тўртинчи саҳна, учинчи қисм».
+**📍 SATRMA-SATR HOLAT (manba `Harry_Potter_and_the.html`):**
+- Tarjima qilingan: **1–3-boblar** = manba satrlari **84–133** (Bob 1: 84–86, Bob 2: 105–107, Bob 3: 130–133).
+- Oxirgi tarjima qilingan manba satri: **133** (Bob 3 `userstuff` oxiri; `/chapter content` marker 134-satrda).
+- To'liq satr xaritasi — pastdagi «BOBLAR HOLATI» jadvalida (har bob uchun aniq satrlar).
+
+**➡️ KEYINGI QADAM:** `Bob_04` — «Act One: Scene Four Part Three» → «4-боб. Биринчи парда, тўртинчи саҳна, учинчи қисм».
+- Manba satrlari: **userstuff 156–158** (markerlar 155–159).
+- Ajratish: 4-chi `<!--chapter content-->` blokini `read_file` (offset≈154) bilan o'qi.
 
 ---
 
@@ -245,82 +255,86 @@ orasidagi 4-chi `userstuff` bloki (grep bilan aniqla). Bob nomi: «4-боб. Б�
 ## 8. BOBLAR HOLATI (77 bob)
 Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+nazoratdan o'tgan+push
 
-| # | Bob (ing) | Holat |
-|---|---|---|
-| 1 | Act One: Scenes One, Two, and Three | ✅ `boblar/Bob_01.html` |
-| 2 | Act One Scene Four Part One | ✅ `boblar/Bob_02.html` |
-| 3 | Act One: Scene Four Part Two | ✅ `boblar/Bob_03.html` |
-| 4 | Act One: Scene Four Part Three | ⬜ |
-| 5 | Act One: Scene Four Part Four | ⬜ |
-| 6 | Act One: Scene Four Part Five | ⬜ |
-| 7 | Act One: Scene Five | ⬜ |
-| 8 | Act One: Scene Six | ⬜ |
-| 9 | Act One: Scene Seven | ⬜ |
-| 10 | Act One: Scenes Eight and Nine | ⬜ |
-| 11 | Act One: Scene Ten | ⬜ |
-| 12 | Act One: Scene Eleven | ⬜ |
-| 13 | Act One: Scene Eleven and a Half | ⬜ |
-| 14 | Act One: Scene Twelve | ⬜ |
-| 15 | Act One: Scenes Thirteen and Fourteen | ⬜ |
-| 16 | Act One: Scene Fifteen | ⬜ |
-| 17 | Act One: Scene Sixteen | ⬜ |
-| 18 | Act One: Scene Eighteen | ⬜ |
-| 19 | Act One: Scene Nineteen | ⬜ |
-| 20 | Act Two: Scene Four | ⬜ |
-| 21 | Act Two: Scenes Six and Seven | ⬜ |
-| 22 | Act Two: Scene Eight | ⬜ |
-| 23 | Act Two: Scene Nine | ⬜ |
-| 24 | Act Two: Scene Eleven | ⬜ |
-| 25 | Act Two: Scene Twelve | ⬜ |
-| 26 | Act Two: Scene Twelve and a Half | ⬜ |
-| 27 | Act Two: Scene Thirteen | ⬜ |
-| 28 | Act Two: Scene Fourteen | ⬜ |
-| 29 | Act Two: Scene Fifteen | ⬜ |
-| 30 | Act Two: Scene Sixteen | ⬜ |
-| 31 | Act Two: Scene Eighteen | ⬜ |
-| 32 | Act Two: Scene Nineteen | ⬜ |
-| 33 | Act Two: Scene Twenty | ⬜ |
-| 34 | Act Three: Scene 0.5 | ⬜ |
-| 35 | Act Three: Scene One | ⬜ |
-| 36 | Act Three: Scene Two | ⬜ |
-| 37 | Act Three: Scene Three | ⬜ |
-| 38 | Act Three: Scene Three and a Half | ⬜ |
-| 39 | Act Three: Scene Four | ⬜ |
-| 40 | Act Three: Scene Five | ⬜ |
-| 41 | Act Three: Scenes Six and Seven | ⬜ |
-| 42 | Act Three: Scene Eight | ⬜ |
-| 43 | Act Three: Scene Nine | ⬜ |
-| 44 | Act Three: Scene Ten | ⬜ |
-| 45 | Act Three: Scene Ten and a Half | ⬜ |
-| 46 | Act Three: Scene Ten and Three Quarters | ⬜ |
-| 47 | Act Three: Scene Eleven | ⬜ |
-| 48 | Act Three: Scene Eleven and a Half | ⬜ |
-| 49 | Act Three: Scene Fourteen | ⬜ |
-| 50 | Act Three: Scenes Twelve and Thirteen | ⬜ |
-| 51 | Act Three: Scene Fourteen and a Half | ⬜ |
-| 52 | Act Three: Scene Fifteen | ⬜ |
-| 53 | Act Three: Scene Sixteen | ⬜ |
-| 54 | Act Three: Scene Sixteen and a Half | ⬜ |
-| 55 | Act Three: Scene Seventeen | ⬜ |
-| 56 | Act Three: Scene Eighteen | ⬜ |
-| 57 | Act Three: Scene Nineteen | ⬜ |
-| 58 | Act Three: Scene Twenty | ⬜ |
-| 59 | Act Three: Scene Twenty-One | ⬜ |
-| 60 | Act Four: Scene 0.5 | ⬜ |
-| 61 | Act Four: Scene One | ⬜ |
-| 62 | Act Four: Scene Two | ⬜ |
-| 63 | Act Four: Scene Two and a Half | ⬜ |
-| 64 | Act Four: Scene Three | ⬜ |
-| 65 | Act Four: Scene Four | ⬜ |
-| 66 | Act Four: Scene Five | ⬜ |
-| 67 | Act Four: Scene Five and a Half | ⬜ |
-| 68 | Act Four: Scene Six | ⬜ |
-| 69 | Act Four: Scenes Seven and Eight | ⬜ |
-| 70 | Act Four: Scene Nine | ⬜ |
-| 71 | Act Four: Scene Ten | ⬜ |
-| 72 | Act Four: Scene Eleven | ⬜ |
-| 73 | Act Four: Scene Twelve | ⬜ |
-| 74 | Act Four: Scene Thirteen | ⬜ |
-| 75 | Act Four Scene Thirteen and a Half | ⬜ |
-| 76 | Act Four: Scene Fourteen | ⬜ |
-| 77 | Act Four: Scene Fifteen | ⬜ |
+> **Manba satrlari** = `Harry_Potter_and_the.html` dagi o'sha bobning `userstuff`
+> bloki (tarjima qilinadigan asosiy matn). Bob N ni ajratish: N-chi
+> `<!--chapter content-->` / `<!--/chapter content-->` markerlari orasi.
+
+| # | Bob (inglizcha sarlavha) | Manba satrlari (userstuff) | Holat |
+|---|---|---|---|
+| 1 | Act One: Scenes One, Two, and Three | 84–86 | ✅ `boblar/Bob_01.html` |
+| 2 | Act One Scene Four Part One | 105–107 | ✅ `boblar/Bob_02.html` |
+| 3 | Act One: Scene Four Part Two | 130–133 | ✅ `boblar/Bob_03.html` |
+| 4 | Act One: Scene Four Part Three | 156–158 | ⬜ |
+| 5 | Act One: Scene Four Part Four | 181–188 | ⬜ |
+| 6 | Act One: Scene Four Part Five | 211–225 | ⬜ |
+| 7 | Act One: Scene Five | 248–252 | ⬜ |
+| 8 | Act One: Scene Six | 275–277 | ⬜ |
+| 9 | Act One: Scene Seven | 300–302 | ⬜ |
+| 10 | Act One: Scenes Eight and Nine | 325–331 | ⬜ |
+| 11 | Act One: Scene Ten | 354–356 | ⬜ |
+| 12 | Act One: Scene Eleven | 379–384 | ⬜ |
+| 13 | Act One: Scene Eleven and a Half | 407–409 | ⬜ |
+| 14 | Act One: Scene Twelve | 432–434 | ⬜ |
+| 15 | Act One: Scenes Thirteen and Fourteen | 457–459 | ⬜ |
+| 16 | Act One: Scene Fifteen | 482–484 | ⬜ |
+| 17 | Act One: Scene Sixteen | 507–511 | ⬜ |
+| 18 | Act One: Scene Eighteen | 534–538 | ⬜ |
+| 19 | Act One: Scene Nineteen | 561–577 | ⬜ |
+| 20 | Act Two: Scene Four | 600–602 | ⬜ |
+| 21 | Act Two: Scenes Six and Seven | 625–651 | ⬜ |
+| 22 | Act Two: Scene Eight | 674–678 | ⬜ |
+| 23 | Act Two: Scene Nine | 700–702 | ⬜ |
+| 24 | Act Two: Scene Eleven | 725–727 | ⬜ |
+| 25 | Act Two: Scene Twelve | 750–754 | ⬜ |
+| 26 | Act Two: Scene Twelve and a Half | 777–797 | ⬜ |
+| 27 | Act Two: Scene Thirteen | 820–822 | ⬜ |
+| 28 | Act Two: Scene Fourteen | 845–847 | ⬜ |
+| 29 | Act Two: Scene Fifteen | 870–876 | ⬜ |
+| 30 | Act Two: Scene Sixteen | 899–901 | ⬜ |
+| 31 | Act Two: Scene Eighteen | 924–928 | ⬜ |
+| 32 | Act Two: Scene Nineteen | 951–953 | ⬜ |
+| 33 | Act Two: Scene Twenty | 976–986 | ⬜ |
+| 34 | Act Three: Scene 0.5 | 1009–1017 | ⬜ |
+| 35 | Act Three: Scene One | 1040–1044 | ⬜ |
+| 36 | Act Three: Scene Two | 1067–1077 | ⬜ |
+| 37 | Act Three: Scene Three | 1100–1102 | ⬜ |
+| 38 | Act Three: Scene Three and a Half | 1125–1127 | ⬜ |
+| 39 | Act Three: Scene Four | 1149–1163 | ⬜ |
+| 40 | Act Three: Scene Five | 1186–1188 | ⬜ |
+| 41 | Act Three: Scenes Six and Seven | 1211–1213 | ⬜ |
+| 42 | Act Three: Scene Eight | 1236–1244 | ⬜ |
+| 43 | Act Three: Scene Nine | 1267–1281 | ⬜ |
+| 44 | Act Three: Scene Ten | 1304–1308 | ⬜ |
+| 45 | Act Three: Scene Ten and a Half | 1331–1333 | ⬜ |
+| 46 | Act Three: Scene Ten and Three Quarters | 1356–1358 | ⬜ |
+| 47 | Act Three: Scene Eleven | 1381–1389 | ⬜ |
+| 48 | Act Three: Scene Eleven and a Half | 1412–1426 | ⬜ |
+| 49 | Act Three: Scene Fourteen | 1449–1455 | ⬜ |
+| 50 | Act Three: Scenes Twelve and Thirteen | 1478–1482 | ⬜ |
+| 51 | Act Three: Scene Fourteen and a Half | 1505–1513 | ⬜ |
+| 52 | Act Three: Scene Fifteen | 1536–1538 | ⬜ |
+| 53 | Act Three: Scene Sixteen | 1561–1573 | ⬜ |
+| 54 | Act Three: Scene Sixteen and a Half | 1596–1600 | ⬜ |
+| 55 | Act Three: Scene Seventeen | 1623–1625 | ⬜ |
+| 56 | Act Three: Scene Eighteen | 1648–1650 | ⬜ |
+| 57 | Act Three: Scene Nineteen | 1673–1677 | ⬜ |
+| 58 | Act Three: Scene Twenty | 1700–1714 | ⬜ |
+| 59 | Act Three: Scene Twenty-One | 1737–1741 | ⬜ |
+| 60 | Act Four: Scene 0.5 | 1764–1770 | ⬜ |
+| 61 | Act Four: Scene One | 1793–1795 | ⬜ |
+| 62 | Act Four: Scene Two | 1818–1820 | ⬜ |
+| 63 | Act Four: Scene Two and a Half | 1843–1845 | ⬜ |
+| 64 | Act Four: Scene Three | 1868–1870 | ⬜ |
+| 65 | Act Four: Scene Four | 1893–1907 | ⬜ |
+| 66 | Act Four: Scene Five | 1930–1932 | ⬜ |
+| 67 | Act Four: Scene Five and a Half | 1955–1957 | ⬜ |
+| 68 | Act Four: Scene Six | 1980–1994 | ⬜ |
+| 69 | Act Four: Scenes Seven and Eight | 2017–2027 | ⬜ |
+| 70 | Act Four: Scene Nine | 2050–2052 | ⬜ |
+| 71 | Act Four: Scene Ten | 2075–2077 | ⬜ |
+| 72 | Act Four: Scene Eleven | 2100–2106 | ⬜ |
+| 73 | Act Four: Scene Twelve | 2129–2147 | ⬜ |
+| 74 | Act Four: Scene Thirteen | 2170–2172 | ⬜ |
+| 75 | Act Four Scene Thirteen and a Half | 2195–2197 | ⬜ |
+| 76 | Act Four: Scene Fourteen | 2220–2224 | ⬜ |
+| 77 | Act Four: Scene Fifteen | 2247–2263 | ⬜ |
