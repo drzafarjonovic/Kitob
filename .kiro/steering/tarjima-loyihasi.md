@@ -29,6 +29,9 @@ nazorati bosqichlariga to'liq amal qil.
 
 ## 4. Har qadamdan keyin — to'liq holatni yozib bor
 Har bir tugallangan ishdan (har bob yoki har o'zgarishdan) so'ng:
+- **Premium reader'ni qayta qur:** `python3 Tarjima/build_reader.py` (barcha tayyor
+  boblarni `Tarjima/Garri_Potter_va_Lanatlangan_Bola.html` o'quvchisiga yig'adi —
+  foydalanuvchi shuni o'qiydi). Toza `boblar/Bob_NN.html` — tarjima manbai.
 - `Tarjima/HOLAT.md` ni TO'LIQ yangila: «BOBLAR HOLATI» jadvali, «HOZIRGI HOLAT»
   va «BAJARILGAN ISHLAR LOG» (nima va qanday qilingani batafsil).
 - Keyin `main` branchiga commit qilib, github power `push_to_remote` bilan push qil

@@ -64,8 +64,9 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 | `00_Uslub_tahlili.md` | 7 kitob uslub tahlili |
 | `01_Lugat.md` | Terminologik lug'at (o'zgarmas; yangi terminlar qo'shiladi) |
 | `02_Style_Guide.md` | Tarjima uslub qo'llanmasi |
-| `boblar/Bob_01.html` … `Bob_77.html` | Tarjima qilingan boblar |
-| (yakunda) `Garri_Potter_va_Lanatlangan_Bola_TARJIMA.html` | Birlashtirilgan yakuniy fayl |
+| `boblar/Bob_01.html` … `Bob_77.html` | Tarjima qilingan boblar (toza manba matn) |
+| `build_reader.py` | Premium reader quruvchi skript (boblarni bitta o'quvchiga yig'adi) |
+| `Garri_Potter_va_Lanatlangan_Bola.html` | ⭐ PREMIUM READER — foydalanuvchi shuni o'qiydi (index.html reader-shell asosida; har bobdan keyin qayta quriladi) |
 
 ## 5. HAR BIR BOB UCHUN ANIQ ISH TARTIBI (aynan shunday bajarilsin)
 1. `01_Lugat.md` + `02_Style_Guide.md` ni yodga ol.
@@ -93,9 +94,18 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
      terminlar (масалан «Хогвартс», «қум соатча», «тарафдорлари») **0** bo'lsin.
    - Mazmun to'liq, personaj ovozi izchil, grammatika/imlo toza.
 7. `HOLAT.md` da bobni ✅ belgila, «Joriy holat» va «LOG» ni yangila.
-8. `git add` (bob fayli + HOLAT.md + agar o'zgargan bo'lsa 01_Lugat.md) → `git commit`
-   → github power `push_to_remote` (branch: `main`).
-9. Qisqa "tayyor" deb bildir.
+8. **PREMIUM READER'ni qayta qur:** `python3 Tarjima/build_reader.py` (bu barcha tayyor
+   boblarni `Garri_Potter_va_Lanatlangan_Bola.html` ga yig'adi — foydalanuvchi shuni o'qiydi).
+   Skript `index.html` dagi reader-shell'ni ishlatadi; placeholderlar (0 bo'lsin) va
+   bob soni to'g'riligini `grep` bilan tekshir.
+9. `git add` (bob fayli + `Garri_Potter_va_Lanatlangan_Bola.html` + HOLAT.md + agar
+   o'zgargan bo'lsa 01_Lugat.md) → `git commit` → github power `push_to_remote` (`main`).
+10. Qisqa "tayyor" deb bildir.
+
+> ℹ️ **Premium reader haqida:** har bob toza `boblar/Bob_NN.html` sifatida yoziladi
+> (tarjima manbai). Foydalanuvchi o'qiydigan qulay o'quvchi — `build_reader.py` yig'adigan
+> `Garri_Potter_va_Lanatlangan_Bola.html`. Unda mavzular, qidiruv, xatcho'p, izoh,
+> Lotin/Kirill almashtirish, bob navigatsiyasi bor. Reader kirill matnini canonical saqlaydi.
 
 ---
 
@@ -157,6 +167,21 @@ Manbada: 2-chi `<!--chapter content-->` blokidagi `userstuff`. Bob nomi tarjimas
 - **Nazorat natijasi:** 249 `<p>` (manba ~248 — hech narsa tushmagan), 6 ta `+++`,
   barcha terminlar lug'atga mos, xato terminlar 0.
 - **Push:** `main` (commit «1-bob tarjima qilindi …»).
+
+### 2026-07-01 — Premium reader qo'shildi (foydalanuvchi talabi) ✅
+- **Nima:** Boblar endi `main/index.html` dagi premium o'quvchi (reader-shell) bilan
+  o'qiladi — qulay o'qish uchun. Natija: `Tarjima/Garri_Potter_va_Lanatlangan_Bola.html`.
+- **Qanday:** `Tarjima/build_reader.py` skripti yozildi. U `index.html` dan reader-shell
+  shablonini ajratadi (escaped `<\/script>` → `</script>`), `boblar/Bob_*.html` larni
+  o'qib, har birini `<section class="chapter">` ga aylantiradi, placeholderlarni
+  (@@TITLE@@, @@SUB@@, @@ACCENT@@, @@CHAPTERS@@, @@BOOKCFG@@) to'ldiradi va o'quvchini yozadi.
+  `+++` sahna ajratgichlari bezakli `✦ ✦ ✦` ga aylantirildi.
+- **Muhim:** har yangi bobdan keyin `python3 Tarjima/build_reader.py` qayta ishga tushiriladi
+  (workflow 8-qadam). Toza `boblar/Bob_NN.html` — manba; reader — yig'ilgan natija.
+- **Reader imkoniyatlari:** mavzular (kunduz/tun/…), qidiruv, xatcho'p, izoh, o'qish jarayoni,
+  Lotin/Kirill almashtirish (kirill canonical), bob navigatsiyasi.
+- **Nazorat:** placeholderlar 0, 1 bob, `<!DOCTYPE html>`…`</html>` butun.
+- **Push:** `main`.
 
 ---
 
