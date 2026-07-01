@@ -122,7 +122,8 @@ qilinib **yakuniy qulflandi**:
 |---|---|---|
 | Sorting Hat | Сараловчи шляпа | ✅ |
 | Great Hall | Катта Зал | ✅ |
-| Madam Hooch | мадам Трюк | ✅ (rus an'anasi) |
+| Madam Hooch | Трюк хоним | ✅ (b1: «Трюк хоним»; toʻliq: Роланда Трюк хоним) |
+| "Up!" (supurgiga) | «Тур!» | ✅ (b1 uchish darsi) |
 | prefect | назоратчи | ✅ |
 | Chocolate Frog | шоколадли бақа | ✅ |
 | dormitory | ётоқхона | ✅ |

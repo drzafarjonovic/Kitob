@@ -111,7 +111,7 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 
 ## 6. HOZIRGI HOLAT
 
-**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 1/77.**
+**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 2/77.**
 
 | Bosqich | Holat |
 |---|---|
@@ -120,12 +120,13 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 | 2. Lug'at (`01_Lugat.md`) | ✅ (tasdiqlangan; tarjima davomida kengaytiriladi) |
 | 3. Style Guide (`02_Style_Guide.md`) | ✅ |
 | Foydalanuvchi tasdig'i (0–3) | ✅ |
-| 4. Bobma-bob tarjima | 🔄 1/77 |
+| 4. Bobma-bob tarjima | 🔄 2/77 |
 | 5. Yakuniy yig'ish | ⬜ |
 
-**➡️ KEYINGI QADAM:** `Bob_02` — «Act One Scene Four Part One».
-Manbada: 2-chi `<!--chapter content-->` blokidagi `userstuff`. Bob nomi tarjimasi:
-«2-боб. Биринчи парда, тўртинчи саҳна, биринчи қисм».
+**➡️ KEYINGI QADAM:** `Bob_03` — «Act One: Scene Four Part Two».
+Manbada bobni ajratish: `<!--chapter content-->` / `<!--/chapter content-->` markerlari
+orasidagi 3-chi `userstuff` bloki (grep bilan aniqla). Bob nomi: «3-боб. Биринчи парда,
+тўртинчи саҳна, иккинчи қисм».
 
 ---
 
@@ -183,6 +184,21 @@ Manbada: 2-chi `<!--chapter content-->` blokidagi `userstuff`. Bob nomi tarjimas
 - **Nazorat:** placeholderlar 0, 1 bob, `<!DOCTYPE html>`…`</html>` butun.
 - **Push:** `main`.
 
+### 2026-07-01 — Bob 2 tarjimasi (`boblar/Bob_02.html`) ✅
+- **Nima:** 2-bob to'liq tarjima — «2-боб. Биринчи парда, тўртинчи саҳна, биринчи қисм».
+  Mazmun: Сараланиш маросими (Катта Зал, сузиб юрган шамлар), Роза → Гриффиндор,
+  Скорпиус → Слизерин, Альбус кутилмаганда → Слизерин (шляпа билан ички суҳбат),
+  Слизерин умумий хонаси ва ётоқхона (Малфойлар қасри, товуслар), уриш дарси —
+  Альбус супургисини кўтара олмайди («слизеринлик сквиб»).
+- **Qanday:** Manba 104–108-qatorlar (userstuff). Skelet `fs_write`, matn `fs_append`
+  bilan 5 qismda. Terminlar tekshirildi; kanon tuzatishlari: Madam Hooch = «Трюк хоним»
+  (b1), broom "Up!" = «Тур!» (b1) — lug'atga qo'shildi. Squib = «сквиб» (🔧),
+  Dark Wizard = «қора сеҳргар», Exploding Snap = «Портловчи қарталар».
+- **Nazorat:** 128/128 `<p>` (manba bilan aynan mos), 4 ta `+++`, terminlar to'g'ri,
+  xato terminlar 0.
+- **Reader:** `build_reader.py` qayta ishga tushirildi → 2 bob, placeholderlar 0.
+- **Push:** `main`.
+
 ---
 
 ## 8. BOBLAR HOLATI (77 bob)
@@ -191,7 +207,7 @@ Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+nazoratdan o'tgan+pus
 | # | Bob (ing) | Holat |
 |---|---|---|
 | 1 | Act One: Scenes One, Two, and Three | ✅ `boblar/Bob_01.html` |
-| 2 | Act One Scene Four Part One | ⬜ |
+| 2 | Act One Scene Four Part One | ✅ `boblar/Bob_02.html` |
 | 3 | Act One: Scene Four Part Two | ⬜ |
 | 4 | Act One: Scene Four Part Three | ⬜ |
 | 5 | Act One: Scene Four Part Four | ⬜ |
