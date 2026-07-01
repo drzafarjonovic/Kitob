@@ -117,6 +117,23 @@ qilinib **yakuniy qulflandi**:
 - **Kviddich:** Bludger → **Бладжер**, Quaffle → **Квоффл**, Beater → **Урувчи**,
   Chaser → **Ҳужумчи**, Keeper → **Дарвозабон**.
 
+## Bob 1 da qo'shilgan (tekshirilgan / hosil qilingan)
+| English | O'zbekcha | St |
+|---|---|---|
+| Sorting Hat | Сараловчи шляпа | ✅ |
+| Great Hall | Катта Зал | ✅ |
+| Madam Hooch | мадам Трюк | ✅ (rus an'anasi) |
+| prefect | назоратчи | ✅ |
+| Chocolate Frog | шоколадли бақа | ✅ |
+| dormitory | ётоқхона | ✅ |
+| Hogwarts Express | «Хогварц экспресси» | 🔧 |
+| common room | умумий хона | 🔧 |
+| Exploding Snap | Портловчи қарталар | 🔧 |
+| Dark Lord | Қора Лорд | 🔧 |
+| Squib | сквиб | 🔧 |
+| Malfoy Manor | Малфойлар қасри | 🔧 |
+| Dark Wizard | қора сеҳргар | 🔧 |
+
 ## ⚠️ TARJIMADA UCHRAGANDA TEKSHIRILADI
 - **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda 7 kitobdan
   tekshiriladi; topilmasa konventsiya bo'yicha hosil qilinib shu faylga qo'shiladi.

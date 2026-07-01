@@ -35,19 +35,20 @@ tarjima qilish — natija Garri Potter seriyasining rasmiy 8-kitobi kabi o'qilsi
 
 ## HOZIRGI HOLAT
 
-**Joriy bosqich:** 0–3 (Tayyorgarlik + Uslub + Lug'at + Style Guide) — TAYYORLANMOQDA.
+**Joriy bosqich:** 4 (Bobma-bob tarjima) — BOSHLANDI. 1/77 bob tayyor.
 
 | Bosqich | Holat |
 |---|---|
 | 0. Papka + HOLAT.md | ✅ |
 | 1. Uslub tahlili (`00_Uslub_tahlili.md`) | ✅ |
-| 2. Lug'at (`01_Lugat.md`) | ✅ (yadro; tarjima davomida kengaytiriladi) |
+| 2. Lug'at (`01_Lugat.md`) | ✅ (tasdiqlangan; tarjima davomida kengaytiriladi) |
 | 3. Style Guide (`02_Style_Guide.md`) | ✅ |
-| Foydalanuvchi tasdig'i (0–3) | ⏳ kutilmoqda |
-| 4. Bobma-bob tarjima | ⬜ boshlanmagan |
+| Foydalanuvchi tasdig'i (0–3) | ✅ tasdiqlandi |
+| 4. Bobma-bob tarjima | 🔄 1/77 |
 | 5. Yakuniy yig'ish | ⬜ |
 
-**Keyingi qadam:** Foydalanuvchi 0–3 bosqichni tasdiqlagach, `Bob_01` tarjimasidan boshlash.
+**Keyingi qadam:** Foydalanuvchi "davom et" desa, `Bob_02` (Act One Scene Four Part One) tarjima qilinadi.
+Manbada Bob_02 content: 1-chi `<!--chapter content-->` dan keyingi 2-chi `userstuff` bloki.
 
 ---
 
@@ -56,7 +57,7 @@ Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+push+nazoratdan o'tga
 
 | # | Bob (ing) | Holat |
 |---|---|---|
-| 1 | Act One: Scenes One, Two, and Three | ⬜ |
+| 1 | Act One: Scenes One, Two, and Three | ✅ `boblar/Bob_01.html` |
 | 2 | Act One Scene Four Part One | ⬜ |
 | 3 | Act One: Scene Four Part Two | ⬜ |
 | 4 | Act One: Scene Four Part Three | ⬜ |
