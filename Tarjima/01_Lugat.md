@@ -82,6 +82,7 @@
 | Order of the Phoenix | Қақнус ордени | ✅ |
 | phoenix | қақнус | ✅ |
 | "Merlin's beard!" | «Мерлин соқоли!» | ✅ |
+| Dark Mark | Ажал белгиси | ✅ (~60 marta) |
 
 ## 6. Sehrlar (imlolar)
 | English | O'zbekcha | St |
@@ -108,7 +109,6 @@
 
 ## ⚠️ 7 KITOBDA TOPILMAGAN — FOYDALANUVCHIDAN SO'RALADI
 Quyidagilar 7 kitobdan qidirildi, topilmadi. Tarjimada uchrasa foydalanuvchidan aniq shakl so'raladi:
-- **Dark Mark** (Ўлimdan miriquvchilar belgisi) — «Қора белги» topilmadi.
 - **Bludger, Quaffle, Beater, Chaser, Keeper** — kviddich to'plari/rollari (Cursed Child'da kam uchraydi).
 - **Yangi personajlar** (7 kitobda yo'q, hozircha konventsiya bo'yicha 🔧):
   Scorpius → Скорпиус, Rose → Роза, Hugo → Хьюго, Astoria → Астория, Delphi/Delphini → Дельфи/Дельфини.
