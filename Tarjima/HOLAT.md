@@ -1,41 +1,107 @@
-# HOLAT — Loyiha Davomiyligi (Progress Tracker)
+# HOLAT — Loyiha Master Hujjati (Progress + Workflow + Log)
 
-> Bu fayl **har bir sessiyada birinchi bo'lib o'qilishi** shart. Sessiya uzilsa,
-> yangi sessiya aynan shu fayldan loyihaning holatini tushunib, kelgan joydan davom etadi.
-
----
-
-## LOYIHA MAQSADI
-`Harry_Potter_and_the.html` (Cursed Child pyesasining romanlashtirilgan inglizcha
-versiyasi, AO3, muallif "BoleynC") ni **o'zbek tiliga (KIRILL alifbosida)** shunday
-tarjima qilish — natija Garri Potter seriyasining rasmiy 8-kitobi kabi o'qilsin.
-
-## TAMAL QARORLAR (o'zgarmaydi)
-- **Alifbo:** KIRILL (foydalanuvchi tasdiqladi — variant A).
-- **Uslubiy manba:** faqat `Garri Potter kitoblari/` ichidagi 1–7 kitoblar (kirill, `matn.txt`).
-- **QAT'IY TAQIQ:** `La'natlangan Bola/` papkasi va `Garri Potter kitoblari/8 - La'natlangan Bola/`
-  hamda `arxiv/` — eski romanlashtirilgan tarjima. **Hech qachon ochilmaydi, o'qilmaydi, manba qilinmaydi.**
-- **Ritm:** bobma-bob. Har bob alohida `.html` fayl.
-- **Bob nomlari:** o'zbekchaga o'giriladi.
-- **Workflow:** har bir tugallangan qadamdan keyin `main` branchiga commit + push. Chatda minimal yozish.
-
-## MANBA TUZILMASI
-- Manba: `Harry_Potter_and_the.html` (~280k so'z, inglizcha).
-- **4 ta Akt (Act), 77 ta bob (Chapter).** Har bob 1 yoki bir necha sahnadan iborat.
-
-## NATIJA TUZILMASI (`Tarjima/` papkasi)
-- `HOLAT.md` — shu fayl (progress tracker).
-- `00_Uslub_tahlili.md` — 7 kitob uslub tahlili.
-- `01_Lugat.md` — terminologik lug'at (o'zgarmas).
-- `02_Style_Guide.md` — tarjima uslub qo'llanmasi.
-- `boblar/Bob_01.html` ... `Bob_77.html` — tarjima qilingan boblar.
-- (Yakunda) `Garri_Potter_va_Lanatlangan_Bola_TARJIMA.html` — birlashtirilgan yakuniy fayl.
+> ⚠️ **YANGI SESSIYA / YANGI AI UCHUN:** Bu fayl loyihaning YAGONA to'liq manbai.
+> Repoga ulanib "davom et" deyilsa, boshqa hech narsa so'ramasdan quyidagini bajar:
+> 1) Shu faylni to'liq o'qi. 2) `01_Lugat.md` va `02_Style_Guide.md` ni o'qi.
+> 3) Quyidagi «BOBLAR HOLATI» jadvalidan birinchi ⬜ (yoki 🔄) bobni top.
+> 4) «HAR BIR BOB UCHUN ANIQ ISH TARTIBI» bo'limi bo'yicha o'sha bobni tarjima qil.
+> Sifat, uslub, terminologiya va usul HECH QACHON o'zgarmasligi shart.
 
 ---
 
-## HOZIRGI HOLAT
+## 1. LOYIHA MAQSADI
+`Harry_Potter_and_the.html` (Harry Potter and the Cursed Child pyesasining
+romanlashtirilgan **inglizcha** versiyasi; manba: AO3, muallif "BoleynC") ni
+**o'zbek tiliga, KIRILL alifbosida** shunday tarjima qilish — natija Garri Potter
+seriyasining **rasmiy 8-kitobi** kabi o'qilsin. O'quvchi tarjimani emas, original
+o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 
-**Joriy bosqich:** 4 (Bobma-bob tarjima) — BOSHLANDI. 1/77 bob tayyor.
+## 2. TAMAL QARORLAR (hech qachon o'zgarmaydi)
+- **Alifbo:** KIRILL (foydalanuvchi tasdiqladi — variant A). Lotin ISHLATILMAYDI.
+- **Yagona uslubiy manba:** faqat `Garri Potter kitoblari/` ichidagi **1–7 kitoblar**
+  (kirill, `matn.txt`). Uslub, terminologiya, ismlar, ohang — hammasi shulardan olinadi.
+- **🚫 QAT'IY TAQIQ (hech qachon ochilmaydi/o'qilmaydi/manba qilinmaydi):**
+  - `La'natlangan Bola/` papkasi (eski romanlashtirilgan tarjima)
+  - `Garri Potter kitoblari/8 - La'natlangan Bola/`
+  - `arxiv/` (Ajal Tuhfalari matni va b.)
+  Bu materiallarga qarash ham mumkin emas.
+- **Ritm:** bobma-bob. Har bob alohida `.html` fayl (`boblar/Bob_NN.html`).
+- **Bob nomlari:** o'zbekchaga o'giriladi (Act=парда, Scene=саҳна, Part=қисм,
+  "and a Half"=«ярим», "Three Quarters"=«чорак»).
+- **Git workflow:** har bir tugallangan qadamdan (har bob + har o'zgarishdan) keyin
+  `main` branchiga commit + `push_to_remote` (github power) bilan push. To'g'ridan-to'g'ri
+  `git push` ISHLAMAYDI (auth yo'q) — github power `push_to_remote` ishlatiladi.
+- **Chatda minimal yozish.** Ish tugagach qisqa "tayyor" deyiladi; foydalanuvchi
+  "davom et" deganda keyingi bob boshlanadi.
+- **Har qadamdan keyin shu HOLAT.md to'liq yangilanadi** (jadval + LOG bo'limi).
+
+## 3. MANBA TUZILMASI VA BOBNI QANDAY AJRATISH
+- Manba fayl: `Harry_Potter_and_the.html` (~1.9MB, ~280k so'z, inglizcha).
+- **4 ta Akt, 77 ta bob.** Har bobning HTML tuzilmasi:
+  ```
+  <div class="meta group">
+    <h2 class="heading"> Chapter N: ... </h2>
+    ...
+  <!--chapter content-->
+  <div class="userstuff">
+    <p>...</p><p>...</p>   <-- ASOSIY BADIIY MATN SHU YERDA
+  </div>
+  <!--/chapter content-->
+  ```
+- **Bobni ajratish usuli:** `grep -n 'class="heading"'` bilan bob sarlavhalari
+  qatorlarini top; N-bobning matni N-chi `<!--chapter content-->` dan keyingi
+  `<div class="userstuff">` bloki (keyingi `<!--/chapter content-->` gacha).
+  Matnni `read_file` (offset/limit) bilan o'qi. Bir bob ~4–8k so'z, `<p>` teglari
+  uzun satrlarda joylashgan.
+- **Bob boshlari (qator raqami, ma'lumot uchun):** Bob 1 sarlavhasi ~76-qatorda;
+  har bobda `<h2 class="heading">` bor. Ajratishda har safar grep bilan aniqla
+  (qator raqamlari o'zgarmagan bo'lsa ham tekshir).
+
+## 4. NATIJA TUZILMASI (`Tarjima/` papkasi)
+| Fayl | Mazmun |
+|---|---|
+| `HOLAT.md` | Shu master hujjat (progress + workflow + log) |
+| `00_Uslub_tahlili.md` | 7 kitob uslub tahlili |
+| `01_Lugat.md` | Terminologik lug'at (o'zgarmas; yangi terminlar qo'shiladi) |
+| `02_Style_Guide.md` | Tarjima uslub qo'llanmasi |
+| `boblar/Bob_01.html` … `Bob_77.html` | Tarjima qilingan boblar |
+| (yakunda) `Garri_Potter_va_Lanatlangan_Bola_TARJIMA.html` | Birlashtirilgan yakuniy fayl |
+
+## 5. HAR BIR BOB UCHUN ANIQ ISH TARTIBI (aynan shunday bajarilsin)
+1. `01_Lugat.md` + `02_Style_Guide.md` ni yodga ol.
+2. Manbadan navbatdagi bob matnini ajratib, `read_file` bilan **to'liq** o'qi.
+3. Bobda uchraydigan **maxsus terminlarni** (yangi ism/joy/sehr/buyum) `01_Lugat.md`
+   dan tekshir. Lug'atda bo'lmasa — **7 kitobdan `grep` bilan qidir** (kirill
+   shakllarni sina). Topilsa aynan o'sha shaklni ol; topilmasa konventsiya bo'yicha
+   transliteratsiya/tarjima qilib, `01_Lugat.md` ga qo'sh (🔧 belgi bilan).
+4. **Faylni bo'laklab yoz** (MUHIM texnik qoida): bitta katta `fs_write` UZILIB
+   qoladi. Shuning uchun:
+   - avval `fs_write` bilan HTML skeletini yoz (head + `<h2 class="heading">` bob
+     nomi + ochilgan `<div class="userstuff">`),
+   - so'ng matnni `fs_append` bilan **bir necha qismda** (~15–20 `<p>` dan) qo'sh,
+   - oxirida `fs_append` bilan `</div></div></body></html>` ni yop.
+5. **Dialog/uslub qoidalari** (`02_Style_Guide.md` dan):
+   - Gapiruvchi replika `<p>` ichida `— ` (tire+probel) bilan boshlanadi.
+   - Muallif izohi tire bilan: `— ..., — деди Скорпиус, ...`
+   - Izoh fe'llari xilma-xil: деди, сўради, хитоб қилди, ғудранди, пичирлади…
+   - Ichki fikr/urg'u: «...» yoki `<em>...</em>`.
+   - Ingliz `"..."`/`'...'` → o'zbekcha «...».
+6. **Sifat nazorati (har bob yakunida majburiy):**
+   - `grep -oE "<p>" | wc -l` — manba `<p>` soniga yaqin bo'lsin (hech narsa tushmasin).
+   - `+++` sahna ajratgichlari soni manbadagidek saqlansin.
+   - Lug'at terminlari to'g'ri ishlatilganini `grep` bilan tekshir; xato/eski
+     terminlar (масалан «Хогвартс», «қум соатча», «тарафдорлари») **0** bo'lsin.
+   - Mazmun to'liq, personaj ovozi izchil, grammatika/imlo toza.
+7. `HOLAT.md` da bobni ✅ belgila, «Joriy holat» va «LOG» ni yangila.
+8. `git add` (bob fayli + HOLAT.md + agar o'zgargan bo'lsa 01_Lugat.md) → `git commit`
+   → github power `push_to_remote` (branch: `main`).
+9. Qisqa "tayyor" deb bildir.
+
+---
+
+## 6. HOZIRGI HOLAT
+
+**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 1/77.**
 
 | Bosqich | Holat |
 |---|---|
@@ -43,17 +109,59 @@ tarjima qilish — natija Garri Potter seriyasining rasmiy 8-kitobi kabi o'qilsi
 | 1. Uslub tahlili (`00_Uslub_tahlili.md`) | ✅ |
 | 2. Lug'at (`01_Lugat.md`) | ✅ (tasdiqlangan; tarjima davomida kengaytiriladi) |
 | 3. Style Guide (`02_Style_Guide.md`) | ✅ |
-| Foydalanuvchi tasdig'i (0–3) | ✅ tasdiqlandi |
+| Foydalanuvchi tasdig'i (0–3) | ✅ |
 | 4. Bobma-bob tarjima | 🔄 1/77 |
 | 5. Yakuniy yig'ish | ⬜ |
 
-**Keyingi qadam:** Foydalanuvchi "davom et" desa, `Bob_02` (Act One Scene Four Part One) tarjima qilinadi.
-Manbada Bob_02 content: 1-chi `<!--chapter content-->` dan keyingi 2-chi `userstuff` bloki.
+**➡️ KEYINGI QADAM:** `Bob_02` — «Act One Scene Four Part One».
+Manbada: 2-chi `<!--chapter content-->` blokidagi `userstuff`. Bob nomi tarjimasi:
+«2-боб. Биринчи парда, тўртинчи саҳна, биринчи қисм».
 
 ---
 
-## BOBLAR HOLATI (77 bob)
-Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+push+nazoratdan o'tgan
+## 7. BAJARILGAN ISHLAR LOG (to'liq tarix — nima va qanday qilingani)
+
+### 2026-07-01 — 0–3 bosqichlar (tayyorgarlik)
+- **0.** `Tarjima/` papkasi va shu `HOLAT.md` yaratildi.
+- **1.** `00_Uslub_tahlili.md`: 7 kitobdan (b1 ochilishi, b3 vaqt chig'irig'i sahnasi,
+  b4 Diggorilar dialogi) namunalar o'qilib, uslub aniqlandi — kirill imlo (Ў Қ Ғ Ҳ +
+  ruscha ж ц щ ъ ь ё э), boy/sifatlashli rivoyat, tire bilan dialog, «...» va `...`.
+- **2.** `01_Lugat.md`: terminlar 7 kitobdan `grep` bilan tekshirib qulflandi.
+  Tasdiqlangan asosiylari: Хогварц, Хогсмёд, Гриффиндор/Слизерин/Равенкло/Хуффльпуфф,
+  Гарри/Рон Уэсли/Гермиона Грэнжер/Дамблдор/Снегг/Вольдеморт/Реддл, Альбус Северус,
+  Драко, Седрик/Амос Диггори, Жинни(Жинни), Квидиш, Сайёди, портшлюс, галлеон,
+  Кўринмас плаш, магл, сеҳрли таёқча, супурги, аврор, дементор, Қақнус ордени, патронум,
+  sehrlar (Экспеллиармус, Ступефай, Люмос, Авада Кедавра, Империо, Круцио, Экспекто патронум).
+- **3.** `02_Style_Guide.md`: dialog/tinish/ohang/QC qoidalari yozildi.
+- Hammasi `main`ga push qilindi.
+
+### 2026-07-01 — Foydalanuvchi terminologik tuzatishlari (7 kitobdan tasdiqlangan)
+- **Time-Turner** → «вақт чиғири» (b3: «Буни вақт чиғири, деб аташади»). (Eski «қум соатча» bekor qilindi.)
+- **Death Eater** → «Ўлимдан мириқувчи(лар)» (7 kitobda yuzlab marta).
+- **Snitch** → «Тилла чаққон».
+- **Dark Mark** → «Ажал белгиси» (~60 marta).
+- 7 kitobda YO'Q — konventsiya bo'yicha qulflangan (foydalanuvchi "o'zing qaror qil" dedi):
+  Скорпиус, Роза, Хьюго, Астория, Дельфи/Дельфини; Бладжер, Квоффл, Урувчи (Beater),
+  Ҳужумчи (Chaser), Дарвозабон (Keeper).
+
+### 2026-07-01 — Bob 1 tarjimasi (`boblar/Bob_01.html`) ✅
+- **Nima:** 1-bob to'liq tarjima qilindi — «1-боб. Биринчи парда: биринчи, иккинчи ва
+  учинчи саҳналар». Mazmun: Alьbusning ichki iztirobi va oila munosabatlari (Гарри,
+  Жинни, Жеймс, Лили, tog'a-xolalar), Хогварцга jo'nash (Кингс Кросс, to'siqdan o'tish),
+  poyezdda Roza bilan suhbat va **Скорпиус bilan tanishuv** sahnasi.
+- **Qanday:** Bob 1 uchun qo'shimcha terminlar 7 kitobdan tekshirilib lug'atga qo'shildi
+  (Сараловчи шляпа, Катта Зал, мадам Трюк=Madam Hooch, назоратчи=prefect, шоколадли бақа;
+  🔧: «Хогварц экспресси», умумий хона, Портловчи қарталар, Қора Лорд, сквиб, Малфойлар қасри).
+  Fayl skeleti `fs_write` bilan, matn `fs_append` bilan 11 qismda yozildi (katta `fs_write`
+  uzilgani sabab). Dialog tire bilan, fikrlar «...»/`<em>` bilan.
+- **Nazorat natijasi:** 249 `<p>` (manba ~248 — hech narsa tushmagan), 6 ta `+++`,
+  barcha terminlar lug'atga mos, xato terminlar 0.
+- **Push:** `main` (commit «1-bob tarjima qilindi …»).
+
+---
+
+## 8. BOBLAR HOLATI (77 bob)
+Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+nazoratdan o'tgan+push
 
 | # | Bob (ing) | Holat |
 |---|---|---|
@@ -134,14 +242,3 @@ Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+push+nazoratdan o'tga
 | 75 | Act Four Scene Thirteen and a Half | ⬜ |
 | 76 | Act Four: Scene Fourteen | ⬜ |
 | 77 | Act Four: Scene Fifteen | ⬜ |
-
----
-
-## SESSIYA UCHUN ISH TARTIBI (resume qilishda)
-1. Shu `HOLAT.md` ni o'qi.
-2. `01_Lugat.md` va `02_Style_Guide.md` ni o'qi — terminologiya va uslubni yodga ol.
-3. Jadvaldan birinchi ⬜ bobni top.
-4. Manbadagi mos bobni `Harry_Potter_and_the.html` dan ajratib ol, tarjima qil.
-5. Nazoratdan o'tkaz (lug'at + style guide + hech narsa tushmasin).
-6. `Tarjima/boblar/Bob_NN.html` ga yoz, HOLAT.md jadvalini yangila, `main`ga commit + push.
-7. "tayyor" deb bildir, foydalanuvchidan "davom et" so'ra.
