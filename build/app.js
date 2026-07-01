@@ -630,7 +630,10 @@
     // click existing highlight
     on(book, "click", function (e) {
       var hl = e.target.closest && e.target.closest(".hl");
-      if (hl) { showSelToolbarForHl(hl); }
+      if (hl) { showSelToolbarForHl(hl); return; }
+      var sel = window.getSelection();
+      if (sel && !sel.isCollapsed) return;   // matn tanlanmoqda -> belgilash oqimi
+      if (typeof tryGlossary === "function") tryGlossary(e.clientX, e.clientY);
     });
     on(document, "mousedown", function (e) {
       if (!selBar.contains(e.target) && !(e.target.closest && e.target.closest(".hl"))) {

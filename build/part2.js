@@ -523,6 +523,80 @@
   }
 
   /* ============================================================
+     GLOSSARIY: matndagi so'zga bosib izoh (tap-to-define)
+     Kitob lug'ati (window.BOOK.glossary) asosida; ikkala alifboda
+     ishlaydi (tegilgan so'z cyr2lat orqali normallashtiriladi).
+     ============================================================ */
+  var GLOSS_TERMS = [], GLOSS_TOK = {}, glossPop = null;
+  function glossNorm(w) { return cyr2lat(String(w || "")).toLowerCase().replace(/[^a-z']/g, ""); }
+  function buildGlossIndex() {
+    GLOSS_TERMS = []; GLOSS_TOK = {};
+    var G = (typeof GLOSSARY !== "undefined" && GLOSSARY) ? GLOSSARY : {};
+    Object.keys(G).forEach(function (cat) {
+      (G[cat] || []).forEach(function (pair) {
+        var idx = GLOSS_TERMS.length;
+        GLOSS_TERMS.push({ term: pair[0], def: pair[1], cat: cat });
+        String(pair[0]).split(/[\s\-()\u2013\u2014]+/).forEach(function (w) {
+          var t = glossNorm(w);
+          if (t.length >= 4 && !(t in GLOSS_TOK)) GLOSS_TOK[t] = idx;
+        });
+      });
+    });
+  }
+  function glossWordAt(x, y) {
+    var range = null;
+    if (document.caretRangeFromPoint) range = document.caretRangeFromPoint(x, y);
+    else if (document.caretPositionFromPoint) { var pos = document.caretPositionFromPoint(x, y); if (pos) { range = document.createRange(); range.setStart(pos.offsetNode, pos.offset); range.collapse(true); } }
+    if (!range || !range.startContainer || range.startContainer.nodeType !== 3) return null;
+    var text = range.startContainer.textContent, i = range.startOffset;
+    var isW = function (ch) { return ch && /[0-9A-Za-z\u0400-\u04FF'\u02bb\u02bc]/.test(ch); };
+    var s = i, e = i;
+    while (s > 0 && isW(text[s - 1])) s--;
+    while (e < text.length && isW(text[e])) e++;
+    return e > s ? text.slice(s, e) : null;
+  }
+  function ensureGlossPop() {
+    if (glossPop) return glossPop;
+    glossPop = document.createElement("div");
+    glossPop.id = "gloss-pop"; glossPop.className = "gloss-pop"; glossPop.hidden = true;
+    document.body.appendChild(glossPop);
+    return glossPop;
+  }
+  function hideGlossPop() { if (glossPop) glossPop.hidden = true; }
+  function showGlossPop(x, y, item) {
+    var p = ensureGlossPop();
+    p.innerHTML = "";
+    var c = document.createElement("div"); c.className = "gp-cat"; c.textContent = item.cat;
+    var t = document.createElement("div"); t.className = "gp-term"; t.textContent = item.term;
+    var d = document.createElement("div"); d.className = "gp-def"; d.textContent = item.def;
+    p.appendChild(c); p.appendChild(t); p.appendChild(d);
+    p.hidden = false;
+    var pw = p.offsetWidth, ph = p.offsetHeight;
+    var left = clamp(x - pw / 2, 8, window.innerWidth - pw - 8);
+    var top = y + 18; if (top + ph > window.innerHeight - 8) top = y - ph - 18; if (top < 8) top = 8;
+    p.style.left = left + "px"; p.style.top = top + "px";
+  }
+  function tryGlossary(x, y) {
+    if (!GLOSS_TERMS.length) return false;
+    var w = glossWordAt(x, y); if (!w) { hideGlossPop(); return false; }
+    var t = glossNorm(w); if (t.length < 4) { hideGlossPop(); return false; }
+    var idx = GLOSS_TOK[t];
+    if (idx === undefined) { hideGlossPop(); return false; }
+    showGlossPop(x, y, GLOSS_TERMS[idx]); return true;
+  }
+  function bindGloss() {
+    window.addEventListener("scroll", hideGlossPop, { passive: true });
+    on(document, "keydown", function (e) { if (e.key === "Escape" || e.keyCode === 27) hideGlossPop(); });
+    on(document, "mousedown", function (e) {
+      if (glossPop && !glossPop.hidden) {
+        var inPop = e.target.closest && e.target.closest("#gloss-pop");
+        var inBook = e.target.closest && e.target.closest("#book");
+        if (!inPop && !inBook) hideGlossPop();
+      }
+    });
+  }
+
+  /* ============================================================
      WIRING + INIT
      ============================================================ */
   function bindChrome() {
@@ -563,6 +637,9 @@
     renderAllHighlights();
     updateLibBadge();
     applyScript();   // dastlabki ko'rinishni tanlangan alifboga moslash
+    buildGlossIndex();
+    bindGloss();
+    try { if (GLOSS_TERMS.length && !localStorage.getItem("gp_gloss_hint")) { setTimeout(function () { toast("Maslahat: matndagi nomga bosib qisqa izohni ko'ring"); }, 1500); localStorage.setItem("gp_gloss_hint", "1"); } } catch (e) {}
 
     // restore reading position
     if (S.progress.scroll > 0) {

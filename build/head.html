@@ -221,6 +221,14 @@ html.reduce-motion, html.reduce-motion * {
 .iconbtn.active { color: var(--accent); }
 .iconbtn .script-ab { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 1rem; line-height: 1; letter-spacing: -.02em; }
 #btn-script.active .script-ab { color: var(--accent); }
+.gloss-pop { position: fixed; z-index: 120; max-width: min(340px, 86vw); background: var(--panel); color: var(--fg);
+  border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 16px 44px rgba(0,0,0,.35); padding: .7rem .85rem;
+  animation: glosspop .16s ease; }
+.gloss-pop[hidden] { display: none; }
+@keyframes glosspop { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.gloss-pop .gp-cat { font-family: system-ui, sans-serif; font-size: .62rem; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); font-weight: 700; }
+.gloss-pop .gp-term { font-weight: 700; font-size: 1.02rem; margin: .15rem 0 .3rem; }
+.gloss-pop .gp-def { font-family: system-ui, sans-serif; font-size: .85rem; line-height: 1.5; }
 .iconbtn .dot {
   position: absolute; top: 7px; right: 8px; width: 7px; height: 7px;
   border-radius: 50%; background: var(--accent); display: none;
