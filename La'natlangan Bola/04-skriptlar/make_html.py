@@ -16,10 +16,12 @@ import os
 import re
 import sys
 
-# Skript arxiv/ papkasida, manba va chiqish fayllari esa loyiha ildizida.
+# Skript "La'natlangan Bola/04-skriptlar/" papkasida, manba va chiqish fayllari
+# esa "La'natlangan Bola/02-roman/" papkasida.
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-SRC = os.path.join(ROOT, "Garri_Potter_va_Lanatlangan_Bola_Roman.txt")
-OUT = os.path.join(ROOT, "Garri_Potter_va_Lanatlangan_Bola.html")
+ROMAN = os.path.join(ROOT, "02-roman")
+SRC = os.path.join(ROMAN, "Garri_Potter_va_Lanatlangan_Bola_Roman.txt")
+OUT = os.path.join(ROMAN, "Garri_Potter_va_Lanatlangan_Bola.html")
 
 CHAPTER_RE = re.compile(r"^([IVXLC]+)\s+BOB\.\s+(.+)$")
 SCENE_SEP = "* * *"
