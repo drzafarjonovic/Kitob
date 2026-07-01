@@ -65,8 +65,9 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 | `01_Lugat.md` | Terminologik lug'at (o'zgarmas; yangi terminlar qo'shiladi) |
 | `02_Style_Guide.md` | Tarjima uslub qo'llanmasi |
 | `boblar/Bob_01.html` … `Bob_77.html` | Tarjima qilingan boblar (toza manba matn) |
-| `build_reader.py` | Premium reader quruvchi skript (boblarni bitta o'quvchiga yig'adi) |
-| `Garri_Potter_va_Lanatlangan_Bola.html` | ⭐ PREMIUM READER — foydalanuvchi shuni o'qiydi (index.html reader-shell asosida; har bobdan keyin qayta quriladi) |
+| `build_reader.py` | Premium reader quruvchi skript. (1) standalone o'quvchini yig'adi; (2) index.html'ga 9-KITOB sifatida qo'shadi/yangilaydi (eski 8-kitobga tegmaydi) |
+| `patch_index_storage.py` | BIR MARTALIK skript: index.html'ga saqlash ko'prigini o'rnatadi (progress mobil brauzerlarda ham ishlashi uchun — top-sahifa orqali localStorage) |
+| `Garri_Potter_va_Lanatlangan_Bola.html` | ⭐ standalone PREMIUM READER (reader-shell asosida; har bobdan keyin qayta quriladi) |
 
 ## 5. HAR BIR BOB UCHUN ANIQ ISH TARTIBI (aynan shunday bajarilsin)
 1. `01_Lugat.md` + `02_Style_Guide.md` ni yodga ol.
@@ -103,9 +104,19 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 10. Qisqa "tayyor" deb bildir.
 
 > ℹ️ **Premium reader haqida:** har bob toza `boblar/Bob_NN.html` sifatida yoziladi
-> (tarjima manbai). Foydalanuvchi o'qiydigan qulay o'quvchi — `build_reader.py` yig'adigan
-> `Garri_Potter_va_Lanatlangan_Bola.html`. Unda mavzular, qidiruv, xatcho'p, izoh,
-> Lotin/Kirill almashtirish, bob navigatsiyasi bor. Reader kirill matnini canonical saqlaydi.
+> (tarjima manbai). `build_reader.py` ularni (a) standalone o'quvchi
+> `Garri_Potter_va_Lanatlangan_Bola.html` ga va (b) `index.html` kutubxonasiga **9-kitob**
+> sifatida yig'adi (eski 8-kitobga TEGILMAYDI). Foydalanuvchi ilovadan (index.html) 9-kitobni
+> ochib o'qiydi. Unda mavzular, qidiruv, xatcho'p, izoh, Lotin/Kirill almashtirish, bob
+> navigatsiyasi bor. Reader kirill matnini canonical saqlaydi.
+>
+> ⚙️ **Progress/saqlash (MUHIM):** reader `srcdoc` iframe ichida ishlaydi; mobil brauzerlar
+> (iOS Safari) srcdoc iframega null-origin berib localStorage'ni bloklaydi. Shuning uchun
+> saqlash TOP-sahifa (kutubxona) orqali amalga oshiriladi: reader progressni `postMessage`
+> bilan yuboradi, kutubxona o'z localStorage'iga yozadi; kitob ochilганда saqlangan holat
+> readerga inject qilinadi (`window.__GP_SAVED__`). Bu ko'prik `patch_index_storage.py` bilan
+> BIR MARTA o'rnatilgan. **Muhim:** o'quvchi haqiqiy manzildan (masalan GitHub Pages `https`)
+> ochilishi kerak — GitHub "blob"/manba ko'rinishida JS umuman ishlamaydi.
 
 ---
 
@@ -197,6 +208,23 @@ orasidagi 4-chi `userstuff` bloki (grep bilan aniqla). Bob nomi: «4-боб. Б�
 - **Nazorat:** 128/128 `<p>` (manba bilan aynan mos), 4 ta `+++`, terminlar to'g'ri,
   xato terminlar 0.
 - **Reader:** `build_reader.py` qayta ishga tushirildi → 2 bob, placeholderlar 0.
+- **Push:** `main`.
+
+### 2026-07-01 — Premium reader progress tuzatildi + 9-kitob qo'shildi (foydalanuvchi talabi) ✅
+- **Muammo:** reader `srcdoc` iframe ichида ishлаганида progress bar/davom etish/localStorage
+  mobil brauzerlarda (iOS Safari srcdoc null-origin) ishlamаган.
+- **Yechim:** saqlash TOP-sahifa (kutubxona) zиммасига o'tkazildi. `patch_index_storage.py`
+  (bir martalik) index.html'ga ko'prik o'rnатди: reader Store.saveRaw → `postMessage({__gp:"save"})`
+  → kutubxona localStorage'ига yozади; kitob ochilганда saqlangan holat readerга inject qилинади
+  (`window.__GP_SAVED__` → shell'да `@@SAVED@@` placeholder). Top-origin localStorage barcha
+  muhitда (https, hatto file:// top-level) ishлайди.
+- **9-kitob:** `build_reader.py` endi tarjimамизни index.html'га **9-kitob** sifatida
+  qo'шади/yangilaйди (BOOKS n:9, bookdata-9, COVERS 9). **Eski 8-kitоб (gp_reader_b8)
+  TEGILMАДИ** — saqlaнди. 9-kitob key: `gp_reader_b9`.
+- **build_reader.py yangilanди:** standalone o'quvchи (`@@SAVED@@`→null) + index.html 9-kitob
+  create-or-update. Har bobдан keyin ishga tushириlади.
+- **Nazorat:** index.html — 9 bookdata skript, BOOKS n:9 to'g'ri, massив `}]` bilan yopiladi,
+  eski 8-kitob joyida, fayl butun. Standalone — placeholderlar 0, 3 bob.
 - **Push:** `main`.
 
 ### 2026-07-01 — Bob 3 tarjimasi (`boblar/Bob_03.html`) ✅

@@ -1417,7 +1417,7 @@ mark.find-hit.current { background: #ff8c00; color: #fff; box-shadow: 0 0 0 2px 
     <p style="margin:.8rem 0 0">Tamom &middot; Premium Reader</p>
   </footer>
 </main>
-<script>window.BOOK={"id": "cursed-child-uz", "key": "gp_cursed_child_uz", "title": "ЛАЪНАТЛАНГАН БОЛА"};</script>
+<script>window.BOOK={"id": "cursed-child-uz", "key": "gp_reader_b9", "title": "ЛАЪНАТЛАНГАН БОЛА"};window.__GP_SAVED__=null;</script>
 <script>
 /* ============================================================
    PREMIUM E-BOOK READER ENGINE
@@ -1491,12 +1491,14 @@ mark.find-hit.current { background: #ff8c00; color: #fff; box-shadow: 0 0 0 2px 
   var KEY = (window.BOOK && window.BOOK.key) || "gp_reader_v2";
   var Store = {
     load: function () {
+      try { if (window.__GP_SAVED__) return window.__GP_SAVED__; } catch (e) {}
       try { return JSON.parse(localStorage.getItem(KEY)) || {}; }
       catch (e) { return {}; }
     },
     saveRaw: function (obj) {
-      try { localStorage.setItem(KEY, JSON.stringify(obj)); return true; }
-      catch (e) { return false; }
+      try { localStorage.setItem(KEY, JSON.stringify(obj)); } catch (e) {}
+      try { if (window.parent && window.parent !== window) window.parent.postMessage({ __gp: "save", key: KEY, data: obj }, "*"); } catch (e) {}
+      return true;
     }
   };
 
