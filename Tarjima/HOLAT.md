@@ -128,7 +128,7 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 
 ## 6. HOZIRGI HOLAT
 
-**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 4/77.**
+**Joriy bosqich:** 4 (Bobma-bob tarjima). **Tayyor boblar: 5/77.**
 
 | Bosqich | Holat |
 |---|---|
@@ -137,17 +137,16 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 | 2. Lug'at (`01_Lugat.md`) | ✅ (tasdiqlangan; tarjima davomida kengaytiriladi) |
 | 3. Style Guide (`02_Style_Guide.md`) | ✅ |
 | Foydalanuvchi tasdig'i (0–3) | ✅ |
-| 4. Bobma-bob tarjima | 🔄 4/77 |
+| 4. Bobma-bob tarjima | 🔄 5/77 |
 | 5. Yakuniy yig'ish | ⬜ |
 
 **📍 SATRMA-SATR HOLAT (manba `Harry_Potter_and_the.html`):**
-- Tarjima qilingan: **1–4-boblar** = manba satrlari **84–158** (Bob 1: 84–86, Bob 2: 105–107, Bob 3: 130–133, Bob 4: 156–158).
-- Oxirgi tarjima qilingan manba satri: **158** (Bob 4 `userstuff` oxiri; `/chapter content` marker 159-satrda).
+- Tarjima qilingan: **1–5-boblar** = manba satrlari **84–188** (Bob 1: 84–86, Bob 2: 105–107, Bob 3: 130–133, Bob 4: 156–158, Bob 5: 181–188).
+- Oxirgi tarjima qilingan manba satri: **188** (Bob 5 `userstuff` oxiri; `/chapter content` marker 189-satrda).
 - To'liq satr xaritasi — pastdagi «BOBLAR HOLATI» jadvalida (har bob uchun aniq satrlar).
 
-**➡️ KEYINGI QADAM:** `Bob_05` — «Act One: Scene Four Part Four» → «5-боб. Биринчи парда, тўртинчи саҳна, тўртинчи қисм».
-- Manba satrlari: **userstuff 181–188** (markerlar 180–189).
-- Ajratish: 5-chi `<!--chapter content-->` blokini `read_file` (offset≈179) bilan o'qi.
+**➡️ KEYINGI QADAM:** `Bob_06` — «Act One: Scene Five» → «6-боб. Биринчи парда, бешинчи саҳна».
+- Ajratish: 6-chi `<!--chapter content-->` blokini top (grep `<!--chapter content-->`), heading + userstuff'ni `read_file` bilan o'qi.
 
 ---
 
@@ -250,6 +249,30 @@ o'zbekcha Garri Potter kitobini o'qiyotgandek his qilishi kerak.
 - **Reader:** `build_reader.py` → 3 bob, placeholderlar 0.
 - **Push:** `main`.
 
+### 2026-07-01 — Bob 5 tarjimasi (`boblar/Bob_05.html`) ✅
+- **Nima:** 5-bob to'liq tarjima — «5-боб. Биринчи парда, тўртинчи саҳна, тўртинчи қисм».
+  Scene Four'ning oxirgi qismi; Альбуснинг **учинчи йили** arafasi va boshlanishi.
+  Mazmun: kўнгилсиз ёз (Скорпиус хат ёзмайди, Жеймс мазахи, оилада ёлғизлик);
+  Жинни ва Гарри каравотдаги суҳбат (Хогсмёд, рухсатнома, «Альбус — Жеймс эмас»);
+  платформада Гарри билан жанжал — Альбус рухсатномани «Инсендио» билан ёқади,
+  Макгонагаллнинг сотгани фош бўлади; Скорпиусни топади — **онаси вафот этган**,
+  дафн маросимига таклиф; Лилининг ГРИФФИНДОРга саралангани, сараловчи шляпа қўшиғи;
+  зиёфатда зуғум, Альбуснинг «мен танламадим» изтироби. Boshdagi muallif izohi
+  (blockquote «Chapter Notes») tarjima QILINMADI.
+- **Qanday:** Manba 181–188-qatorlar (userstuff). Skelet + matn 4 qismda `fs_append`.
+  **Kanon (7 kitobdan grep):** Diagon Alley = «Диагон хиёбони», Hogsmeade = «Хогсмёд»,
+  Hufflepuff = «Хуффльпуфф», Ravenclaw = «Равенкло», Basilisk = «Василиск»,
+  Sorting Hat = «Сараловчи шляпа», Incendio = «Инсендио», permission form = «рухсатнома»,
+  Honeydukes = «Асалхона (дўкони)», Luna = «Луна». Barchasi lug'atga qo'shildi.
+  Sараловчи шляпа қўшиғи (6 сатр) qofiyali she'r qilib tarjima qilindi (em/br saqlangan).
+- **Nazorat:** 98/98 `<p>` (aynan mos), 3 ta `+++`, 8/8 `<em>`, 5/5 `<br>`, Latin harf 0,
+  eski/xato terminlar 0.
+- **Reader:** `build_reader.py` → 5 bob (~16258 so'z), placeholderlar 0, index.html 9 bookdata,
+  eski 8-kitob (gp_reader_b8) joyida.
+- **Push:** `main`.
+
+---
+
 ### 2026-07-01 — Bob 4 tarjimasi (`boblar/Bob_04.html`) ✅
 - **Nima:** 4-bob to'liq tarjima — «4-боб. Биринчи парда, тўртинчи саҳна, учинчи қисм».
   Bu ham muallif qo'shgan "roman" bob — Альбуснинг **иккинчи йили** (bir yil qamrab
@@ -290,7 +313,7 @@ Belgilar: ⬜ boshlanmagan · 🔄 jarayonda · ✅ tayyor+nazoratdan o'tgan+pus
 | 2 | Act One Scene Four Part One | 105–107 | ✅ `boblar/Bob_02.html` |
 | 3 | Act One: Scene Four Part Two | 130–133 | ✅ `boblar/Bob_03.html` |
 | 4 | Act One: Scene Four Part Three | 156–158 | ✅ `boblar/Bob_04.html` |
-| 5 | Act One: Scene Four Part Four | 181–188 | ⬜ |
+| 5 | Act One: Scene Four Part Four | 181–188 | ✅ `boblar/Bob_05.html` |
 | 6 | Act One: Scene Four Part Five | 211–225 | ⬜ |
 | 7 | Act One: Scene Five | 248–252 | ⬜ |
 | 8 | Act One: Scene Six | 275–277 | ⬜ |

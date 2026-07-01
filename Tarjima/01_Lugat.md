@@ -160,6 +160,22 @@ qilinib **yakuniy qulflandi**:
 | Karl Jenkins | Карл Женкинс | 🔧 (7 kitobda yo'q; konventsiya) |
 | owl post (xat) | укки почтаси | ✅ |
 
+## Bob 5 da qo'shilgan
+| English | O'zbekcha | St |
+|---|---|---|
+| Diagon Alley | Диагон хиёбони | ✅ (7 kitob) |
+| Hogsmeade | Хогсмёд | ✅ (7 kitob, 100+ marta) |
+| Honeydukes | Асалхона (дўкони) | ✅ (b: «асалхона дўкони») |
+| Hufflepuff | Хуффльпуфф | ✅ (7 kitob, 89+ marta) |
+| Ravenclaw | Равенкло | ✅ (7 kitob, 128 marta) |
+| Basilisk | Василиск | ✅ (7 kitob, 50 marta) |
+| Sorting Hat | Сараловчи шляпа | ✅ (7 kitob) |
+| Sorting (marosim) | Саралаш | ✅ |
+| Incendio (afsun) | Инсендио | ✅ (b: 1 marta) |
+| permission form | рухсатнома | ✅ (7 kitob, 35 marta) |
+| Luna | Луна | ✅ |
+| funeral | дафн маросими | 🔧 |
+
 ## ⚠️ TARJIMADA UCHRAGANDA TEKSHIRILADI
 - **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda 7 kitobdan
   tekshiriladi; topilmasa konventsiya bo'yicha hosil qilinib shu faylga qo'shiladi.
