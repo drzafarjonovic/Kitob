@@ -103,13 +103,20 @@
 | team | жамоа | ✅ |
 | captain | сардор | ✅ |
 | Golden Snitch | Тилла чаққон | ✅ |
-| Bludger | ⚠️ topilmadi — so'raladi | ⚠️ |
-| Quaffle | ⚠️ topilmadi — so'raladi | ⚠️ |
-| Beater / Chaser / Keeper | ⚠️ topilmadi — so'raladi | ⚠️ |
+| Bludger | Бладжер | 🔧 |
+| Quaffle | Квоффл | 🔧 |
+| Beater | Урувчи | 🔧 |
+| Chaser | Ҳужумчи | 🔧 |
+| Keeper | Дарвозабон | 🔧 |
 
-## ⚠️ 7 KITOBDA TOPILMAGAN — FOYDALANUVCHIDAN SO'RALADI
-Quyidagilar 7 kitobdan qidirildi, topilmadi. Tarjimada uchrasa foydalanuvchidan aniq shakl so'raladi:
-- **Bludger, Quaffle, Beater, Chaser, Keeper** — kviddich to'plari/rollari (Cursed Child'da kam uchraydi).
-- **Yangi personajlar** (7 kitobda yo'q, hozircha konventsiya bo'yicha 🔧):
-  Scorpius → Скорпиус, Rose → Роза, Hugo → Хьюго, Astoria → Астория, Delphi/Delphini → Дельфи/Дельфини.
-- **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda so'raladi/tekshiriladi.
+## 🔧 QAROR QILINGAN (7 kitobda yo'q — qulflangan, o'zgarmaydi)
+Foydalanuvchi "o'zing qaror qil" dedi. Quyidagilar konventsiya bo'yicha transliteratsiya/tarjima
+qilinib **yakuniy qulflandi**:
+- **Yangi personajlar:** Scorpius → **Скорпиус**, Rose → **Роза**, Hugo → **Хьюго**,
+  Astoria → **Астория**, Delphi/Delphini → **Дельфи / Дельфини**.
+- **Kviddich:** Bludger → **Бладжер**, Quaffle → **Квоффл**, Beater → **Урувчи**,
+  Chaser → **Ҳужумчи**, Keeper → **Дарвозабон**.
+
+## ⚠️ TARJIMADA UCHRAGANDA TEKSHIRILADI
+- **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda 7 kitobdan
+  tekshiriladi; topilmasa konventsiya bo'yicha hosil qilinib shu faylga qo'shiladi.
