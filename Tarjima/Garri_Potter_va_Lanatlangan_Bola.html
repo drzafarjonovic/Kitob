@@ -1489,6 +1489,28 @@ mark.find-hit.current { background: #ff8c00; color: #fff; box-shadow: 0 0 0 2px 
 
   /* ---------- safe storage ---------- */
   var KEY = (window.BOOK && window.BOOK.key) || "gp_reader_v2";
+  /* ---------- IndexedDB zaxira (file:// va localStorage bloklangan holatlar) ---------- */
+  var _idb = null;
+  function idbOpen(cb) {
+    try {
+      if (!window.indexedDB) { cb && cb(); return; }
+      var r = indexedDB.open("gp_reader_db", 1);
+      r.onupgradeneeded = function () { try { r.result.createObjectStore("kv"); } catch (e) {} };
+      r.onsuccess = function () { _idb = r.result; cb && cb(); };
+      r.onerror = function () { cb && cb(); };
+    } catch (e) { cb && cb(); }
+  }
+  function idbSet(obj) {
+    try { if (_idb) _idb.transaction("kv", "readwrite").objectStore("kv").put(obj, KEY); } catch (e) {}
+  }
+  function idbGet(cb) {
+    try {
+      if (!_idb) { cb(null); return; }
+      var rq = _idb.transaction("kv", "readonly").objectStore("kv").get(KEY);
+      rq.onsuccess = function () { cb(rq.result || null); };
+      rq.onerror = function () { cb(null); };
+    } catch (e) { cb(null); }
+  }
   var Store = {
     load: function () {
       try { if (window.__GP_SAVED__) return window.__GP_SAVED__; } catch (e) {}
@@ -1497,6 +1519,7 @@ mark.find-hit.current { background: #ff8c00; color: #fff; box-shadow: 0 0 0 2px 
     },
     saveRaw: function (obj) {
       try { localStorage.setItem(KEY, JSON.stringify(obj)); } catch (e) {}
+      idbSet(obj);
       try { if (window.parent && window.parent !== window) window.parent.postMessage({ __gp: "save", key: KEY, data: obj }, "*"); } catch (e) {}
       return true;
     }
@@ -2944,6 +2967,24 @@ mark.find-hit.current { background: #ff8c00; color: #fff; box-shadow: 0 0 0 2px 
 
     updateProgress();
     Library.render();
+    idbInitAndRestore();
+    function idbInitAndRestore() {
+      idbOpen(function () {
+        var haveLS = false; try { haveLS = !!localStorage.getItem(KEY); } catch (e) {}
+        if (haveLS || window.__GP_SAVED__) return;
+        idbGet(function (saved) {
+          if (!saved || (S.progress && S.progress.scroll > 0)) return;
+          try {
+            S.settings = Object.assign({}, DEFAULTS, saved.settings || {});
+            S.bookmarks = saved.bookmarks || []; S.highlights = saved.highlights || [];
+            S.notes = saved.notes || []; S.searchHistory = saved.searchHistory || [];
+            S.progress = saved.progress || { scroll: 0, pct: 0 }; S.stats = saved.stats || S.stats;
+            SettingsUI.apply(); renderAllHighlights(); updateProgress(); updateLibBadge();
+            if (S.progress.scroll > 0) { window.scrollTo(0, S.progress.scroll); setTimeout(function () { window.scrollTo(0, S.progress.scroll); }, 120); }
+          } catch (e) {}
+        });
+      });
+    }
 
     // stats ticker
     setInterval(function () { Stats.tick(); }, 1000);

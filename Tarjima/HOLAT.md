@@ -217,7 +217,7 @@ orasidagi 4-chi `userstuff` bloki (grep bilan aniqla). Bob nomi: «4-боб. Б�
   (bir martalik) index.html'ga ko'prik o'rnатди: reader Store.saveRaw → `postMessage({__gp:"save"})`
   → kutubxona localStorage'ига yozади; kitob ochilганда saqlangan holat readerга inject qилинади
   (`window.__GP_SAVED__` → shell'да `@@SAVED@@` placeholder). Top-origin localStorage barcha
-  muhitда (https, hatto file:// top-level) ishлайди.
+  muhitда (https, hatto file:// top-level) ishлайди. Qoʻshimcha: patch_index_idb.py reader-shellga IndexedDB zaxira qatlamini qoʻshdi — localStorage bloklangan yoki file:// holatlarda ham progress saqlanadi (additiv, himoyalangan). Standalone oʻquvchi toʻliq offline (tashqi resurs yoʻq): Chromeда file:// bilan ochilganda ham progress/davom etish ishlaydi.
 - **9-kitob:** `build_reader.py` endi tarjimамизни index.html'га **9-kitob** sifatida
   qo'шади/yangilaйди (BOOKS n:9, bookdata-9, COVERS 9). **Eski 8-kitоб (gp_reader_b8)
   TEGILMАДИ** — saqlaнди. 9-kitob key: `gp_reader_b9`.
