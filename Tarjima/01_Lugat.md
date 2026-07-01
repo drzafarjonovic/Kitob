@@ -71,7 +71,8 @@
 | wand | сеҳрли таёқча | ✅ |
 | broomstick | супурги | ✅ |
 | Invisibility Cloak | Кўринмас плаш | ✅ |
-| Time-Turner | қум соатча | ✅ (b3) |
+| Time-Turner | вақт чиғири | ✅ (b3: «Буни вақт чиғири, деб аташади») |
+| Death Eater | Ўлимдан мириқувчи(лар) | ✅ (yuzlab marta) |
 | Portkey | портшлюс | ✅ |
 | Galleon | галлеон | ✅ |
 | Patronus | патронум | ✅ |
@@ -100,10 +101,15 @@
 | Seeker | Сайёди | ✅ |
 | team | жамоа | ✅ |
 | captain | сардор | ✅ |
-| Snitch / Bludger / Quaffle | ⚠️ tarjimada b1 dan aniqlanadi | ⚠️ |
+| Golden Snitch | Тилла чаққон | ✅ |
+| Bludger | ⚠️ topilmadi — so'raladi | ⚠️ |
+| Quaffle | ⚠️ topilmadi — so'raladi | ⚠️ |
+| Beater / Chaser / Keeper | ⚠️ topilmadi — so'raladi | ⚠️ |
 
-## ⚠️ TARJIMADA QULFLANADIGAN (birinchi uchraganda)
-- **Death Eater** — 7 kitobda qat'iy atama yo'q; tasviriy: «Вольдемортнинг тарафдорлари / малайлари».
-  Birinchi uchraganda b4 (qabriston) va b7 to'liq o'qilib, eng ko'p ishlatilgan shakl qulflanadi.
-- **Dark Mark**, **Ministry corridor**, **Trolley Witch**, **Bane** (kentavr), **Ludo Bagman**,
-  **Bathilda Bagshot**, **St Oswald's**, **Craig Bowker** — uchraganda tekshiriladi/hosil qilinadi.
+## ⚠️ 7 KITOBDA TOPILMAGAN — FOYDALANUVCHIDAN SO'RALADI
+Quyidagilar 7 kitobdan qidirildi, topilmadi. Tarjimada uchrasa foydalanuvchidan aniq shakl so'raladi:
+- **Dark Mark** (Ўлimdan miriquvchilar belgisi) — «Қора белги» topilmadi.
+- **Bludger, Quaffle, Beater, Chaser, Keeper** — kviddich to'plari/rollari (Cursed Child'da kam uchraydi).
+- **Yangi personajlar** (7 kitobda yo'q, hozircha konventsiya bo'yicha 🔧):
+  Scorpius → Скорпиус, Rose → Роза, Hugo → Хьюго, Astoria → Астория, Delphi/Delphini → Дельфи/Дельфини.
+- **Ludo Bagman, Bathilda Bagshot, Bane, Craig Bowker, St Oswald's** — uchraganda so'raladi/tekshiriladi.
