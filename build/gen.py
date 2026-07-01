@@ -894,15 +894,40 @@ def build_single(summary, shell, chapters_map):
     gloss_json = json.dumps(GLOSSARY, ensure_ascii=False)
     world_json = json.dumps(WORLD, ensure_ascii=False)
     _grounds = (
-        '<path d="M40 26 L40 18 L50 13 L60 18 L60 26 Z"/>'
-        '<path d="M36 26 L36 20 L40 20 M60 20 L64 20 L64 26"/>'
-        '<path d="M50 13 L50 6 L53 6 L53 13 M50 6 l1.5 -3 l1.5 3"/>'
-        '<path d="M30 40 Q45 34 70 40 Q72 44 60 46 Q45 48 34 45 Q28 43 30 40 Z"/>'
-        '<path d="M42 84 Q50 78 78 84 Q80 90 58 92 Q42 94 30 90 Q24 87 30 84" stroke-width="0.5"/>'
-        '<path d="M6 66 l2 -5 l2 5 z M9 68 l2 -5 l2 5 z M4 70 l2 -5 l2 5 z M12 69 l2 -5 l2 5 z M8 62 l2 -5 l2 5 z"/>'
-        '<path d="M40 26 Q30 40 26 56"/><path d="M46 40 Q40 30 44 26"/>'
-        '<circle cx="16" cy="34" r="3"/><path d="M16 31 L16 37"/>'
-        '<path d="M30 48 l0 4 M28 50 l4 0 M28 46 l4 4 M28 54 l4 -4"/>'
+        '<path d="M1 5 L30 5 L30 33 Q22 37 15 34 Q8 38 1 33 Z" fill="#4f6f3f"/>'
+        '<path d="M1 56 L25 56 Q28 66 21 76 Q11 82 2 76 Z" fill="#4f6f3f"/>'
+        '<path d="M5 12 l2 -4 l2 4 z M10 11 l2 -4 l2 4 z M15 13 l2 -4 l2 4 z M20 11 l2 -4 l2 4 z M25 13 l2 -4 l2 4 z M8 19 l2 -4 l2 4 z M18 20 l2 -4 l2 4 z"/>'
+        '<path d="M5 61 l2 -4 l2 4 z M10 63 l2 -4 l2 4 z M15 61 l2 -4 l2 4 z M8 68 l2 -4 l2 4 z M18 66 l2 -4 l2 4 z"/>'
+        '<path d="M30 72 Q48 66 70 71 Q81 74 80 84 Q77 95 58 96 Q39 97 31 91 Q25 83 30 72 Z" fill="#3f6b86"/>'
+        '<path d="M35 80 q6 -2 12 0 M42 86 q6 -2 12 0" stroke-width="0.3" fill="none"/>'
+        '<path d="M33 44 Q45 49 58 46 L58 42 L33 42 Z" fill="#7a6a4a"/>'
+        '<path d="M40 42 L40 26 L44 23 L52 23 L56 26 L56 42 Z" fill="#efe7d0"/>'
+        '<path d="M40 30 L56 30 M48 23 L48 42" stroke-width="0.3"/>'
+        '<path d="M40 24 l0 2 M44 22 l0 2 M52 22 l0 2 M56 24 l0 2"/>'
+        '<path d="M38 42 L38 15 L43 15 L43 42 Z" fill="#efe7d0"/>'
+        '<path d="M37.5 15 L40.5 7 L43.5 15 Z" fill="currentColor"/>'
+        '<path d="M40.5 7 L40.5 3.5 L43 4.5 L40.5 5.5"/>'
+        '<circle cx="50" cy="36" r="4" fill="#efe7d0"/><circle cx="50" cy="36" r="1"/>'
+        '<path d="M50 30 L47.5 26 L50 22 L52.5 26 Z" fill="currentColor"/>'
+        '<path d="M34 42 L34 31 L37 31 L37 42 Z" fill="#efe7d0"/><path d="M33.3 31 L35.5 27 L37.7 31 Z" fill="currentColor"/>'
+        '<path d="M58 42 L58 30 L61 30 L61 42 Z" fill="#efe7d0"/><path d="M57.3 30 L59.5 26 L61.7 30 Z" fill="currentColor"/>'
+        '<path d="M61 42 L72 42 L72 35 L66.5 31 L61 35 Z" fill="#efe7d0"/>'
+        '<path d="M61 35 L66.5 31 L72 35" fill="none"/>'
+        '<path d="M72 43 L88 43"/><path d="M73 43 q2 -4 4 0 M77 43 q2 -4 4 0 M81 43 q2 -4 4 0 M85 43 q2 -4 4 0" stroke-width="0.3" fill="none"/>'
+        '<path d="M88 39 L92 39 L92 46 L88 46 Z" fill="#efe7d0"/>'
+        '<path d="M62 36 a3 2.5 0 0 1 6 0 Z" fill="#cfe0d0"/><path d="M68 35 a2.5 2 0 0 1 5 0 Z" fill="#cfe0d0"/>'
+        '<path d="M61 20 L61 13 L65 13 L65 20 Z" fill="#efe7d0"/><path d="M60.3 13 L63 9 L65.7 13 Z" fill="currentColor"/>'
+        '<ellipse cx="16" cy="35" rx="8" ry="4" fill="none"/>'
+        '<path d="M11 34 L11 29 M16 34 L16 28 M21 34 L21 29"/>'
+        '<circle cx="11" cy="28.5" r="0.9"/><circle cx="16" cy="27.5" r="0.9"/><circle cx="21" cy="28.5" r="0.9"/>'
+        '<path d="M30 54 L30 48 M30 48 q-4 -2 -6 -5 M30 48 q4 -2 6 -5 M30 49 q-6 0 -9 2 M30 49 q6 0 9 2 M30 48 q-2 -5 -2 -8 M30 48 q2 -5 2 -8"/>'
+        '<path d="M23 64 a3 3 0 0 1 6 0 Z" fill="#e7d8b8"/><path d="M22.4 62 L26 58 L29.6 62 Z" fill="currentColor"/>'
+        '<path d="M28 59 L28 55" fill="none"/>'
+        '<circle cx="21" cy="66" r="0.5"/><circle cx="23" cy="67" r="0.5"/><circle cx="25" cy="67.5" r="0.5"/>'
+        '<path d="M63 66 L69 66 L67.5 63 L64.5 63 Z" fill="#e7d8b8"/>'
+        '<path d="M50 97 Q48 78 46 60 Q44 50 48 44" stroke-width="0.5" fill="none"/>'
+        '<path d="M42 44 Q34 54 27 60" stroke-width="0.4" fill="none"/>'
+        '<path d="M34 40 Q25 38 19 36" stroke-width="0.4" fill="none"/>'
     )
     _castle = (
         '<path d="M20 60 L20 30 L44 18 L68 30 L68 60 Z"/>'
@@ -1237,7 +1262,7 @@ border:1px solid #b79b6a;background:radial-gradient(120% 120% at 50% 0%,#f3e7c9,
 box-shadow:inset 0 0 60px rgba(120,85,35,.35);}
 .map-wrap:before{content:"";position:absolute;inset:0;pointer-events:none;
 background:repeating-linear-gradient(0deg,rgba(120,85,35,.05) 0 2px,transparent 2px 5px);opacity:.5;}
-.map-svg{position:absolute;inset:0;width:100%;height:100%;color:#5b3f1e;opacity:.55;pointer-events:none;}
+.map-svg{position:absolute;inset:0;width:100%;height:100%;color:#5b3f1e;opacity:.72;pointer-events:none;}
 .map-title{position:absolute;top:2%;left:0;right:0;text-align:center;font-family:Georgia,serif;font-style:italic;
 color:#6b4a22;font-size:clamp(.8rem,2.6vw,1.15rem);letter-spacing:.03em;pointer-events:none;text-shadow:0 1px 0 rgba(255,250,235,.5);}
 .map-mk{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;
@@ -1267,7 +1292,7 @@ background:rgba(243,231,205,.7);padding:0 .25rem;border-radius:3px;white-space:n
 .map-svg .ink path,.map-svg .ink circle{stroke-dasharray:280;stroke-dashoffset:0;}
 .map-wrap.reveal .map-svg{animation:mapfade 1s ease;}
 .map-wrap.reveal .map-svg .ink path,.map-wrap.reveal .map-svg .ink circle{stroke-dashoffset:280;animation:inkdraw 1.5s ease forwards;}
-@keyframes mapfade{from{opacity:0}to{opacity:.55}}
+@keyframes mapfade{from{opacity:0}to{opacity:.72}}
 @keyframes inkdraw{to{stroke-dashoffset:0}}
 .map-wrap.reveal .map-mk{animation:mkfade .9s ease both;}
 @keyframes mkfade{from{opacity:0}to{opacity:1}}
