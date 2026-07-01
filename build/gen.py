@@ -234,6 +234,262 @@ GLOSSARY = {
 }
 
 # ----------------------------------------------------------------------------
+# "Sehrli Olam" (Wizarding World) — interaktiv ensiklopediya ma'lumotlari.
+# Har maqola `book` maydoni bilan belgilangan: u qaysi kitobda ochilishini
+# bildiradi va spoiler himoyasi shu asosda ishlaydi.
+# cat: qahramon | joy | sehr | mavjudot | buyum | fakultet
+# ----------------------------------------------------------------------------
+def _e(id, name, cat, book, tag, desc, house="", rel=None, c1="", c2=""):
+    return {"id": id, "name": name, "cat": cat, "book": book, "house": house,
+            "tag": tag, "desc": desc, "rel": rel or [], "c1": c1, "c2": c2}
+
+WORLD = {
+    "entries": [
+        # ---- Qahramonlar ----
+        _e("garri", "Garri Potter", "qahramon", 1, "Tirik qolgan bola",
+           "Peshonasidagi chaqmoq izi bilan tanilgan bosh qahramon. Voldemort hujumidan omon qolgan yagona bola; Gryffindor fakultetida o'qiydi.",
+           "gryffindor", ["ron", "germiona", "voldemort", "dambldor", "lily_james"]),
+        _e("ron", "Ron Uizli", "qahramon", 1, "Sodiq do'st",
+           "Garrining eng yaqin do'sti, katta Uizlilar oilasining kenja o'g'li. Mard, hazilkash va sadoqatli.",
+           "gryffindor", ["garri", "germiona", "moli", "fred_jorj", "jinni"]),
+        _e("germiona", "Germiona Greynjer", "qahramon", 1, "Zukko jodugar",
+           "Maripat oilasidan chiqqan g'oyat aqlli va kitobsevar jodugar; uchlikning miyasi. Keyinchalik Sehrgarlik vaziri bo'ladi.",
+           "gryffindor", ["garri", "ron"]),
+        _e("dambldor", "Albus Dambldor", "qahramon", 1, "Bosh direktor",
+           "Xogvartsning donishmand bosh direktori, davrning eng qudratli sehrgari. Garrining ustozi va himoyachisi.",
+           "gryffindor", ["garri", "snegg", "voldemort", "feniks"]),
+        _e("hagrid", "Rubeus Hagrid", "qahramon", 1, "O'rmonboni",
+           "Yarim-gigant, Xogvarts o'rmonbonisi va Garrining mehribon do'sti. Sehrli mavjudotlarni juda sevadi.",
+           "gryffindor", ["garri", "aragog", "bakljak"]),
+        _e("snegg", "Severus Snegg", "qahramon", 1, "Iksirlar ustozi",
+           "Sirli va ziddiyatli Iksirlar ustozi, Slizerin dekani. Uning haqiqiy sadoqati kitob so'ngida ochiladi.",
+           "slizerin", ["dambldor", "garri", "lily_james", "voldemort"]),
+        _e("makgonagal", "Minerva Makgonagal", "qahramon", 1, "Transfiguratsiya ustozi",
+           "Qat'iyatli Transfiguratsiya professori va Gryffindor dekani; anigamag (mushukka aylana oladi).",
+           "gryffindor", ["dambldor"]),
+        _e("voldemort", "Lord Voldemort", "qahramon", 1, "Nomi aytilmaydigan",
+           "Asl ismi Tom Ridl. Asrning eng qora sehrgari, sehrli dunyoni bo'ysundirishga intilgan asosiy yovuz kuch.",
+           "slizerin", ["garri", "bellatrisa", "xorkruks", "snegg"]),
+        _e("draco", "Drako Malfoy", "qahramon", 1, "Slizerin raqibi",
+           "Kibrli sof qonli sehrgar, Garrining maktabdagi asosiy raqibi. Malfoy oilasining vorisi.",
+           "slizerin", ["snegg", "voldemort"]),
+        _e("nevill", "Nevill Longbottom", "qahramon", 1, "Botir gerbolog",
+           "Dastlab uquvsiz ko'ringan, ammo jasoratli Gryffindor o'quvchisi; gerbologiyada iqtidorli.",
+           "gryffindor", ["garri", "luna"]),
+        _e("jinni", "Jinni Uizli", "qahramon", 2, "Uizlilarning qizi",
+           "Uizlilar oilasining yagona qizi; kuchli va mustaqil jodugar. Keyinchalik Garrining rafiqasi bo'ladi.",
+           "gryffindor", ["ron", "garri", "moli"]),
+        _e("dobbi", "Dobbi", "qahramon", 2, "Ozod uy-elfi",
+           "Malfoylar xizmatidagi uy-elfi; Garrini ogohlantirib himoya qiladi va oxir-oqibat ozodlikka erishadi.",
+           "", ["garri", "draco"]),
+        _e("sirius", "Sirius Blek", "qahramon", 3, "Garrining cho'qintirgan otasi",
+           "Azkabandan qochgan begunoh mahbus; aslida Garrining cho'qintirgan otasi va sodiq himoyachisi. Anigamag (qora it).",
+           "gryffindor", ["garri", "lyupin", "petigryu"]),
+        _e("lyupin", "Remus Lyupin", "qahramon", 3, "Bo'ri-odam ustoz",
+           "Mehribon Qora kuchlardan himoya ustozi; bo'ri-odam. Sirius va Jeymsning eski do'sti.",
+           "gryffindor", ["sirius", "petigryu", "garri"]),
+        _e("petigryu", "Piter Petigryu", "qahramon", 3, "Sotqin",
+           "Jeyms Potterning eski do'sti; Potterlar sirini Voldemortga sotgan xoin. Anigamag (kalamush).",
+           "gryffindor", ["sirius", "lyupin", "voldemort"]),
+        _e("sedrik", "Sedrik Diggori", "qahramon", 4, "Xogvarts chempioni",
+           "Halol va olijanob Puffenduy o'quvchisi, Uch Afsungar Bellashuvi ishtirokchisi. Uning fojiasi seriyada burilish nuqtasi bo'ladi.",
+           "puffenduy", ["garri", "voldemort"]),
+        _e("muudi", "Alastor Muudi", "qahramon", 4, "Sehrgar-ovchi",
+           "Sirli ko'zi bilan tanilgan taniqli qora sehrgar-ovchi (auror); \"Doimo hushyor!\" shiori bilan mashhur.",
+           "", ["dambldor"]),
+        _e("umbrij", "Doloris Umbrij", "qahramon", 5, "Vazirlik nozirasi",
+           "Pushti kiyingan, zohiran shirin, aslida shafqatsiz Vazirlik amaldori; Xogvartsda zolim tartib o'rnatadi.",
+           "slizerin", ["vazirlik"]),
+        _e("bellatrisa", "Bellatrisa Lestranj", "qahramon", 5, "Sodiq izdosh",
+           "Voldemortning eng fanatik va shafqatsiz izdoshi; kuchli qora jodugar.",
+           "slizerin", ["voldemort", "sirius"]),
+        _e("luna", "Luna Lavgud", "qahramon", 5, "Xayolparast",
+           "G'ayrioddiy, samimiy va dono Kogtevran o'quvchisi; boshqalar shubha qilgan narsalarga ishonadi.",
+           "kogtevran", ["garri", "nevill"]),
+        _e("slughorn", "Horas Slughorn", "qahramon", 6, "Iksirlar ustozi",
+           "Nufuzli shogirdlarni yig'ishni yaxshi ko'radigan Iksirlar professori; Voldemortning o'tmishi haqida muhim sirni saqlaydi.",
+           "slizerin", ["voldemort", "dambldor"]),
+        _e("fred_jorj", "Fred va Jorj Uizli", "qahramon", 1, "Hazil ustalari",
+           "Uizlilar oilasining egizak aka-ukalari; hazil-mutoyiba va ixtirolari bilan mashhur.",
+           "gryffindor", ["ron", "moli"]),
+        _e("moli", "Moli Uizli", "qahramon", 1, "Mehribon ona",
+           "Uizlilar oilasining g'amxo'r onasi; Garrini o'z farzandidek qabul qiladi.",
+           "gryffindor", ["ron", "jinni", "fred_jorj"]),
+        _e("lily_james", "Lili va Jeyms Potter", "qahramon", 1, "Garrining ota-onasi",
+           "Garrini himoya qilib halok bo'lgan ota-ona. Lilining muhabbat qurboni Garrini Voldemortdan asraydi.",
+           "gryffindor", ["garri", "voldemort", "snegg"]),
+
+        # ---- Joylar ----
+        _e("xogvarts", "Xogvarts", "joy", 1, "Sehrgarlik maktabi",
+           "Sehrgarlik va jodugarlik maktabi; to'rt fakultetga bo'lingan qadimiy qal'a. Voqealarning asosiy maskani.",
+           "", ["gryffindor", "slizerin", "puffenduy", "kogtevran", "ormon"]),
+        _e("diagon", "Diagon xiyoboni", "joy", 1, "Sehrli savdo ko'chasi",
+           "Sehrgarlar xarid qiladigan yashirin savdo ko'chasi: tayoqchalar, kitoblar, buyumlar.",
+           "", ["gringotts"]),
+        _e("platform", "To'qqiz-uchdan-bir platforma", "joy", 1, "Sirli platforma",
+           "Kings Kross vokzalidagi 9¾ platforma; Xogvarts ekspressiga shu yerdan chiqiladi.",
+           "", ["xogvarts"]),
+        _e("gringotts", "Gringotts banki", "joy", 1, "Sehrgarlar banki",
+           "Goblinlar boshqaradigan yer ostidagi eng xavfsiz sehrli bank.",
+           "", ["diagon"]),
+        _e("ormon", "Taqiqlangan o'rmon", "joy", 1, "Sirli o'rmon",
+           "Xogvarts yonidagi xatarli o'rmon; kentavrlar, akromantulalar va boshqa mavjudotlar makoni.",
+           "", ["hagrid", "aragog", "xogvarts"]),
+        _e("maxfiyxona", "Maxfiy Xona", "joy", 2, "Yashirin xona",
+           "Salazar Slizerin qurgan afsonaviy yashirin xona; ichida qo'rqinchli maxluq yashiringan.",
+           "", ["bazilisk", "voldemort"]),
+        _e("azkaban", "Azkaban", "joy", 3, "Sehrgarlar qamoqxonasi",
+           "Dementorlar qo'riqlaydigan dahshatli sehrli qamoqxona.",
+           "", ["dementor", "sirius"]),
+        _e("xogsmid", "Xogsmid", "joy", 3, "Sehrgarlar qishlog'i",
+           "Britaniyadagi yagona to'liq sehrli qishloq; Xogvarts o'quvchilari dam olishga boradi.",
+           "", ["xogvarts"]),
+        _e("vazirlik", "Sehrgarlik Vazirligi", "joy", 5, "Sehrli hukumat",
+           "Sehrli dunyoning hukumati; qonunlar va tartibni boshqaradi.",
+           "", ["umbrij"]),
+        _e("godrik", "Godrik Jarligi", "joy", 7, "Potterlar qishlog'i",
+           "Potter oilasi yashagan qishloq; Garrining ota-onasi shu yerda halok bo'lgan.",
+           "", ["lily_james", "garri"]),
+
+        # ---- Sehrlar ----
+        _e("expelliarmus", "Expelliarmus", "sehr", 1, "Qurolsizlantirish",
+           "Raqibning tayoqchasini qo'lidan uchirib yuboruvchi sehr; Garrining eng sevimli afsuni.",
+           "", ["garri"]),
+        _e("lumos", "Lumos", "sehr", 1, "Yorug'lik",
+           "Tayoqcha uchini chiroqdek yorituvchi oddiy, ammo foydali sehr.", ""),
+        _e("wingardium", "Wingardium Leviosa", "sehr", 1, "Havoga ko'tarish",
+           "Buyumlarni havoga ko'taruvchi sehr; birinchi kursda o'rganiladi.",
+           "", ["germiona", "ron"]),
+        _e("patronum", "Expecto Patronum", "sehr", 3, "Homiy sehri",
+           "Dementorlardan himoya qiluvchi nurli homiy chaqiruvchi murakkab sehr; baxtli xotira talab qiladi.",
+           "", ["dementor", "garri"]),
+        _e("avada", "Avada Kedavra", "sehr", 4, "O'lim sehri",
+           "Uch kechirilmas sehrdan biri — bir zumda o'ldiruvchi la'nat. Undan himoya yo'q.",
+           "", ["voldemort"]),
+        _e("accio", "Accio", "sehr", 4, "Chaqiruv",
+           "Uzoqdagi buyumni o'ziga tortib chaqiruvchi sehr.", ""),
+        _e("sectumsempra", "Sectumsempra", "sehr", 6, "Kesuvchi la'nat",
+           "Snegg o'ylab topgan, ko'rinmas qilich kabi chuqur yara qoldiruvchi xatarli sehr.",
+           "", ["snegg"]),
+        _e("obliviate", "Obliviate", "sehr", 2, "Xotirani o'chirish",
+           "Insonning xotirasini o'chiruvchi yoki o'zgartiruvchi sehr.", ""),
+
+        # ---- Mavjudotlar ----
+        _e("dementor", "Dementor", "mavjudot", 3, "Baxt o'g'risi",
+           "Insondan barcha xursandchilikni so'rib oluvchi qorong'u maxluq; Azkabanni qo'riqlaydi.",
+           "", ["azkaban", "patronum"]),
+        _e("bazilisk", "Bazilisk", "mavjudot", 2, "Ilonlar shohi",
+           "Nigohi o'ldiruvchi ulkan ilon; Maxfiy Xonada yashiringan.",
+           "", ["maxfiyxona"]),
+        _e("bakljak", "Bakljak", "mavjudot", 3, "Hipogrif",
+           "Yarim-burgut, yarim-ot mag'rur mavjudot; Hagridning suyukli hayvoni.",
+           "", ["hagrid", "sirius"]),
+        _e("feniks", "Feniks", "mavjudot", 2, "Olovqush",
+           "Yonib qayta tug'iluvchi sehrli qush; ko'z yoshlari davolaydi. Dambldorning hamrohi.",
+           "", ["dambldor"]),
+        _e("aragog", "Aragog", "mavjudot", 2, "Ulkan o'rgimchak",
+           "Taqiqlangan o'rmonda yashovchi gapiradigan akromantul; Hagridning eski do'sti.",
+           "", ["hagrid", "ormon"]),
+        _e("bogart", "Bogart", "mavjudot", 3, "Qo'rquv maxlug'i",
+           "Har kimga uning eng qo'rqadigan narsasi qiyofasida ko'rinuvchi shakl o'zgartiruvchi mavjudot; \"Riddikulus\" bilan yengiladi.",
+           "", ["lyupin"]),
+
+        # ---- Buyumlar ----
+        _e("falsafiytosh", "Falsafiy Tosh", "buyum", 1, "Abadiylik toshi",
+           "Har qanday metallni oltinga aylantiruvchi va abadiy hayot beruvchi afsonaviy tosh.",
+           "", ["voldemort"]),
+        _e("kundalik", "Ridl kundaligi", "buyum", 2, "Sirli kundalik",
+           "Yosh Tom Ridlning xotirasini saqlagan sehrli kundalik; aslida Voldemortning bir bo'lagi.",
+           "", ["voldemort", "xorkruks", "jinni"]),
+        _e("rido", "Ko'rinmas rido", "buyum", 1, "Yashirin libos",
+           "Kiygan kishini butunlay ko'rinmas qiluvchi kamyob rido; Garriga otasidan meros.",
+           "", ["garri", "tuhfalar"]),
+        _e("xarita", "Qaroqchilar xaritasi", "buyum", 3, "Sehrli xarita",
+           "Xogvartsdagi har bir insonning joylashuvini real vaqtda ko'rsatuvchi sehrli xarita.",
+           "", ["garri", "lyupin", "sirius"]),
+        _e("vaqt", "Vaqt Aylantirgich", "buyum", 3, "Vaqt asbobi",
+           "Egasini bir necha soat orqaga qaytaruvchi kichik sehrli asbob.",
+           "", ["germiona"]),
+        _e("jom", "Otashli Jom", "buyum", 4, "Chempion tanlovchi",
+           "Uch Afsungar Bellashuvi chempionlarini tanlaydigan sehrli jom (kubok).",
+           "", ["sedrik", "garri"]),
+        _e("xorkruks", "Xorkrukslar", "buyum", 6, "Jon parchalari",
+           "Voldemort o'z jonini bo'lib yashirgan buyumlar; ularni yo'q qilmaguncha u o'lmaydi.",
+           "", ["voldemort", "kundalik", "tuhfalar"]),
+        _e("tuhfalar", "Ajal Tuhfalari", "buyum", 7, "Uch muqaddas buyum",
+           "Buzilmas tayoqcha, Tiriltiruvchi tosh va Ko'rinmas rido — o'lim ustidan hokimlik beruvchi uch buyum.",
+           "", ["rido", "voldemort"]),
+        _e("shlyapa", "Saralovchi Shlyapa", "buyum", 1, "Fakultet tanlovchi",
+           "Yangi o'quvchilarni to'rt fakultetga taqsimlovchi gapiradigan qadimiy shlyapa.",
+           "", ["gryffindor", "slizerin", "puffenduy", "kogtevran"]),
+        _e("oyna", "Yeshek Oynasi", "buyum", 1, "Orzular ko'zgusi",
+           "Insonga qalbining eng chuqur orzusini ko'rsatuvchi sehrli ko'zgu.",
+           "", ["garri", "dambldor"]),
+
+        # ---- Fakultetlar ----
+        _e("gryffindor", "Gryffindor", "fakultet", 1, "Jasorat va mardlik",
+           "Jasur, mard va olijanob yuraklilar fakulteti. Ramzi — sher; ranglari qizil va oltin.",
+           "", ["garri", "ron", "germiona", "dambldor"], "#7b1113", "#d4af37"),
+        _e("slizerin", "Slizerin", "fakultet", 1, "Topqirlik va iroda",
+           "Ayyor, qat'iyatli va maqsadga intiluvchilar fakulteti. Ramzi — ilon; ranglari yashil va kumush.",
+           "", ["snegg", "draco", "voldemort"], "#1a472a", "#a7b0b3"),
+        _e("puffenduy", "Puffenduy", "fakultet", 1, "Sadoqat va halollik",
+           "Mehnatkash, sodiq va adolatlilar fakulteti. Ramzi — bo'rsiq; ranglari sariq va qora.",
+           "", ["sedrik"], "#d3a625", "#372e29"),
+        _e("kogtevran", "Kogtevran", "fakultet", 1, "Donishmandlik va zukkolik",
+           "Aqlli, ijodkor va bilimga chanqoqlar fakulteti. Ramzi — burgut; ranglari ko'k va bronza.",
+           "", ["luna"], "#0e1a40", "#946b2d"),
+    ],
+    "timeline": [
+        {"year": "1926", "book": 6, "title": "Tom Ridlning tug'ilishi",
+         "desc": "Kelajakda Lord Voldemortga aylanadigan Tom Ridl dunyoga keladi."},
+        {"year": "1980", "book": 1, "title": "Garri Potter tug'iladi",
+         "desc": "Bashoratda tilga olingan bola \u2014 Garri \u2014 dunyoga keladi."},
+        {"year": "1981", "book": 1, "title": "Voldemortning qulashi",
+         "desc": "Voldemort Potterlarni o'ldiradi, biroq Garriga qilgan la'nati o'ziga qaytib, u yo'qoladi. Garri \"Tirik qolgan bola\"ga aylanadi."},
+        {"year": "1991", "book": 1, "title": "Xogvartsga qabul",
+         "desc": "Garri sehrgar ekanini bilib, Xogvartsga o'qishga boradi va Ron hamda Germiona bilan do'stlashadi."},
+        {"year": "1992", "book": 2, "title": "Maxfiy Xona ochiladi",
+         "desc": "Qadimiy Maxfiy Xona ochilib, o'quvchilarga xavf soladi; Garri baziliskni yengadi."},
+        {"year": "1993", "book": 3, "title": "Sirius Blekning qochishi",
+         "desc": "Azkabandan qochgan Sirius Garrining cho'qintirgan otasi ekani ma'lum bo'ladi."},
+        {"year": "1994", "book": 4, "title": "Uch Afsungar Bellashuvi",
+         "desc": "Garri bellashuvga tortiladi; Sedrik halok bo'ladi va Voldemort qaytadan tanaga kiradi."},
+        {"year": "1995", "book": 5, "title": "Feniks Ordeni",
+         "desc": "Voldemortga qarshi Orden tiklanadi; Vazirlikda jang bo'lib, Sirius halok bo'ladi."},
+        {"year": "1996", "book": 6, "title": "Dambldorning halokati",
+         "desc": "Garri Voldemortning o'tmishi va xorkrukslarni o'rganadi; Dambldor halok bo'ladi."},
+        {"year": "1997", "book": 7, "title": "Xorkrukslar ovi",
+         "desc": "Garri, Ron va Germiona maktabni tark etib, Voldemortning xorkrukslarini yo'q qilishga kirishadi."},
+        {"year": "1998", "book": 7, "title": "Xogvarts jangi",
+         "desc": "Buyuk jangda Voldemort mag'lub etiladi; sehrli dunyoga tinchlik qaytadi."},
+        {"year": "2020", "book": 8, "title": "La'natlangan Bola",
+         "desc": "Garrining o'g'li Albus va Skorpius Vaqt Aylantirgich bilan o'tmishga aralashib, xatarga yo'liqishadi."},
+    ],
+    "families": [
+        {"name": "Potter oilasi", "book": 1,
+         "note": "Sehrli dunyoning eng mashhur oilasi.",
+         "levels": [["Jeyms Potter", "Lili Potter"],
+                    ["Garri Potter", "Jinni Uizli"],
+                    ["Jeyms S. Potter", "Albus S. Potter", "Lili L. Potter"]]},
+        {"name": "Uizli oilasi", "book": 1,
+         "note": "Katta, mehribon va sof qonli sehrgarlar oilasi.",
+         "levels": [["Artur Uizli", "Moli Uizli"],
+                    ["Bill", "Charli", "Persi", "Fred", "Jorj", "Ron", "Jinni"]]},
+        {"name": "Malfoy oilasi", "book": 1,
+         "note": "Kibrli va nufuzli sof qonli oila.",
+         "levels": [["Lyusius Malfoy", "Narsissa Malfoy"],
+                    ["Drako Malfoy", "Astoriya Greengrass"],
+                    ["Skorpius Malfoy"]]},
+        {"name": "Blek oilasi", "book": 3,
+         "note": "Qadimiy va sirli sof qonli sulola.",
+         "levels": [["Orion Blek", "Valburga Blek"],
+                    ["Sirius Blek", "Regulus Blek"],
+                    ["Narsissa", "Bellatrisa", "Andromeda (amakivachcha)"]]},
+    ],
+}
+
+# ----------------------------------------------------------------------------
 # Assemble readers
 # ----------------------------------------------------------------------------
 def read(p):
@@ -307,6 +563,7 @@ def build_single(summary, shell, chapters_map):
     # the engine is no longer duplicated 8x.
     books_json = json.dumps(summary, ensure_ascii=False)
     gloss_json = json.dumps(GLOSSARY, ensure_ascii=False)
+    world_json = json.dumps(WORLD, ensure_ascii=False)
     # --- Saralash Qalpoqchasi (Sorting Hat) data, injected as JSON ---
     houses = {
         "gryffindor": {"name": "Gryffindor", "tag": "Jasorat, mardlik va olijanoblik",
@@ -384,6 +641,12 @@ def build_single(summary, shell, chapters_map):
         'stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">'
         '<path d="M12 3 L8.3 14 H15.7 Z"/>'
         '<path d="M4.5 14 C8 16.2 16 16.2 19.5 14 L18.2 17.4 C14 19 10 19 5.8 17.4 Z"/></svg>'
+    )
+    world_svg = (
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
+        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+        '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
+        '<path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>'
     )
     css = """
 :root{--bg:#faf8f3;--bg2:#f1ede3;--fg:#2b2b2b;--muted:#7a7368;--accent:#7b1113;
@@ -490,6 +753,84 @@ border-radius:999px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.9
 justify-content:center;box-shadow:0 12px 32px rgba(0,0,0,.42);}
 .hat-house .crest{width:54px;height:54px;color:#fff;}
 .hat-tag{color:var(--accent);font-family:system-ui,sans-serif;font-weight:600;font-size:.87rem;}
+/* ===== Sehrli Olam (Wizarding World) paneli ===== */
+.world-card{position:relative;display:flex;flex-direction:column;max-width:820px;width:100%;height:88vh;
+background:var(--panel);color:var(--fg);border:1px solid var(--border);border-radius:22px;overflow:hidden;
+box-shadow:0 26px 70px rgba(0,0,0,.55);animation:hatpop .32s cubic-bezier(.2,.85,.3,1);}
+.world-top{display:flex;align-items:center;gap:.7rem;padding:1rem 1.1rem;border-bottom:1px solid var(--border);
+background:linear-gradient(135deg,var(--panel),var(--panel2));}
+.world-top .wt-crest{width:34px;height:34px;color:var(--accent);flex:none;}
+.world-top h2{font-size:1.2rem;margin:0;flex:1;min-width:0;}
+.world-top h2 small{display:block;font-size:.68rem;color:var(--muted);font-weight:400;font-family:system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;}
+.world-x{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--panel2);
+color:var(--fg);font-size:1.3rem;cursor:pointer;line-height:1;flex:none;}
+.world-x:hover{border-color:var(--accent);}
+.spoiler-tg{display:inline-flex;align-items:center;gap:.4rem;font-family:system-ui,sans-serif;font-size:.74rem;
+color:var(--muted);background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:.35rem .7rem;cursor:pointer;flex:none;}
+.spoiler-tg.on{color:var(--accent);border-color:var(--accent);}
+.world-tabs{display:flex;gap:.2rem;padding:.5rem .7rem 0;border-bottom:1px solid var(--border);overflow-x:auto;}
+.world-tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);
+font-family:system-ui,sans-serif;font-size:.86rem;font-weight:600;padding:.6rem .7rem;cursor:pointer;white-space:nowrap;}
+.world-tabs button.sel{color:var(--accent);border-bottom-color:var(--accent);}
+.world-body{flex:1;overflow-y:auto;padding:1rem 1.1rem 2rem;}
+.world-search{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:11px;
+color:var(--fg);font-family:system-ui,sans-serif;font-size:.92rem;padding:.65rem .9rem;margin-bottom:.7rem;}
+.world-cats{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;}
+.wcat{background:var(--panel2);border:1px solid var(--border);color:var(--muted);font-family:system-ui,sans-serif;
+font-size:.78rem;padding:.4rem .8rem;border-radius:999px;cursor:pointer;}
+.wcat.sel{background:var(--accent);border-color:var(--accent);color:#fff;}
+.world-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.7rem;}
+.wcard{position:relative;text-align:left;background:var(--panel2);border:1px solid var(--border);border-radius:14px;
+padding:.8rem;cursor:pointer;transition:transform .14s,border-color .14s,box-shadow .14s;color:inherit;overflow:hidden;}
+.wcard:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 24px var(--shadow2);}
+.wcard .wc-ic{font-size:1.5rem;line-height:1;}
+.wcard .wc-name{font-weight:700;font-size:.95rem;margin:.4rem 0 .15rem;line-height:1.2;}
+.wcard .wc-tag{font-size:.74rem;color:var(--muted);font-family:system-ui,sans-serif;}
+.wh-dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:.3rem;}
+.wbadge{position:absolute;top:.5rem;right:.55rem;font-size:.62rem;font-family:system-ui,sans-serif;
+background:var(--bg2);color:var(--muted);padding:.1rem .4rem;border-radius:999px;border:1px solid var(--border);}
+.wcard.locked .wc-name,.wcard.locked .wc-tag{filter:blur(5px);-webkit-filter:blur(5px);user-select:none;}
+.wcard.locked .wc-ic{opacity:.35;}
+.lock-note{position:absolute;inset:auto 0 0 0;font-size:.64rem;text-align:center;color:var(--accent);
+font-family:system-ui,sans-serif;padding:.25rem;background:linear-gradient(0deg,var(--panel2),transparent);}
+.world-empty{color:var(--muted);font-family:system-ui,sans-serif;text-align:center;padding:2rem 0;}
+/* detail */
+.wd-back{background:none;border:0;color:var(--accent);font-family:system-ui,sans-serif;font-size:.85rem;
+cursor:pointer;padding:.2rem 0;margin-bottom:.6rem;display:inline-flex;align-items:center;gap:.3rem;}
+.wd-hero{border-radius:16px;padding:1.1rem;color:#fff;margin-bottom:.9rem;background:linear-gradient(150deg,var(--accent),rgba(0,0,0,.4));}
+.wd-hero .wd-ic{font-size:2rem;}
+.wd-hero h3{margin:.3rem 0 .1rem;font-size:1.4rem;}
+.wd-hero .wd-tag{font-family:system-ui,sans-serif;font-size:.82rem;opacity:.92;}
+.wd-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem;}
+.wd-chip{font-family:system-ui,sans-serif;font-size:.72rem;background:var(--panel2);border:1px solid var(--border);
+color:var(--muted);padding:.3rem .7rem;border-radius:999px;}
+.wd-desc{line-height:1.7;font-size:1rem;margin-bottom:1.1rem;}
+.wd-rel-t{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+font-family:system-ui,sans-serif;font-weight:700;margin-bottom:.5rem;}
+.wd-rel{display:flex;flex-wrap:wrap;gap:.45rem;}
+.wd-rel button{background:var(--panel2);border:1px solid var(--border);color:var(--fg);font-family:system-ui,sans-serif;
+font-size:.8rem;padding:.4rem .8rem;border-radius:999px;cursor:pointer;}
+.wd-rel button:hover{border-color:var(--accent);color:var(--accent);}
+/* timeline */
+.world-tl{position:relative;padding-left:1.4rem;}
+.world-tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--border);}
+.tl-item{position:relative;margin-bottom:1.3rem;}
+.tl-item:before{content:"";position:absolute;left:-1.4rem;top:4px;width:12px;height:12px;border-radius:50%;
+background:var(--accent);box-shadow:0 0 0 3px var(--panel);}
+.tl-year{font-family:system-ui,sans-serif;font-weight:800;color:var(--accent);font-size:.95rem;}
+.tl-title{font-weight:700;font-size:1.02rem;margin:.1rem 0 .2rem;}
+.tl-desc{color:var(--muted);font-family:system-ui,sans-serif;font-size:.85rem;line-height:1.55;}
+.tl-item.locked .tl-title,.tl-item.locked .tl-desc{filter:blur(5px);-webkit-filter:blur(5px);cursor:pointer;}
+/* family */
+.fam{margin-bottom:1.6rem;}
+.fam-name{font-weight:700;font-size:1.1rem;}
+.fam-note{color:var(--muted);font-family:system-ui,sans-serif;font-size:.82rem;margin:.15rem 0 .8rem;}
+.fam-level{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:.4rem;position:relative;}
+.fam-level+.fam-level:before{content:"";position:absolute;top:-.5rem;left:50%;width:2px;height:.5rem;background:var(--border);}
+.fam-box{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:.45rem .8rem;
+font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;}
+@media(max-width:560px){.world-card{height:94vh;max-width:100%;border-radius:16px;}
+.world-grid{grid-template-columns:repeat(2,1fr);}}
 """
     js = """
 var BOOKS=__BOOKS__;
@@ -617,7 +958,87 @@ function renderHouseChip(){var host=document.getElementById('housechip');if(!hos
   var cb=document.getElementById('chipbtn');if(cb){cb.onclick=function(){hatOpen(false);};}}
 document.getElementById('hatmodal').addEventListener('click',function(e){if(e.target===this){hatClose();}});
 document.getElementById('hatbtn').onclick=function(e){e.stopPropagation();hatOpen(false);};
-document.addEventListener('keydown',function(e){if(e.key==='Escape'||e.keyCode===27){hatClose();}});
+(function(){var wm=document.getElementById('worldmodal');if(wm){wm.addEventListener('click',function(e){if(e.target===this){worldClose();}});}
+var wb=document.getElementById('worldbtn');if(wb){wb.onclick=function(e){e.stopPropagation();worldOpen();};}})();
+document.addEventListener('keydown',function(e){if(e.key==='Escape'||e.keyCode===27){hatClose();worldClose();}});
+
+// ===== Sehrli Olam (Wizarding World) =====
+var WORLD=__WORLD__;
+var WCAT={all:['Barchasi','\\uD83D\\uDCDA'],qahramon:['Qahramonlar','\\uD83E\\uDDD9'],fakultet:['Fakultetlar','\\uD83D\\uDEE1'],joy:['Joylar','\\uD83C\\uDFF0'],sehr:['Sehrlar','\\u2728'],mavjudot:['Mavjudotlar','\\uD83D\\uDC3E'],buyum:['Buyumlar','\\uD83D\\uDDDD']};
+var HCOL={gryffindor:['#7b1113','#d4af37','Gryffindor'],slizerin:['#1a472a','#a7b0b3','Slizerin'],puffenduy:['#d3a625','#372e29','Puffenduy'],kogtevran:['#0e1a40','#946b2d','Kogtevran']};
+var HMAP={gryffindor:'gryffindor',slytherin:'slizerin',hufflepuff:'puffenduy',ravenclaw:'kogtevran'};
+var wState={tab:'enc',cat:'all',q:'',detail:null};var wRevealed={};
+function wById(id){for(var i=0;i<WORLD.entries.length;i++){if(WORLD.entries[i].id===id)return WORLD.entries[i];}return null;}
+function spoilerOn(){try{return localStorage.getItem('gp_spoiler')!=='off';}catch(e){return true;}}
+function setSpoiler(v){try{localStorage.setItem('gp_spoiler',v?'on':'off');}catch(e){}}
+function wFrontier(){var f=1;BOOKS.forEach(function(b){if(prog(b.key)>0&&b.n>f)f=b.n;});try{var l=JSON.parse(localStorage.getItem('gp_last_book'));if(l&&l.id&&l.id>f)f=l.id;}catch(e){}return f;}
+function wLocked(book,key){return spoilerOn()&&book>wFrontier()&&!wRevealed[key];}
+function wGrad(e){if(e.c1)return 'linear-gradient(150deg,'+e.c1+','+e.c2+')';if(e.house&&HCOL[e.house])return 'linear-gradient(150deg,'+HCOL[e.house][0]+','+HCOL[e.house][1]+')';return 'linear-gradient(150deg,var(--accent),rgba(0,0,0,.4))';}
+function worldOpen(){wState={tab:'enc',cat:'all',q:'',detail:null};
+  var m=document.getElementById('worldmodal');if(!m)return;
+  m.innerHTML='<div class="world-card" role="dialog" aria-modal="true" aria-label="Sehrli Olam">'+
+    '<div class="world-top">'+CREST.replace('class="crest"','class="wt-crest"')+
+    '<h2>Sehrli Olam<small>Garri Potter ensiklopediyasi</small></h2>'+
+    '<button class="spoiler-tg'+(spoilerOn()?' on':'')+'" id="wspoiler" title="Spoiler himoyasi">\\uD83D\\uDEE1 Spoiler</button>'+
+    '<button class="world-x" id="wx" aria-label="Yopish">\\u00d7</button></div>'+
+    '<div class="world-tabs" id="wtabs">'+
+      '<button data-t="enc" class="sel">\\uD83D\\uDCD6 Ensiklopediya</button>'+
+      '<button data-t="tl">\\uD83D\\uDD70 Voqealar tasmasi</button>'+
+      '<button data-t="fam">\\uD83C\\uDF33 Oila daraxti</button>'+
+    '</div><div class="world-body" id="world-body"></div></div>';
+  document.getElementById('wx').onclick=worldClose;
+  document.getElementById('wspoiler').onclick=function(){setSpoiler(!spoilerOn());this.classList.toggle('on',spoilerOn());worldRenderBody();};
+  Array.prototype.forEach.call(document.querySelectorAll('#wtabs button'),function(b){b.onclick=function(){wState.tab=b.getAttribute('data-t');wState.detail=null;Array.prototype.forEach.call(document.querySelectorAll('#wtabs button'),function(x){x.classList.toggle('sel',x===b);});worldRenderBody();};});
+  worldRenderBody();m.hidden=false;}
+function worldClose(){var m=document.getElementById('worldmodal');if(m)m.hidden=true;}
+function worldRenderBody(){var body=document.getElementById('world-body');if(!body)return;
+  if(wState.detail){body.innerHTML=wDetailHTML(wState.detail);wBindDetail(body);body.scrollTop=0;return;}
+  if(wState.tab==='enc'){wRenderEnc(body);}else if(wState.tab==='tl'){wRenderTL(body);}else{wRenderFam(body);}}
+function wRenderEnc(body){
+  var cats=['all','qahramon','fakultet','joy','sehr','mavjudot','buyum'];
+  var chips=cats.map(function(c){return '<button class="wcat'+(wState.cat===c?' sel':'')+'" data-c="'+c+'">'+WCAT[c][1]+' '+WCAT[c][0]+'</button>';}).join('');
+  var q=wState.q.trim().toLowerCase();
+  var list=WORLD.entries.filter(function(e){if(wState.cat!=='all'&&e.cat!==wState.cat)return false;
+    if(q){if((e.name+' '+e.tag+' '+e.desc).toLowerCase().indexOf(q)<0)return false;}return true;});
+  var myHouse=HMAP[getHouse()]||'';
+  var cards=list.map(function(e){var locked=wLocked(e.book,e.id);
+    var dot=(e.house&&HCOL[e.house])?'<span class="wh-dot" style="background:'+HCOL[e.house][0]+'"></span>':'';
+    var mine=(e.cat==='fakultet'&&e.id===myHouse)?' style="border-color:'+e.c1+';border-width:2px"':'';
+    return '<button class="wcard'+(locked?' locked':'')+'" data-id="'+e.id+'"'+mine+'>'+
+      '<div class="wc-ic">'+WCAT[e.cat][1]+'</div><span class="wbadge">'+e.book+'-kitob</span>'+
+      '<div class="wc-name">'+dot+esc(e.name)+'</div><div class="wc-tag">'+esc(e.tag)+'</div>'+
+      (locked?'<div class="lock-note">\\uD83D\\uDD12 '+e.book+'-kitobda ochiladi</div>':'')+'</button>';}).join('');
+  body.innerHTML='<input class="world-search" id="wq" placeholder="Ensiklopediyadan qidirish..." value="'+esc(wState.q).replace(/"/g,'&quot;')+'">'+
+    '<div class="world-cats">'+chips+'</div>'+
+    (list.length?'<div class="world-grid">'+cards+'</div>':'<div class="world-empty">Hech narsa topilmadi.</div>');
+  var qi=document.getElementById('wq');qi.oninput=function(){var s=qi.selectionStart;wState.q=qi.value;wRenderEnc(body);var n=document.getElementById('wq');if(n){n.focus();try{n.setSelectionRange(s,s);}catch(e){}}};
+  Array.prototype.forEach.call(body.querySelectorAll('.wcat'),function(b){b.onclick=function(){wState.cat=b.getAttribute('data-c');wRenderEnc(body);};});
+  Array.prototype.forEach.call(body.querySelectorAll('.wcard'),function(b){b.onclick=function(){wState.detail=b.getAttribute('data-id');worldRenderBody();};});}
+function wDetailHTML(id){var e=wById(id);if(!e)return '<div class="world-empty">Topilmadi.</div>';
+  if(wLocked(e.book,e.id)){return '<button class="wd-back" data-back="1">\\u2039 Orqaga</button>'+
+    '<div class="wd-hero" style="background:linear-gradient(150deg,#555,#222)"><div class="wd-ic">\\uD83D\\uDD12</div><h3>Spoiler himoyasi</h3><div class="wd-tag">Bu maqola '+e.book+'-kitobda ochiladi</div></div>'+
+    '<p class="wd-desc">Agar syujet sirini oldindan bilishni istamasangiz, avval '+e.book+"-kitobni o'qing.</p>"+
+    '<div class="wd-rel"><button data-reveal="'+e.id+'">Baribir ko\\u02bbrsatish</button></div>';}
+  var meta='<span class="wd-chip">'+WCAT[e.cat][0]+'</span><span class="wd-chip">'+e.book+'-kitob</span>';
+  if(e.house&&HCOL[e.house])meta+='<span class="wd-chip">\\uD83D\\uDEE1 '+HCOL[e.house][2]+'</span>';
+  var rels=e.rel.map(function(rid){var r=wById(rid);return r?'<button data-id="'+rid+'">'+esc(r.name)+'</button>':'';}).join('');
+  return '<button class="wd-back" data-back="1">\\u2039 Orqaga</button>'+
+    '<div class="wd-hero" style="background:'+wGrad(e)+'"><div class="wd-ic">'+WCAT[e.cat][1]+'</div><h3>'+esc(e.name)+'</h3><div class="wd-tag">'+esc(e.tag)+'</div></div>'+
+    '<div class="wd-meta">'+meta+'</div><p class="wd-desc">'+esc(e.desc)+'</p>'+
+    (rels?'<div class="wd-rel-t">Bog\\u02bbliq maqolalar</div><div class="wd-rel">'+rels+'</div>':'');}
+function wBindDetail(body){var back=body.querySelector('[data-back]');if(back)back.onclick=function(){wState.detail=null;worldRenderBody();};
+  var rev=body.querySelector('[data-reveal]');if(rev)rev.onclick=function(){wRevealed[rev.getAttribute('data-reveal')]=1;worldRenderBody();};
+  Array.prototype.forEach.call(body.querySelectorAll('.wd-rel button[data-id]'),function(b){b.onclick=function(){wState.detail=b.getAttribute('data-id');worldRenderBody();};});}
+function wRenderTL(body){var items=WORLD.timeline.map(function(t,i){var locked=wLocked(t.book,'tl'+i);
+    return '<div class="tl-item'+(locked?' locked':'')+'" data-tl="'+i+'">'+
+      '<div class="tl-year">'+esc(t.year)+' <span class="wbadge" style="position:static">'+t.book+'-kitob</span></div>'+
+      '<div class="tl-title">'+esc(t.title)+'</div><div class="tl-desc">'+esc(t.desc)+'</div></div>';}).join('');
+  body.innerHTML='<div class="world-tl">'+items+'</div>';
+  Array.prototype.forEach.call(body.querySelectorAll('.tl-item.locked'),function(el){el.onclick=function(){wRevealed['tl'+el.getAttribute('data-tl')]=1;wRenderTL(body);};});}
+function wRenderFam(body){body.innerHTML=WORLD.families.map(function(f){var locked=wLocked(f.book,'fam-'+f.name);
+    var levels=f.levels.map(function(lv){return '<div class="fam-level">'+lv.map(function(n){return '<span class="fam-box">'+esc(n)+'</span>';}).join('')+'</div>';}).join('');
+    return '<div class="fam"><div class="fam-name">'+esc(f.name)+'</div><div class="fam-note">'+esc(f.note)+'</div>'+
+      (locked?'<div class="world-empty">\\uD83D\\uDD12 '+f.book+'-kitobda ochiladi</div>':levels)+'</div>';}).join('');}
 
 // ===== Atmosfera: ambient canvas portal =====
 (function(){
@@ -654,7 +1075,7 @@ buildThemePop();applyTheme(savedTheme);render();
 (function(){var m=/kitob-(\\d+)/.exec(location.hash);if(m){openBook(+m[1]);}})();
 """
     js = js.replace("__BOOKS__", books_json).replace("__CREST__", crest)
-    js = js.replace("__GLOSS__", gloss_json)
+    js = js.replace("__GLOSS__", gloss_json).replace("__WORLD__", world_json)
     js = (js.replace("__HOUSES__", houses_json)
             .replace("__QUIZ__", quiz_json)
             .replace("__T__", uitext_json))
@@ -673,6 +1094,8 @@ buildThemePop();applyTheme(savedTheme);render();
         + crest
         + '<h1>Garri Potter<small>O\'zbekcha kutubxona \u00b7 8 kitob</small></h1></span>'
         '<span class="actions">'
+        '<button class="theme-btn" id="worldbtn" title="Sehrli Olam" '
+        'aria-label="Sehrli Olam \u2014 ensiklopediya">' + world_svg + '</button>'
         '<button class="theme-btn" id="hatbtn" title="Saralash Qalpoqchasi" '
         'aria-label="Saralash Qalpoqchasi">' + hat_svg + '</button>'
         '<button class="theme-btn" id="themebtn" title="Mavzu" aria-label="Mavzu">\u25d0</button>'
@@ -684,6 +1107,7 @@ buildThemePop();applyTheme(savedTheme);render();
         '<footer>J.K. Rouling \u00b7 o\'zbek tilidagi tarjima \u00b7 Premium o\'quvchi</footer>\n'
         '</div>\n'
         '<div id="hatmodal" class="hat-overlay" hidden></div>\n'
+        '<div id="worldmodal" class="hat-overlay" hidden></div>\n'
         '<iframe id="viewer" hidden title="O\'qish oynasi"></iframe>\n'
         + reader_shell_block + '\n'
         + data_blocks + '\n'
