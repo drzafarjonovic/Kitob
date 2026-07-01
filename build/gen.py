@@ -487,6 +487,63 @@ WORLD = {
                     ["Sirius Blek", "Regulus Blek"],
                     ["Narsissa", "Bellatrisa", "Andromeda (amakivachcha)"]]},
     ],
+    # Hogvarts xaritasi. x/y \u2014 foizlarda (0-100), sxematik joylashuv.
+    # book \u2014 spoiler chegarasi uchun. ref \u2014 ensiklopediyadagi maqola id (ixtiyoriy).
+    "map": {
+        "locations": [
+            {"id": "great_hall", "name": "Buyuk Zal", "x": 50, "y": 44, "book": 1, "ref": "xogvarts",
+             "tag": "Yig'ilishlar zali", "desc": "Sehrlangan yulduzli shiftga ega ulkan zal. Bu yerda o'quvchilar ovqatlanadi, saralanadi va bayramlar o'tkaziladi."},
+            {"id": "gryf_tower", "name": "Gryffindor minorasi", "x": 43, "y": 20, "book": 1, "ref": "gryffindor",
+             "tag": "Yotoqxona", "desc": "Semiz Xonim portreti ortidagi Gryffindor umumiy xonasi va yotoqxonalari; iliq va qulay maskan."},
+            {"id": "slyth_dungeon", "name": "Slizerin zindoni", "x": 39, "y": 64, "book": 1, "ref": "slizerin",
+             "tag": "Yer osti yotoqxonasi", "desc": "Qora ko'l ostidagi salqin zindonda joylashgan Slizerin umumiy xonasi; yashil xira nur bilan yoritilgan."},
+            {"id": "raven_tower", "name": "Kogtevran minorasi", "x": 63, "y": 22, "book": 1, "ref": "kogtevran",
+             "tag": "Yotoqxona", "desc": "Kirish uchun topishmoq javobini talab qiluvchi Kogtevran minorasi; bilim shinavandalari makoni."},
+            {"id": "huff_basement", "name": "Puffenduy yerto'lasi", "x": 57, "y": 60, "book": 1, "ref": "puffenduy",
+             "tag": "Yotoqxona", "desc": "Oshxona yaqinidagi qulay, o'simliklarga boy Puffenduy umumiy xonasi."},
+            {"id": "library", "name": "Kutubxona", "x": 67, "y": 39, "book": 1, "ref": "germiona",
+             "tag": "Bilim maskani", "desc": "Minglab sehrli kitoblar saqlanadigan keng kutubxona; Taqiqlangan bo'lim ham shu yerda."},
+            {"id": "hospital", "name": "Kasalxona qanoti", "x": 33, "y": 33, "book": 1, "ref": "",
+             "tag": "Shifoxona", "desc": "Madam Pomfri boshqaradigan shifoxona; sehrli jarohat va kasalliklar shu yerda davolanadi."},
+            {"id": "astronomy", "name": "Astronomiya minorasi", "x": 50, "y": 11, "book": 1, "ref": "",
+             "tag": "Eng baland minora", "desc": "Xogvartsning eng baland minorasi; yulduzlarni kuzatish darslari shu yerda o'tadi."},
+            {"id": "owlery", "name": "Boyqushxona", "x": 74, "y": 17, "book": 1, "ref": "",
+             "tag": "Xat-xabar", "desc": "Maktab va o'quvchilarning boyqushlari yashaydigan minora; xatlar shu yerdan jo'natiladi."},
+            {"id": "room_req", "name": "Talab Xonasi", "x": 59, "y": 30, "book": 5, "ref": "",
+             "tag": "Sirli xona", "desc": "Faqat unga chin muhtoj bo'lganlarga paydo bo'ladigan sehrli xona; har safar boshqacha ko'rinadi."},
+            {"id": "headmaster", "name": "Direktor kabineti", "x": 46, "y": 29, "book": 2, "ref": "dambldor",
+             "tag": "Boshqaruv", "desc": "Aylanma zinapoya ortidagi direktor kabineti; portretlar, Saralovchi Shlyapa va sirlar shu yerda."},
+            {"id": "kitchens", "name": "Oshxona", "x": 52, "y": 55, "book": 4, "ref": "dobbi",
+             "tag": "Uy-elflar", "desc": "Buyuk Zal ostidagi ulkan oshxona; yuzlab uy-elflar bu yerda ovqat tayyorlaydi."},
+            {"id": "chamber", "name": "Maxfiy Xona", "x": 40, "y": 73, "book": 2, "ref": "maxfiyxona",
+             "tag": "Yashirin xona", "desc": "Salazar Slizerin qurgan afsonaviy xona; qiz bolalar hojatxonasi orqali kiriladi."},
+            {"id": "quidditch", "name": "Kviddich maydoni", "x": 19, "y": 31, "book": 1, "ref": "",
+             "tag": "Sport", "desc": "Baland minorali stadion; supurgilardagi kviddich o'yinlari shu yerda bo'lib o'tadi."},
+            {"id": "boathouse", "name": "Qayiqxona", "x": 61, "y": 82, "book": 1, "ref": "",
+             "tag": "Ko'l bo'yi", "desc": "Birinchi kurs o'quvchilari qal'aga qayiqlarda kelib tushadigan ko'l bo'yidagi bino."},
+            {"id": "lake", "name": "Qora Ko'l", "x": 45, "y": 90, "book": 1, "ref": "",
+             "tag": "Suv osti olami", "desc": "Qal'a yonidagi ulkan ko'l; suvparilar, ulkan kalmar va boshqa suv mavjudotlari makoni."},
+            {"id": "forest", "name": "Taqiqlangan O'rmon", "x": 12, "y": 66, "book": 1, "ref": "ormon",
+             "tag": "Xavfli hudud", "desc": "O'quvchilarga taqiqlangan qorong'u o'rmon; kentavrlar, akromantulalar va sirli mavjudotlar yashaydi."},
+            {"id": "hagrid", "name": "Hagrid kulbasi", "x": 24, "y": 59, "book": 1, "ref": "hagrid",
+             "tag": "O'rmonboni uyi", "desc": "O'rmon chekkasidagi kulba; Hagridning uyi va sehrli mavjudotlar boqiladigan joy."},
+            {"id": "whomping", "name": "Kaltaklovchi Tol", "x": 30, "y": 49, "book": 2, "ref": "",
+             "tag": "Xavfli daraxt", "desc": "Yaqinlashganni shoxlari bilan uradigan jangovar daraxt; ostida yashirin yo'l bor."},
+            {"id": "viaduct", "name": "Ichki hovli", "x": 41, "y": 46, "book": 1, "ref": "",
+             "tag": "Markaziy maydon", "desc": "Qal'aning ichki hovlisi va ko'priklari; o'quvchilar tanaffuslarda shu yerda yig'iladi."},
+            {"id": "passages", "name": "Yashirin yo'llar", "x": 69, "y": 53, "book": 3, "ref": "xarita",
+             "tag": "Maxfiy o'tishlar", "desc": "Qal'adan Xogsmidga olib boruvchi yashirin yo'llar; Qaroqchilar xaritasida ko'rsatilgan."},
+        ],
+        # Marauder uslubidagi izlar \u2014 vakillik (iconic) joylashuv, aniq-per-bob emas.
+        "figures": [
+            {"name": "Garri", "x": 45, "y": 24, "book": 1, "house": "gryffindor"},
+            {"name": "Ron", "x": 41, "y": 22, "book": 1, "house": "gryffindor"},
+            {"name": "Germiona", "x": 66, "y": 42, "book": 1, "house": "gryffindor"},
+            {"name": "Dambldor", "x": 47, "y": 27, "book": 1, "house": ""},
+            {"name": "Snegg", "x": 40, "y": 67, "book": 1, "house": "slizerin"},
+            {"name": "Drako", "x": 37, "y": 62, "book": 1, "house": "slizerin"},
+        ],
+    },
 }
 
 # ----------------------------------------------------------------------------
@@ -564,6 +621,21 @@ def build_single(summary, shell, chapters_map):
     books_json = json.dumps(summary, ensure_ascii=False)
     gloss_json = json.dumps(GLOSSARY, ensure_ascii=False)
     world_json = json.dumps(WORLD, ensure_ascii=False)
+    mapart = (
+        '<svg class="map-svg" viewBox="0 0 100 70" preserveAspectRatio="none" fill="none" '
+        'stroke="currentColor" stroke-width="0.4" stroke-linejoin="round" aria-hidden="true">'
+        '<path d="M20 60 Q45 52 78 60 Q80 66 60 68 Q40 70 25 67 Q16 64 20 60 Z" stroke-width="0.5"/>'
+        '<path d="M6 50 l2 -5 l2 5 z M9 52 l2 -5 l2 5 z M4 54 l2 -5 l2 5 z M12 55 l2 -5 l2 5 z M8 47 l2 -5 l2 5 z"/>'
+        '<path d="M34 44 L34 22 L46 16 L58 22 L58 44 Z"/>'
+        '<path d="M30 44 L30 18 L34 18 M30 18 l2 -4 l2 4"/>'
+        '<path d="M58 44 L58 20 L62 20 M58 20 l2 -4 l2 4"/>'
+        '<path d="M46 16 L46 6 L50 6 L50 16 M46 6 l2 -3 l2 3"/>'
+        '<path d="M62 30 L66 30 L66 44 M62 30 l2 -4 l2 4"/>'
+        '<path d="M20 46 Q30 42 34 44 M14 48 l6 -2"/>'
+        '<path d="M34 44 Q28 52 24 58"/>'
+        '<circle cx="19" cy="31" r="3"/><path d="M19 28 L19 34"/>'
+        '</svg>'
+    )
     # --- Saralash Qalpoqchasi (Sorting Hat) data, injected as JSON ---
     houses = {
         "gryffindor": {"name": "Gryffindor", "tag": "Jasorat, mardlik va olijanoblik",
@@ -831,6 +903,39 @@ background:var(--accent);box-shadow:0 0 0 3px var(--panel);}
 font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;}
 @media(max-width:560px){.world-card{height:94vh;max-width:100%;border-radius:16px;}
 .world-grid{grid-template-columns:repeat(2,1fr);}}
+/* ===== Hogvarts xaritasi (Marauder uslubi) ===== */
+.map-toolbar{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.7rem;}
+.map-toggle{display:inline-flex;align-items:center;gap:.4rem;font-family:system-ui,sans-serif;font-size:.76rem;
+background:var(--panel2);border:1px solid var(--border);color:var(--muted);border-radius:999px;padding:.35rem .8rem;cursor:pointer;}
+.map-toggle.on{color:#5b3a1a;border-color:#8a5a1a;background:#f0e2c4;}
+.map-hint{font-family:system-ui,sans-serif;font-size:.72rem;color:var(--muted);}
+.map-wrap{position:relative;width:100%;aspect-ratio:10/7;border-radius:14px;overflow:hidden;
+border:1px solid #b79b6a;background:radial-gradient(120% 120% at 50% 0%,#f3e7c9,#e5d3aa 55%,#d8c49a);
+box-shadow:inset 0 0 60px rgba(120,85,35,.35);}
+.map-wrap:before{content:"";position:absolute;inset:0;pointer-events:none;
+background:repeating-linear-gradient(0deg,rgba(120,85,35,.05) 0 2px,transparent 2px 5px);opacity:.5;}
+.map-svg{position:absolute;inset:0;width:100%;height:100%;color:#5b3f1e;opacity:.55;pointer-events:none;}
+.map-title{position:absolute;top:2%;left:0;right:0;text-align:center;font-family:Georgia,serif;font-style:italic;
+color:#6b4a22;font-size:clamp(.8rem,2.6vw,1.15rem);letter-spacing:.03em;pointer-events:none;text-shadow:0 1px 0 rgba(255,250,235,.5);}
+.map-mk{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;
+gap:2px;background:none;border:0;cursor:pointer;padding:0;z-index:2;}
+.mk-dot{width:11px;height:11px;border-radius:50%;background:#6b1b1c;box-shadow:0 0 0 3px rgba(240,226,196,.85),0 0 6px rgba(107,27,28,.6);transition:transform .15s;}
+.map-mk:hover .mk-dot,.map-mk:focus .mk-dot{transform:scale(1.5);}
+.mk-lbl{font-family:Georgia,serif;font-size:clamp(.5rem,1.7vw,.72rem);color:#4a2f12;white-space:nowrap;
+background:rgba(243,231,205,.82);padding:0 .3rem;border-radius:4px;max-width:22vw;overflow:hidden;text-overflow:ellipsis;}
+.map-mk:hover .mk-lbl{background:#f3e7cd;font-weight:700;}
+.map-mk.locked{cursor:pointer;}
+.map-mk.locked .mk-dot{background:#8a8072;box-shadow:0 0 0 3px rgba(240,226,196,.7);}
+.map-mk.locked .mk-lbl{filter:blur(4px);}
+.map-fig{position:absolute;transform:translate(-50%,-50%);z-index:3;display:none;flex-direction:column;align-items:center;
+pointer-events:none;animation:figstep 3.4s ease-in-out infinite;}
+.map-wrap.marauder .map-fig{display:flex;}
+.map-wrap.marauder .map-mk .mk-lbl{opacity:.35;}
+.fig-ic{font-size:clamp(.7rem,2vw,1rem);line-height:1;filter:sepia(1) saturate(.6);}
+.fig-nm{font-family:Georgia,serif;font-style:italic;font-size:clamp(.5rem,1.6vw,.7rem);color:#3a2a12;
+background:rgba(243,231,205,.7);padding:0 .25rem;border-radius:3px;white-space:nowrap;}
+@keyframes figstep{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-46%,-53%)}}
+.map-legend{margin-top:.7rem;font-family:system-ui,sans-serif;font-size:.72rem;color:var(--muted);text-align:center;}
 """
     js = """
 var BOOKS=__BOOKS__;
@@ -964,10 +1069,11 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'||e.keyCode==
 
 // ===== Sehrli Olam (Wizarding World) =====
 var WORLD=__WORLD__;
+var MAPART=__MAPART__;
 var WCAT={all:['Barchasi','\\uD83D\\uDCDA'],qahramon:['Qahramonlar','\\uD83E\\uDDD9'],fakultet:['Fakultetlar','\\uD83D\\uDEE1'],joy:['Joylar','\\uD83C\\uDFF0'],sehr:['Sehrlar','\\u2728'],mavjudot:['Mavjudotlar','\\uD83D\\uDC3E'],buyum:['Buyumlar','\\uD83D\\uDDDD']};
 var HCOL={gryffindor:['#7b1113','#d4af37','Gryffindor'],slizerin:['#1a472a','#a7b0b3','Slizerin'],puffenduy:['#d3a625','#372e29','Puffenduy'],kogtevran:['#0e1a40','#946b2d','Kogtevran']};
 var HMAP={gryffindor:'gryffindor',slytherin:'slizerin',hufflepuff:'puffenduy',ravenclaw:'kogtevran'};
-var wState={tab:'enc',cat:'all',q:'',detail:null};var wRevealed={};
+var wState={tab:'enc',cat:'all',q:'',detail:null};var wRevealed={};var wMarauder=false;
 function wById(id){for(var i=0;i<WORLD.entries.length;i++){if(WORLD.entries[i].id===id)return WORLD.entries[i];}return null;}
 function spoilerOn(){try{return localStorage.getItem('gp_spoiler')!=='off';}catch(e){return true;}}
 function setSpoiler(v){try{localStorage.setItem('gp_spoiler',v?'on':'off');}catch(e){}}
@@ -985,6 +1091,7 @@ function worldOpen(){wState={tab:'enc',cat:'all',q:'',detail:null};
       '<button data-t="enc" class="sel">\\uD83D\\uDCD6 Ensiklopediya</button>'+
       '<button data-t="tl">\\uD83D\\uDD70 Voqealar tasmasi</button>'+
       '<button data-t="fam">\\uD83C\\uDF33 Oila daraxti</button>'+
+      '<button data-t="map">\\uD83D\\uDDFA Xarita</button>'+
     '</div><div class="world-body" id="world-body"></div></div>';
   document.getElementById('wx').onclick=worldClose;
   document.getElementById('wspoiler').onclick=function(){setSpoiler(!spoilerOn());this.classList.toggle('on',spoilerOn());worldRenderBody();};
@@ -992,8 +1099,12 @@ function worldOpen(){wState={tab:'enc',cat:'all',q:'',detail:null};
   worldRenderBody();m.hidden=false;}
 function worldClose(){var m=document.getElementById('worldmodal');if(m)m.hidden=true;}
 function worldRenderBody(){var body=document.getElementById('world-body');if(!body)return;
-  if(wState.detail){body.innerHTML=wDetailHTML(wState.detail);wBindDetail(body);body.scrollTop=0;return;}
-  if(wState.tab==='enc'){wRenderEnc(body);}else if(wState.tab==='tl'){wRenderTL(body);}else{wRenderFam(body);}}
+  if(wState.detail){
+    if(wState.detail.indexOf('loc:')===0){body.innerHTML=wLocDetailHTML(wState.detail.slice(4));}
+    else{body.innerHTML=wDetailHTML(wState.detail);}
+    wBindDetail(body);body.scrollTop=0;return;}
+  if(wState.tab==='enc'){wRenderEnc(body);}else if(wState.tab==='tl'){wRenderTL(body);}
+  else if(wState.tab==='map'){wRenderMap(body);}else{wRenderFam(body);}}
 function wRenderEnc(body){
   var cats=['all','qahramon','fakultet','joy','sehr','mavjudot','buyum'];
   var chips=cats.map(function(c){return '<button class="wcat'+(wState.cat===c?' sel':'')+'" data-c="'+c+'">'+WCAT[c][1]+' '+WCAT[c][0]+'</button>';}).join('');
@@ -1028,6 +1139,7 @@ function wDetailHTML(id){var e=wById(id);if(!e)return '<div class="world-empty">
     (rels?'<div class="wd-rel-t">Bog\\u02bbliq maqolalar</div><div class="wd-rel">'+rels+'</div>':'');}
 function wBindDetail(body){var back=body.querySelector('[data-back]');if(back)back.onclick=function(){wState.detail=null;worldRenderBody();};
   var rev=body.querySelector('[data-reveal]');if(rev)rev.onclick=function(){wRevealed[rev.getAttribute('data-reveal')]=1;worldRenderBody();};
+  var revl=body.querySelector('[data-reveal-loc]');if(revl)revl.onclick=function(){wRevealed['loc-'+revl.getAttribute('data-reveal-loc')]=1;worldRenderBody();};
   Array.prototype.forEach.call(body.querySelectorAll('.wd-rel button[data-id]'),function(b){b.onclick=function(){wState.detail=b.getAttribute('data-id');worldRenderBody();};});}
 function wRenderTL(body){var items=WORLD.timeline.map(function(t,i){var locked=wLocked(t.book,'tl'+i);
     return '<div class="tl-item'+(locked?' locked':'')+'" data-tl="'+i+'">'+
@@ -1039,6 +1151,31 @@ function wRenderFam(body){body.innerHTML=WORLD.families.map(function(f){var lock
     var levels=f.levels.map(function(lv){return '<div class="fam-level">'+lv.map(function(n){return '<span class="fam-box">'+esc(n)+'</span>';}).join('')+'</div>';}).join('');
     return '<div class="fam"><div class="fam-name">'+esc(f.name)+'</div><div class="fam-note">'+esc(f.note)+'</div>'+
       (locked?'<div class="world-empty">\\uD83D\\uDD12 '+f.book+'-kitobda ochiladi</div>':levels)+'</div>';}).join('');}
+function wRenderMap(body){var M=WORLD.map;
+  var mks=M.locations.map(function(l){var locked=wLocked(l.book,'loc-'+l.id);
+    return '<button class="map-mk'+(locked?' locked':'')+'" style="left:'+l.x+'%;top:'+l.y+'%" data-loc="'+l.id+'" title="'+esc(l.name)+'">'+
+      '<span class="mk-dot"></span><span class="mk-lbl">'+esc(l.name)+'</span></button>';}).join('');
+  var figs=M.figures.map(function(f){if(wLocked(f.book,'fig'))return '';
+    var col=(f.house&&HCOL[f.house])?HCOL[f.house][0]:'#3a2a12';
+    return '<div class="map-fig" style="left:'+f.x+'%;top:'+f.y+'%"><span class="fig-ic">\\uD83D\\uDC63</span><span class="fig-nm" style="color:'+col+'">'+esc(f.name)+'</span></div>';}).join('');
+  body.innerHTML='<div class="map-toolbar"><button class="map-toggle'+(wMarauder?' on':'')+'" id="mrd">\\uD83D\\uDC63 Marauder rejimi</button>'+
+    '<span class="map-hint">Joy ustiga bosing \u2014 tavsif ochiladi</span></div>'+
+    '<div class="map-wrap'+(wMarauder?' marauder':'')+'" id="mapwrap">'+MAPART+
+    '<div class="map-title">Janoblar Xaritasi \u00b7 Hogvarts</div>'+mks+figs+'</div>'+
+    '<div class="map-legend">Izlar vakillik xarakterga ega \u2014 iconic joylashuv, aniq har-bobda emas.</div>';
+  var mrd=document.getElementById('mrd');if(mrd)mrd.onclick=function(){wMarauder=!wMarauder;var w=document.getElementById('mapwrap');if(w)w.classList.toggle('marauder',wMarauder);this.classList.toggle('on',wMarauder);};
+  Array.prototype.forEach.call(body.querySelectorAll('.map-mk'),function(b){b.onclick=function(){wState.detail='loc:'+b.getAttribute('data-loc');worldRenderBody();};});}
+function wLocDetailHTML(id){var M=WORLD.map,l=null;for(var i=0;i<M.locations.length;i++){if(M.locations[i].id===id){l=M.locations[i];break;}}
+  if(!l)return '<div class="world-empty">Topilmadi.</div>';
+  if(wLocked(l.book,'loc-'+l.id)){return '<button class="wd-back" data-back="1">\\u2039 Orqaga</button>'+
+    '<div class="wd-hero" style="background:linear-gradient(150deg,#6b4a22,#3a2a12)"><div class="wd-ic">\\uD83D\\uDD12</div><h3>Spoiler himoyasi</h3><div class="wd-tag">Bu joy '+l.book+'-kitobda ochiladi</div></div>'+
+    '<p class="wd-desc">Bu maskan haqidagi ma\\u02bblumot '+l.book+"-kitobda ochiladi.</p>"+
+    '<div class="wd-rel"><button data-reveal-loc="'+l.id+'">Baribir ko\\u02bbrsatish</button></div>';}
+  var rel='';if(l.ref){var r=wById(l.ref);if(r)rel='<div class="wd-rel-t">Bog\\u02bbliq maqola</div><div class="wd-rel"><button data-id="'+l.ref+'">'+esc(r.name)+' \u2192</button></div>';}
+  return '<button class="wd-back" data-back="1">\\u2039 Orqaga</button>'+
+    '<div class="wd-hero" style="background:linear-gradient(150deg,#7a5a2a,#3a2a12)"><div class="wd-ic">\\uD83C\\uDFF0</div><h3>'+esc(l.name)+'</h3><div class="wd-tag">'+esc(l.tag)+'</div></div>'+
+    '<div class="wd-meta"><span class="wd-chip">Joy</span><span class="wd-chip">Birinchi: '+l.book+'-kitob</span></div>'+
+    '<p class="wd-desc">'+esc(l.desc)+'</p>'+rel;}
 
 // ===== Atmosfera: ambient canvas portal =====
 (function(){
@@ -1076,6 +1213,7 @@ buildThemePop();applyTheme(savedTheme);render();
 """
     js = js.replace("__BOOKS__", books_json).replace("__CREST__", crest)
     js = js.replace("__GLOSS__", gloss_json).replace("__WORLD__", world_json)
+    js = js.replace("__MAPART__", json.dumps(mapart, ensure_ascii=False))
     js = (js.replace("__HOUSES__", houses_json)
             .replace("__QUIZ__", quiz_json)
             .replace("__T__", uitext_json))
