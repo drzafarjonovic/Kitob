@@ -893,6 +893,23 @@ def build_single(summary, shell, chapters_map):
     books_json = json.dumps(summary, ensure_ascii=False)
     gloss_json = json.dumps(GLOSSARY, ensure_ascii=False)
     world_json = json.dumps(WORLD, ensure_ascii=False)
+    # Foydalanuvchi tasdig'i bilan: Maps/ dagi illyustratsiya xaritasi
+    # ko'rinadigan atribut (kredit) bilan alohida ko'rinish sifatida qo'shiladi.
+    import base64
+    _illus = os.path.join(ROOT, "Maps",
+        "old-but-useful-map-of-hogwarts-v0-mthRYJCEB3-7yvurS1T1oY0EgS-nzG1d4ySf1Vg-KbY.jpg")
+    if os.path.exists(_illus):
+        try:
+            _b = open(_illus, "rb").read()
+            _uri = "data:image/jpeg;base64," + base64.b64encode(_b).decode()
+            _wm = json.loads(world_json)
+            _wm["map"]["maps"].append({
+                "id": "illustration", "name": "Illyustratsiya", "art": "", "img": _uri,
+                "credit": "Xarita: Gamma-ray-burst \u00b7 DeviantArt",
+                "book": 1, "locations": [], "figures": []})
+            world_json = json.dumps(_wm, ensure_ascii=False)
+        except Exception:
+            pass
     _grounds = (
         '<path d="M1 5 L30 5 L30 33 Q22 37 15 34 Q8 38 1 33 Z" fill="#4f6f3f"/>'
         '<path d="M1 56 L25 56 Q28 66 21 76 Q11 82 2 76 Z" fill="#4f6f3f"/>'
@@ -1284,6 +1301,8 @@ pointer-events:none;animation:figstep 3.4s ease-in-out infinite;}
 background:rgba(243,231,205,.7);padding:0 .25rem;border-radius:3px;white-space:nowrap;}
 @keyframes figstep{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-46%,-53%)}}
 .map-legend{margin-top:.7rem;font-family:system-ui,sans-serif;font-size:.72rem;color:var(--muted);text-align:center;}
+.map-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#efe7d0;}
+.map-credit{position:absolute;bottom:6px;right:8px;font-family:system-ui,sans-serif;font-size:.6rem;color:#5b3f1e;background:rgba(243,231,205,.8);padding:.12rem .45rem;border-radius:4px;border:1px solid rgba(138,90,26,.4);}
 .map-toolbar{justify-content:space-between;}
 .map-sels{display:flex;flex-wrap:wrap;gap:.35rem;}
 .mapsel{background:var(--panel2);border:1px solid var(--border);color:var(--muted);font-family:system-ui,sans-serif;font-size:.74rem;padding:.35rem .75rem;border-radius:999px;cursor:pointer;}
@@ -1544,7 +1563,11 @@ function wRenderMap(body){var M=WORLD.map,fr=wFrontier(),i;
   var mp=null;for(i=0;i<M.maps.length;i++){if(M.maps[i].id===wState.map){mp=M.maps[i];break;}}
   if(!mp||mp.book>fr){mp=null;for(i=0;i<M.maps.length;i++){if(M.maps[i].book<=fr){mp=M.maps[i];wState.map=mp.id;break;}}}
   var inner='';
-  if(mp){
+  if(mp&&mp.img){
+    inner='<div class="map-wrap reveal" id="mapwrap"><img class="map-img" src="'+mp.img+'" alt="Hogvarts xaritasi (illyustratsiya)"/>'+MAPDECO+
+      '<div class="map-title">'+esc(mp.name)+'</div>'+
+      (mp.credit?'<div class="map-credit">'+esc(mp.credit)+'</div>':'')+'</div>';
+  }else if(mp){
     var mks=(mp.locations||[]).map(function(l,ix){var locked=wLocked(l.book,'loc-'+mp.id+'-'+ix);
       return '<button class="map-mk'+(locked?' locked':'')+'" style="left:'+l.x+'%;top:'+l.y+'%" data-loc="'+ix+'" title="'+esc(l.name)+'"><span class="mk-dot"></span><span class="mk-lbl">'+esc(l.name)+'</span></button>';}).join('');
     var figs=(mp.figures||[]).map(function(f,fi){if(wLocked(f.book,'fig-'+mp.id+'-'+fi))return '';
